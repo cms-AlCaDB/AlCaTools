@@ -15,6 +15,7 @@ import errno
 import sqlite3
 import json
 import tempfile
+from prettytable import PrettyTable
 
 parser = optparse.OptionParser(usage =
                                'Usage: %prog [options] <file> [<file> ...]\n'
@@ -43,18 +44,18 @@ fldmap = (
 
 # Leave these alone for unquoted, tab-delimited record format.
 head = '\t'.join(fldmap[0:len(fldmap):2]) + '\n'
-fmt  = '\t'.join( \
-           [ \
-               '{' + '{0}:{1}'.format(col,fmt) + '}' \
-               for col, fmt in zip( \
-                       fldmap[0:len(fldmap):2], \
-                       fldmap[1:len(fldmap):2] \
-                   ) \
-           ] \
-       ) + '\n'
 
-print head
+#print head
+
+t = PrettyTable(['hash', 'since','tag','synch','insertion'])
+
 
 for element in my_dict:
     # print fmt.format(name=element['name'], synch=element['synchronization'], insertion=element['insertion_time'])
-    print element['name'], element['synchronization'], element['insertion_time']
+    TAG = connection.tag(name=element['name']).iovs().as_dicts()
+    for IOV in TAG:
+        if (IOV['payload_hash'] == options.hash):  
+            #print IOV['payload_hash'],IOV['since'],element['name'],element['synchronization'],element['insertion_time']
+            t.add_row([IOV['payload_hash'],IOV['since'],element['name'],element['synchronization'],element['insertion_time']])
+
+print t
