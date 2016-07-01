@@ -16,6 +16,7 @@ import string, re
 import subprocess
 import ConfigParser
 from optparse import OptionParser,OptionGroup
+from prettytable import PrettyTable
 
 #####################################################################
 def getCommandOutput(command):
@@ -46,8 +47,8 @@ def main():
         print "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
         print "+ This tool needs cmsQueryingMiniFramework (https://gitlab.cern.ch/jdawes/cmsQueryingMiniFramework)"
         print "+ Easiest way to get it is via CMSSW (>800) is"
-        print "+ cmsrel CMSSW_8_0_4"
-        print "+ cd CMSSW_8_0_4/src"
+        print "+ cmsrel CMSSW_8_0_X  #get your favorite"
+        print "+ cd CMSSW_8_0_X/src"
         print "+ cmsenv"
         print "+ cd -"
         print "and then you can proceed"
@@ -65,6 +66,14 @@ def main():
     import CondCore.Utilities.CondDBFW.shell as shell
     con = shell.connect()
 
+    myGTrefInfo = con.global_tag(name=opts.refGT)
+    myGTtarInfo = con.global_tag(name=opts.tarGT)
+
+    text_file = open(("diff_%s_vs_%s.twiki") % (opts.refGT,opts.tarGT), "w")
+
+    refSnap = myGTrefInfo.snapshot_time
+    tarSnap = myGTtarInfo.snapshot_time
+
     myGTref = con.global_tag(name=opts.refGT).tags(amount=1000).as_dicts()
     myGTtar = con.global_tag(name=opts.tarGT).tags(amount=1000).as_dicts()
 
@@ -80,8 +89,12 @@ def main():
                 if RefTag != element2["tag_name"]:
                     differentTags[(RefRecord,RefLabel)]=(RefTag,element2["tag_name"])
 
-    print "| *Record* | *"+opts.refGT+"* | *"+opts.tarGT+"* | Remarks |"
-       
+    text_file.write("| *Record* | *"+opts.refGT+"* | *"+opts.tarGT+"* | Remarks | \n")
+
+    t = PrettyTable(['/','',opts.refGT,opts.tarGT,refSnap,tarSnap])
+    t.hrules=1
+    t.add_row(['Record','label','Reference Tag','Target Tag','hash1:time1:since1','hash2:time2:since2'])
+ 
     for Rcd in sorted(differentTags):
 
         #print Rcd,differentTags[Rcd][2]," 1:",differentTags[Rcd][0]," 2:",differentTags[Rcd][1]
@@ -102,43 +115,64 @@ def main():
                     hash_lastRefTagIOV = i["payload_hash"]
                     time_lastRefTagIOV = str(i["insertion_time"])
 
-            for i in tarTagIOVs:
-                if (i["since"]>lastSinceTar):
-                    lastSinceTar = i["since"]
-                    hash_lastTarTagIOV = i["payload_hash"]
-                    time_lastTarTagIOV = str(i["insertion_time"])
+            for j in tarTagIOVs:
+                if (j["since"]>lastSinceTar):
+                    lastSinceTar = j["since"]
+                    hash_lastTarTagIOV = j["payload_hash"]
+                    time_lastTarTagIOV = str(j["insertion_time"])
 
             if(hash_lastRefTagIOV!=hash_lastTarTagIOV):
-                print "| ="+Rcd[0]+"= ("+Rcd[1]+") | =="+differentTags[Rcd][0]+"==  | =="+differentTags[Rcd][1]+"== | | "
-                print "|^|"+hash_lastRefTagIOV+" <br> ("+time_lastRefTagIOV+") "+ str(lastSinceRef) +" | "+hash_lastTarTagIOV+" <br> ("+time_lastTarTagIOV+") " + str(lastSinceTar)+" | ^|"
+                text_file.write("| ="+Rcd[0]+"= ("+Rcd[1]+") | =="+differentTags[Rcd][0]+"==  | =="+differentTags[Rcd][1]+"== | | \n")
+                text_file.write("|^|"+hash_lastRefTagIOV+" <br> ("+time_lastRefTagIOV+") "+ str(lastSinceRef) +" | "+hash_lastTarTagIOV+" <br> ("+time_lastTarTagIOV+") " + str(lastSinceTar)+" | ^| \n")
 
+                t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0],differentTags[Rcd][1],str(hash_lastRefTagIOV)+"\n"+str(time_lastRefTagIOV)+"\n"+str(lastSinceRef),str(hash_lastTarTagIOV)+"\n"+str(time_lastTarTagIOV)+"\n"+str(lastSinceTar)])
+            
         else:    
 
             theGoodRefIOV=-1
             theGoodTarIOV=-1
+            sinceRefTagIOV=0
+            sinceTarTagIOV=0
+            
+            RefIOVtime = datetime.datetime(1970, 1, 1, 0, 0, 0)
+            TarIOVtime = datetime.datetime(1970, 1, 1, 0, 0, 0)
+
+            #print RefIOVtime
+            #print refSnap
+
             theRefPayload=""
             theTarPayload=""
             theRefTime=""
             theTarTime=""
 
-            for IOV in refTagIOVs:
-                sinceRefTagIOV = IOV["since"]
-                if (sinceRefTagIOV < int(opts.testRunNumber)):
-                    theGoodRefIOV=sinceRefTagIOV
-                    theRefPayload=IOV["payload_hash"]
-                    theRefTime=str(IOV["insertion_time"])
+            #  print "refIOV[]","RefIOVtime","refSnap","refIOV[]>RefIOVtime","refIOV[]<refSnap"
+            for refIOV in refTagIOVs:            
+
+                #print "|",refIOV["insertion_time"],"|",RefIOVtime,"|",refSnap,(refIOV["insertion_time"]>RefIOVtime),(refIOV["insertion_time"]<refSnap), (refIOV["since"] < int(opts.testRunNumber)),(refIOV["since"]>=sinceRefTagIOV)
+                    
+                if ( (refIOV["since"] < int(opts.testRunNumber)) and (refIOV["since"]>=sinceRefTagIOV) and (refIOV["insertion_time"]>RefIOVtime) and (refIOV["insertion_time"]<refSnap) ):
+                    sinceRefTagIOV = refIOV["since"]   
+                    RefIOVtime = refIOV["insertion_time"]
+                    theGoodRefIOV=sinceRefTagIOV                
+                    theRefPayload=refIOV["payload_hash"]
+                    theRefTime=str(refIOV["insertion_time"])
           
-            for IOV in tarTagIOVs:
-                sinceTarTagIOV = IOV["since"]
-                if (sinceTarTagIOV < int(opts.testRunNumber)):
+            for tarIOV in tarTagIOVs:
+                if ( (tarIOV["since"] < int(opts.testRunNumber)) and (tarIOV["since"]>sinceTarTagIOV) and (tarIOV["insertion_time"]>TarIOVtime) and (tarIOV["insertion_time"]<tarSnap)):
+                    sinceTarTagIOV = tarIOV["since"]
+                    tarIOVtime = tarIOV["insertion_time"]
                     theGoodTarIOV=sinceTarTagIOV
-                    theTarPayload=IOV["payload_hash"]
-                    theTarTime=str(IOV["insertion_time"])
+                    theTarPayload=tarIOV["payload_hash"]
+                    theTarTime=str(tarIOV["insertion_time"])
         
-                    if(theRefPayload!=theTarPayload):
-                        print "| ="+Rcd[0]+"= ("+Rcd[1]+") | =="+differentTags[Rcd][0]+"==  | =="+differentTags[Rcd][1]+"== |"
-                        print "|^|"+theRefPayload+" ("+theRefTime+") | "+theTarPayload+" ("+theTarTime+") |"
-                       
+            if(theRefPayload!=theTarPayload):
+                text_file.write("| ="+Rcd[0]+"= ("+Rcd[1]+") | =="+differentTags[Rcd][0]+"==  | =="+differentTags[Rcd][1]+"== |\n")
+                text_file.write("|^|"+theRefPayload+" ("+theRefTime+") | "+theTarPayload+" ("+theTarTime+") |\n")                       
+
+                t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0],differentTags[Rcd][1],str(theRefPayload)+"\n"+str(theRefTime)+"\n"+str(theGoodRefIOV),str(theTarPayload)+"\n"+str(theTarTime)+"\n"+str(theGoodTarIOV)])
+                                
+
+    print t
 
 if __name__ == "__main__":        
     main()
