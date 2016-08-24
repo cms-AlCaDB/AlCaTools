@@ -130,6 +130,7 @@ def main():
                 'RunII_Asymptotic_scenario' : ('run2_mc',"Run2 Asymptotic Simulation"),
                 'RunII_Startup_scenario' : ('run2_mc_50ns',"Run2 Startup Simulation"),
                 'RunII_Heavy_Ions_scenario' : ('run2_mc_hi',"Run2 Heavy Ions Simulation"),
+                'RunII_Proton-Lead_scenario' : ('run2_mc_pa',"Run2 Proton Leade Simulation"),
                 'RunII_CRAFT_scenario' : ('run2_mc_cosmics',"Run2 CRAFT cosmics Simulation"),
                 'RunI_HLT_processing' : ('run1_hlt',"Run1 data HLT processing"),
                 'RunI_Offline_processing': ('run1_data',"Run1 data offline processing"),
