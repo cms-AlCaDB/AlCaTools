@@ -6,7 +6,7 @@ Script to create GT documentation
 
 __author__ = 'Marco Musich'
 __copyright__ = 'Copyright 2015, CERN CMS'
-__credits__ = ['Giacomo Govi', 'Salvatore Di Guida', 'Miguel Ojeda', 'Andreas Pfeiffer']
+__credits__ = ['Giacomo Govi', 'Salvatore Di Guida', 'Gregor Mittag', 'Andreas Pfeiffer']
 __license__ = 'Unknown'
 __maintainer__ = 'Marco Musich'
 __email__ = 'marco.musich@cern.ch'
@@ -137,7 +137,13 @@ def main():
                 'RunII_HLT_processing' : ('run2_hlt',"Run2 data HLT processing"),
                 'RunII_HLTHI_processing' : ('run2_hlt_hi', "Run2 data HLT Heavy Ion processing"),
                 'RunII_Offline_processing': ('run2_data',"Run2 data offline processing"),
-                'PhaseI_design_scenario': ('phase1_2017_design',"Phase-I 2017 design")}
+                'RunII_HLT_relval_processing' : ('run2_hlt_relval',"Run2 data HLT RelVal processing"),
+                'RunII_Offline_relval_processing' : ('run2_data_relval',"Run2 data offline RelVal processing"),
+                'PhaseI_design_scenario': ('phase1_2017_design',"Phase-I 2017 design"),
+                'PhaseI_realistic_scenario': ('phase1_2017_realistic',"Phase-I 2017 realistic"),
+                'PhaseI_HcalDev_scenario' :('phase1_2017_hcaldev',"Phase-I 2017 hcal development"),
+                'PhaseII_realistic_scenario' :('phase2_2023_realistic',"Phase-II 2023 realistic")
+        }
         
         thePR=""
         theRelease=""
