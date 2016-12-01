@@ -141,6 +141,7 @@ def main():
                 'RunII_Offline_relval_processing' : ('run2_data_relval',"Run2 data offline RelVal processing"),
                 'PhaseI_design_scenario': ('phase1_2017_design',"Phase-I 2017 design"),
                 'PhaseI_realistic_scenario': ('phase1_2017_realistic',"Phase-I 2017 realistic"),
+                'PhaseI_cosmics_scenario': ('phase1_2017_cosmics',"Phase-I 2017 cosmics"),
                 'PhaseI_HcalDev_scenario' :('phase1_2017_hcaldev',"Phase-I 2017 hcal development"),
                 'PhaseII_realistic_scenario' :('phase2_2023_realistic',"Phase-II 2023 realistic")
         }
