@@ -1,5 +1,7 @@
 # Readme
 
+Documented at: https://twiki.cern.ch/twiki/bin/view/CMS/ValidateHLTMenu
+
 ## Inputs:
 
    * twiki of AlCaReco Matrix: AlCaRecoMatrix.wiki
