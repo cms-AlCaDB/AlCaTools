@@ -1,0 +1,21 @@
+| *Primary Dataset* | *AlCaRecos to be run* |
+| AlCaLumiPixels | 	LumiPixels |
+| Commissioning	| HcalCalIsoTrk |
+| Charmonium	| TkAlJpsiMuMu |
+| DoubleEG	| EcalCalZElectron, EcalUncalZElectron, HcalCalIterativePhiSym, HcalCalIsoTrkFilter |
+| DoubleMuon	| TkAlZMuMu, MuAlCalIsolatedMu, MuAlOverlaps, MuAlZMuMu, DtCalib |
+| HcalNZS	| HcalCalMinBias |
+| HLTPhysics	| TkAlMinBias, HcalCalIsoTrkFilter |
+| JetHT	| HcalCalDijets, HcalCalIsoTrkFilter |
+| MET	| HcalCalNoise |
+| MuOnia	| TkAlUpsilonMuMu |
+| MinimumBias	| SiStripCalZeroBias, SiStripCalMinBias, TkAlMinBias |
+| SingleElectron	| EcalCalWElectron, EcalUncalWElectron, EcalCalZElectron, EcalUncalZElectron, HcalCalIterativePhiSym, EcalESAlign, HcalCalIsoTrkFilter |
+| SingleMuon	| TkAlMuonIsolated, HcalCalIterativePhiSym, DtCalib, MuAlCalIsolatedMu, MuAlOverlaps, MuAlZMuMu, HcalCalHO |
+| SinglePhoton	| HcalCalGammaJet |
+| ExpressPhysics	| SiStripPCLHistos, SiStripCalZeroBias, SiStripCalMinBias, SiStripCalMinBiasAfterAbortGap, TkAlMinBias, DtCalib, Hotline, LumiPixelsMinBias |
+| TestEnablesEcalHcal	| HcalCalPedestal |
+| ZeroBias	| SiStripCalZeroBias, TkAlMinBias, LumiPixelsMinBias |
+| ExpressCosmics	| SiStripPCLHistos, SiStripCalZeroBias, TkAlCosmics0T | 
+| Cosmics	| TkAlCosmics0T, MuAlGlobalCosmics, HcalCalHOCosmics, DtCalibCosmics | 
+
