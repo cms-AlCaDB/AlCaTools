@@ -94,6 +94,8 @@ def main():
     t = PrettyTable(['/','',opts.refGT,opts.tarGT,refSnap,tarSnap])
     t.hrules=1
     t.add_row(['Record','label','Reference Tag','Target Tag','hash1:time1:since1','hash2:time2:since2'])
+
+    isDifferent=False
  
     for Rcd in sorted(differentTags):
 
@@ -122,6 +124,7 @@ def main():
                     time_lastTarTagIOV = str(j["insertion_time"])
 
             if(hash_lastRefTagIOV!=hash_lastTarTagIOV):
+                isDifferent=True
                 text_file.write("| ="+Rcd[0]+"= ("+Rcd[1]+") | =="+differentTags[Rcd][0]+"==  | =="+differentTags[Rcd][1]+"== | | \n")
                 text_file.write("|^|"+hash_lastRefTagIOV+" <br> ("+time_lastRefTagIOV+") "+ str(lastSinceRef) +" | "+hash_lastTarTagIOV+" <br> ("+time_lastTarTagIOV+") " + str(lastSinceTar)+" | ^| \n")
 
@@ -133,7 +136,7 @@ def main():
             theGoodTarIOV=-1
             sinceRefTagIOV=0
             sinceTarTagIOV=0
-            
+         
             RefIOVtime = datetime.datetime(1970, 1, 1, 0, 0, 0)
             TarIOVtime = datetime.datetime(1970, 1, 1, 0, 0, 0)
 
@@ -145,12 +148,12 @@ def main():
             theRefTime=""
             theTarTime=""
 
-            #  print "refIOV[]","RefIOVtime","refSnap","refIOV[]>RefIOVtime","refIOV[]<refSnap"
+            #print "refIOV[]","RefIOVtime","refSnap","refIOV[]>RefIOVtime","refIOV[]<refSnap"
             for refIOV in refTagIOVs:            
 
                 #print "|",refIOV["insertion_time"],"|",RefIOVtime,"|",refSnap,(refIOV["insertion_time"]>RefIOVtime),(refIOV["insertion_time"]<refSnap), (refIOV["since"] < int(opts.testRunNumber)),(refIOV["since"]>=sinceRefTagIOV)
                     
-                if ( (refIOV["since"] < int(opts.testRunNumber)) and (refIOV["since"]>=sinceRefTagIOV) and (refIOV["insertion_time"]>RefIOVtime) and (refIOV["insertion_time"]<refSnap) ):
+                if ( (refIOV["since"] <= int(opts.testRunNumber)) and (refIOV["since"]>=sinceRefTagIOV) and (refIOV["insertion_time"]>RefIOVtime) and (refIOV["insertion_time"]<refSnap) ):
                     sinceRefTagIOV = refIOV["since"]   
                     RefIOVtime = refIOV["insertion_time"]
                     theGoodRefIOV=sinceRefTagIOV                
@@ -158,7 +161,7 @@ def main():
                     theRefTime=str(refIOV["insertion_time"])
           
             for tarIOV in tarTagIOVs:
-                if ( (tarIOV["since"] < int(opts.testRunNumber)) and (tarIOV["since"]>sinceTarTagIOV) and (tarIOV["insertion_time"]>TarIOVtime) and (tarIOV["insertion_time"]<tarSnap)):
+                if ( (tarIOV["since"] <= int(opts.testRunNumber)) and (tarIOV["since"]>=sinceTarTagIOV) and (tarIOV["insertion_time"]>TarIOVtime) and (tarIOV["insertion_time"]<tarSnap)):
                     sinceTarTagIOV = tarIOV["since"]
                     tarIOVtime = tarIOV["insertion_time"]
                     theGoodTarIOV=sinceTarTagIOV
@@ -166,11 +169,15 @@ def main():
                     theTarTime=str(tarIOV["insertion_time"])
         
             if(theRefPayload!=theTarPayload):
+                isDifferent=True
                 text_file.write("| ="+Rcd[0]+"= ("+Rcd[1]+") | =="+differentTags[Rcd][0]+"==  | =="+differentTags[Rcd][1]+"== |\n")
                 text_file.write("|^|"+theRefPayload+" ("+theRefTime+") | "+theTarPayload+" ("+theTarTime+") |\n")                       
 
                 t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0],differentTags[Rcd][1],str(theRefPayload)+"\n"+str(theRefTime)+"\n"+str(theGoodRefIOV),str(theTarPayload)+"\n"+str(theTarTime)+"\n"+str(theGoodTarIOV)])
                                 
+            
+    if(not isDifferent):
+        t.add_row(["None","None","None","None","None","None"])
 
     print t
 
