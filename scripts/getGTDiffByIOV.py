@@ -57,10 +57,11 @@ def main():
 
     desc="""This is a description of %prog."""
     parser = OptionParser(description=desc,version='%prog version 0.1')
-    parser.add_option('-r','--run', help='test run number', dest='testRunNumber', action='store', default='251883')
+    parser.add_option('-r','--run'        ,help='test run number', dest='testRunNumber', action='store', default='251883')
     parser.add_option('-R','--ReferenceGT',help='Reference Global Tag', dest='refGT', action='store', default='GR_H_V58C')
     parser.add_option('-T','--TargetGT'   ,help='Target Global Tag'   , dest='tarGT', action='store', default='74X_dataRun2_HLTValidation_Queue')
-    parser.add_option('-L','--last',help='compares the very last IOV' , dest='lastIOV',action='store_true', default=False)
+    parser.add_option('-L','--last'       ,help='compares the very last IOV' , dest='lastIOV',action='store_true', default=False)
+    parser.add_option('-v','--verbose'    ,help='returns more info', dest='isVerbose',action='store_true',default=False)
     (opts, args) = parser.parse_args()
 
     import CondCore.Utilities.CondDBFW.shell as shell
@@ -91,9 +92,21 @@ def main():
 
     text_file.write("| *Record* | *"+opts.refGT+"* | *"+opts.tarGT+"* | Remarks | \n")
 
-    t = PrettyTable(['/','',opts.refGT,opts.tarGT,refSnap,tarSnap])
+    t = PrettyTable()
+
+    if(opts.isVerbose):
+        t.field_names = ['/','',opts.refGT,opts.tarGT,refSnap,tarSnap]
+    else:
+        t.field_names = ['/','',opts.refGT,opts.tarGT]
+
     t.hrules=1
-    t.add_row(['Record','label','Reference Tag','Target Tag','hash1:time1:since1','hash2:time2:since2'])
+    
+    if(opts.isVerbose):
+        t.add_row(['Record','label','Reference Tag','Target Tag','hash1:time1:since1','hash2:time2:since2'])
+    else:
+        t.add_row(['Record','label','Reference Tag','Target Tag'])
+
+    isDifferent=False
  
     for Rcd in sorted(differentTags):
 
@@ -104,7 +117,8 @@ def main():
 
         if(opts.lastIOV):
 
-            #print "COMPARING the LAST IOV"
+            if(sorted(differentTags).index(Rcd)==0):
+                print "=== COMPARING ONLY THE LAST IOV ==="
 
             lastSinceRef=-1
             lastSinceTar=-1
@@ -122,18 +136,22 @@ def main():
                     time_lastTarTagIOV = str(j["insertion_time"])
 
             if(hash_lastRefTagIOV!=hash_lastTarTagIOV):
+                isDifferent=True
                 text_file.write("| ="+Rcd[0]+"= ("+Rcd[1]+") | =="+differentTags[Rcd][0]+"==  | =="+differentTags[Rcd][1]+"== | | \n")
                 text_file.write("|^|"+hash_lastRefTagIOV+" <br> ("+time_lastRefTagIOV+") "+ str(lastSinceRef) +" | "+hash_lastTarTagIOV+" <br> ("+time_lastTarTagIOV+") " + str(lastSinceTar)+" | ^| \n")
+                
+                if(opts.isVerbose):
+                    t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0],differentTags[Rcd][1],str(hash_lastRefTagIOV)+"\n"+str(time_lastRefTagIOV)+"\n"+str(lastSinceRef),str(hash_lastTarTagIOV)+"\n"+str(time_lastTarTagIOV)+"\n"+str(lastSinceTar)])
+                else:
+                    t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0]+"\n"+str(hash_lastRefTagIOV),differentTags[Rcd][1]+"\n"+str(hash_lastTarTagIOV)])
 
-                t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0],differentTags[Rcd][1],str(hash_lastRefTagIOV)+"\n"+str(time_lastRefTagIOV)+"\n"+str(lastSinceRef),str(hash_lastTarTagIOV)+"\n"+str(time_lastTarTagIOV)+"\n"+str(lastSinceTar)])
-            
         else:    
 
             theGoodRefIOV=-1
             theGoodTarIOV=-1
             sinceRefTagIOV=0
             sinceTarTagIOV=0
-            
+         
             RefIOVtime = datetime.datetime(1970, 1, 1, 0, 0, 0)
             TarIOVtime = datetime.datetime(1970, 1, 1, 0, 0, 0)
 
@@ -145,12 +163,12 @@ def main():
             theRefTime=""
             theTarTime=""
 
-            #  print "refIOV[]","RefIOVtime","refSnap","refIOV[]>RefIOVtime","refIOV[]<refSnap"
+            #print "refIOV[]","RefIOVtime","refSnap","refIOV[]>RefIOVtime","refIOV[]<refSnap"
             for refIOV in refTagIOVs:            
 
                 #print "|",refIOV["insertion_time"],"|",RefIOVtime,"|",refSnap,(refIOV["insertion_time"]>RefIOVtime),(refIOV["insertion_time"]<refSnap), (refIOV["since"] < int(opts.testRunNumber)),(refIOV["since"]>=sinceRefTagIOV)
                     
-                if ( (refIOV["since"] < int(opts.testRunNumber)) and (refIOV["since"]>=sinceRefTagIOV) and (refIOV["insertion_time"]>RefIOVtime) and (refIOV["insertion_time"]<refSnap) ):
+                if ( (refIOV["since"] <= int(opts.testRunNumber)) and (refIOV["since"]>=sinceRefTagIOV) and (refIOV["insertion_time"]>RefIOVtime) and (refIOV["insertion_time"]<refSnap) ):
                     sinceRefTagIOV = refIOV["since"]   
                     RefIOVtime = refIOV["insertion_time"]
                     theGoodRefIOV=sinceRefTagIOV                
@@ -158,7 +176,7 @@ def main():
                     theRefTime=str(refIOV["insertion_time"])
           
             for tarIOV in tarTagIOVs:
-                if ( (tarIOV["since"] < int(opts.testRunNumber)) and (tarIOV["since"]>sinceTarTagIOV) and (tarIOV["insertion_time"]>TarIOVtime) and (tarIOV["insertion_time"]<tarSnap)):
+                if ( (tarIOV["since"] <= int(opts.testRunNumber)) and (tarIOV["since"]>=sinceTarTagIOV) and (tarIOV["insertion_time"]>TarIOVtime) and (tarIOV["insertion_time"]<tarSnap)):
                     sinceTarTagIOV = tarIOV["since"]
                     tarIOVtime = tarIOV["insertion_time"]
                     theGoodTarIOV=sinceTarTagIOV
@@ -166,12 +184,20 @@ def main():
                     theTarTime=str(tarIOV["insertion_time"])
         
             if(theRefPayload!=theTarPayload):
+                isDifferent=True
                 text_file.write("| ="+Rcd[0]+"= ("+Rcd[1]+") | =="+differentTags[Rcd][0]+"==  | =="+differentTags[Rcd][1]+"== |\n")
                 text_file.write("|^|"+theRefPayload+" ("+theRefTime+") | "+theTarPayload+" ("+theTarTime+") |\n")                       
 
-                t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0],differentTags[Rcd][1],str(theRefPayload)+"\n"+str(theRefTime)+"\n"+str(theGoodRefIOV),str(theTarPayload)+"\n"+str(theTarTime)+"\n"+str(theGoodTarIOV)])
-                                
-
+                if(opts.isVerbose):
+                    t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0],differentTags[Rcd][1],str(theRefPayload)+"\n"+str(theRefTime)+"\n"+str(theGoodRefIOV),str(theTarPayload)+"\n"+str(theTarTime)+"\n"+str(theGoodTarIOV)])
+                else:
+                    t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0]+"\n"+str(theRefPayload),differentTags[Rcd][1]+"\n"+str(theTarPayload)])
+            
+    if(not isDifferent):
+        if(opts.isVerbose):
+            t.add_row(["None","None","None","None","None","None"])
+        else:
+            t.add_row(["None","None","None"])
     print t
 
 if __name__ == "__main__":        
