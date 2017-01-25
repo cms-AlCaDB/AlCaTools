@@ -163,10 +163,13 @@ def main():
                 'RunII_Offline_processing': ('run2_data',"Run2 data offline processing"),
                 'RunII_HLT_relval_processing' : ('run2_hlt_relval',"Run2 data HLT RelVal processing"),
                 'RunII_Offline_relval_processing' : ('run2_data_relval',"Run2 data offline RelVal processing"),
-                'PhaseI_design_scenario': ('phase1_2017_design',"Phase-I 2017 design"),
-                'PhaseI_realistic_scenario': ('phase1_2017_realistic',"Phase-I 2017 realistic"),
-                'PhaseI_cosmics_scenario': ('phase1_2017_cosmics',"Phase-I 2017 cosmics"),
-                'PhaseI_HcalDev_scenario' :('phase1_2017_hcaldev',"Phase-I 2017 hcal development"),
+                'PhaseI_2017_design_scenario': ('phase1_2017_design',"Phase-I 2017 design"),
+                'PhaseI_2017_realistic_scenario': ('phase1_2017_realistic',"Phase-I 2017 realistic"),
+                'PhaseI_2017_cosmics_scenario': ('phase1_2017_cosmics',"Phase-I 2017 cosmics"),
+                'PhaseI_2017_HcalDev_scenario' :('phase1_2017_hcaldev',"Phase-I 2017 hcal development"),
+                'PhaseI_2018_design_scenario': ('phase1_2018_design',"Phase-I 2018 design"),
+                'PhaseI_2018_realistic_scenario': ('phase1_2018_realistic',"Phase-I 2018 realistic"),
+                'PhaseI_2018_cosmics_scenario': ('phase1_2018_cosmics',"Phase-I 2018 cosmics"),
                 'PhaseII_realistic_scenario' :('phase2_2023_realistic',"Phase-II 2023 realistic")
         }
         
@@ -203,7 +206,7 @@ def main():
             for key in conditions1:
                 if("scenario" in key):
                     params = conditions1[key].split(',')
-                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop...]: ')
+                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop and go to next item...]: ')
 
                     fout1.write("   * **"+key.replace("_"," ")+"** : ["+params[0]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+") as ["+params[1]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[1]+") with the following [changes](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"): \n")
                     for line in description.splitlines():
@@ -224,7 +227,7 @@ def main():
             for key in conditions2:
                 if("scenario" in key):
                     params = conditions2[key].split(',')
-                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop...]: ')
+                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop and go to next item...]: ')
                     
                     fout1.write("   * **"+key.replace("_"," ")+"** : ["+params[0]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+") as ["+params[1]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[1]+") with the following [changes](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"): \n")
                     for line in description.splitlines():
@@ -245,7 +248,7 @@ def main():
             for key in conditions3:
                 if("processing" in key):
                     params = conditions3[key].split(',')
-                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop...]: ')
+                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop and go to next item...]: ')
                     
                     fout1.write("   * **"+key.replace("_"," ")+"** : ["+params[0]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+") as ["+params[1]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[1]+") with the following [changes](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"): \n")
                     for line in description.splitlines():
@@ -266,7 +269,7 @@ def main():
             for key in conditions4:
                 if("processing" in key):
                     params = conditions4[key].split(',')
-                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop...]: ')
+                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop and go to next item...]: ')
                     
                     fout1.write("   * **"+key.replace("_"," ")+"** : ["+params[0]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+") as ["+params[1]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[1]+") with the following [changes](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"): \n")
                     for line in description.splitlines():
@@ -287,7 +290,7 @@ def main():
             for key in conditions5:
                 if("scenario" in key):
                     params = conditions5[key].split(',')
-                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop...]: ')
+                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop and go to next item...]: ')
                     
                     fout1.write("   * **"+key.replace("_"," ")+"** : ["+params[0]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+") as ["+params[1]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[1]+") with the following [changes](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"): \n")
                     for line in description.splitlines():
