@@ -18,6 +18,7 @@ import copy
 import string, re
 import subprocess
 import ConfigParser, json
+import os.path
 from optparse import OptionParser
 
 ####################--- Classes ---############################
@@ -100,6 +101,28 @@ def ConfigSectionMap(config, section):
             the_dict[option] = None
     return the_dict
 
+##### method to get input and print it in the description ###########
+def getInput(default, prompt = ''):
+    '''Like raw_input() but with a default and automatic strip().
+    '''
+    
+    text = ""
+    stopword = ""
+    while True:
+        answer = raw_input(prompt)
+        if answer.strip() == stopword:
+            break
+        text += "%s\n" % answer
+    for line in text.splitlines():
+        print "-",line
+    return text.strip()
+    
+    #answer = raw_input(prompt)
+    #if answer:
+    #    return answer.strip()
+    #
+    #return default.strip()
+
 ##############################################
 def main():
 ##############################################
@@ -111,7 +134,7 @@ def main():
 
     ConfigFile = opts.inputconfig
     
-    if ConfigFile is not None:
+    if (ConfigFile is not None and os.path.exists("./"+ConfigFile)) :
         print "********************************************************"
         print "* Parsing from input file:", ConfigFile," "
         print "********************************************************"
@@ -133,6 +156,7 @@ def main():
                 'RunII_Proton-Lead_scenario' : ('run2_mc_pa',"Run2 Proton Lead Simulation"),
                 'RunII_CRAFT_scenario' : ('run2_mc_cosmics',"Run2 CRAFT cosmics Simulation"),
                 'RunI_HLT_processing' : ('run1_hlt',"Run1 data HLT processing"),
+                'RunII_Prompt_processing' : ('run2_data_promptlike',"Run 2 data prompt processing"),
                 'RunI_Offline_processing': ('run1_data',"Run1 data offline processing"),
                 'RunII_HLT_processing' : ('run2_hlt',"Run2 data HLT processing"),
                 'RunII_HLTHI_processing' : ('run2_hlt_hi', "Run2 data HLT Heavy Ion processing"),
@@ -179,12 +203,17 @@ def main():
             for key in conditions1:
                 if("scenario" in key):
                     params = conditions1[key].split(',')
-                    
+                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop...]: ')
+
                     fout1.write("   * **"+key.replace("_"," ")+"** : ["+params[0]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+") as ["+params[1]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[1]+") with the following [changes](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"): \n")
-                    fout1.write("      *\n \n")
+                    for line in description.splitlines():
+                        fout1.write("      * "+line+"\n")
+                    fout1.write("\n")
                     
                     fout2.write("   * =\'"+dict[key][0]+"\'= ("+dict[key][1]+") : [[https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+"]["+params[0]+"]],[[https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"][diff with previous]]: \n")
-                    fout2.write("      *\n \n")
+                    for line in description.splitlines():
+                        fout2.write("      * "+line+"\n")
+                    fout2.write("\n")
 
         ###############################
         # Run2 Simulation
@@ -195,13 +224,18 @@ def main():
             for key in conditions2:
                 if("scenario" in key):
                     params = conditions2[key].split(',')
+                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop...]: ')
                     
                     fout1.write("   * **"+key.replace("_"," ")+"** : ["+params[0]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+") as ["+params[1]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[1]+") with the following [changes](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"): \n")
-                    fout1.write("      *\n \n")
+                    for line in description.splitlines():
+                        fout1.write("      * "+line+"\n")
+                    fout1.write("\n")
                     
                     fout2.write("   * =\'"+dict[key][0]+"\'= ("+dict[key][1]+") : [[https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+"]["+params[0]+"]],[[https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"][diff with previous]]: \n")
-                    fout2.write("      *\n \n")
-                
+                    for line in description.splitlines():
+                        fout2.write("      * "+line+"\n")
+                    fout2.write("\n")
+                  
         ###############################
         # Data Run1 
         ###############################
@@ -211,13 +245,18 @@ def main():
             for key in conditions3:
                 if("processing" in key):
                     params = conditions3[key].split(',')
+                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop...]: ')
                     
                     fout1.write("   * **"+key.replace("_"," ")+"** : ["+params[0]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+") as ["+params[1]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[1]+") with the following [changes](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"): \n")
-                    fout1.write("      *\n \n")
-                    
+                    for line in description.splitlines():
+                        fout1.write("      * "+line+"\n")
+                    fout1.write("\n")
+                  
                     fout2.write("   * =\'"+dict[key][0]+"\'= ("+dict[key][1]+") : [[https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+"]["+params[0]+"]],[[https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"][diff with previous]]: \n")
-                    fout2.write("      *\n \n")
-
+                    for line in description.splitlines():
+                        fout2.write("      * "+line+"\n")
+                    fout2.write("\n")
+              
         ###############################
         # Data Run2
         ###############################
@@ -227,13 +266,18 @@ def main():
             for key in conditions4:
                 if("processing" in key):
                     params = conditions4[key].split(',')
+                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop...]: ')
                     
                     fout1.write("   * **"+key.replace("_"," ")+"** : ["+params[0]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+") as ["+params[1]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[1]+") with the following [changes](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"): \n")
-                    fout1.write("      *\n \n")
+                    for line in description.splitlines():
+                        fout1.write("      * "+line+"\n")
+                    fout1.write("\n")
 
                     fout2.write("   * =\'"+dict[key][0]+"\'= ("+dict[key][1]+") : [[https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+"]["+params[0]+"]],[[https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"][diff with previous]]: \n")
-                    fout2.write("      *\n \n")
-               
+                    for line in description.splitlines():
+                        fout2.write("      * "+line+"\n")
+                    fout2.write("\n")
+              
         ###############################
         # Upgrade
         ###############################
@@ -243,14 +287,36 @@ def main():
             for key in conditions5:
                 if("scenario" in key):
                     params = conditions5[key].split(',')
+                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop...]: ')
                     
                     fout1.write("   * **"+key.replace("_"," ")+"** : ["+params[0]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+") as ["+params[1]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[1]+") with the following [changes](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"): \n")
-                    fout1.write("      *\n \n")
+                    for line in description.splitlines():
+                        fout1.write("      * "+line+"\n")
+                    fout1.write("\n")
                     
                     fout2.write("   * =\'"+dict[key][0]+"\'= ("+dict[key][1]+") : [[https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+"]["+params[0]+"]],[[https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"][diff with previous]]: \n")
-                    fout2.write("      *\n \n")
-
+                    for line in description.splitlines():
+                        fout2.write("      * "+line+"\n")
+                    fout2.write("\n")
+                    
                     fout2.write("[[https://github.com/cms-sw/cmssw/pull/"+thePR+"][Pull Request]]")
+
+        #########################
+        # Print output
+        #########################
+        print "Output will be found at:"
+        print "  - GitHub_"+theRelease+"_"+thePR+".txt"
+        print "  - Twiki_"+theRelease+"_"+thePR+".txt"
+
+    else:
+        print "\n"
+        print "ERROR in calling createDescription.py "
+        print "  An input file has not been specified"
+        print "  Please enter the command in the format: "
+        print "  python createGTDescription.py -i GT_changes.ini"
+        print " =====> exiting..."
+        print "\n"
+        exit(1)
 
 if __name__ == "__main__":        
     main()
