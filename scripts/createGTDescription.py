@@ -21,6 +21,9 @@ import ConfigParser, json
 import os.path
 from optparse import OptionParser
 
+import collections
+
+
 ####################--- Classes ---############################
 
 class BetterConfigParser(ConfigParser.ConfigParser):
@@ -84,7 +87,14 @@ class BetterConfigParser(ConfigParser.ConfigParser):
                     #raise AllInOneError(msg)
         result = self.__updateDict( result, section )
         #print result
-        return result
+        keylist = result.keys()
+        resultSorted = collections.OrderedDict()
+        #print keylist
+        print sorted(keylist)
+        for key in sorted(keylist):
+            resultSorted[key]=result[key]
+        #print resultSorted
+        return resultSorted
 
 ##### method to parse the input file ################################
 
