@@ -78,9 +78,16 @@ process.AlCaRecoTriggerBitsRcdUpdate.startEmpty = False
 # Also if you want to replace settings for one 'key', you have to remove it first.
 #process.AlCaRecoTriggerBitsRcdUpdate.listNamesRemove = ["SiStripCalZeroBias"]
 # Here specifiy 'key' and corresponding paths for new entries or updated ones:
-process.AlCaRecoTriggerBitsRcdUpdate.triggerListsAdd = [
-    cms.PSet(listName = cms.string('AlCaEcalTrg'), # to be updated
-             hltPaths = cms.vstring('AlCa_EcalPhiSym*')
+# process.AlCaRecoTriggerBitsRcdUpdate.triggerListsAdd = [
+#     cms.PSet(listName = cms.string('AlCaEcalTrg'), # to be updated
+#              hltPaths = cms.vstring('AlCa_EcalPhiSym*')
+#              )
+#     ]
+
+process.AlCaRecoTriggerBitsRcdUpdate.triggerListsAdd = []
+process.AlCaRecoTriggerBitsRcdUpdate.alcarecoToReplace = [
+    cms.PSet(oldKey = cms.string('SiStripCalMinBiasAfterAbortGap'),
+             newKey = cms.string('SiStripCalMinBiasAAG')
              )
     ]
 
