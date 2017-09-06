@@ -315,6 +315,31 @@ def main():
                     
                     fout2.write("[[https://github.com/cms-sw/cmssw/pull/"+thePR+"][Pull Request]]")
 
+        ###############################
+        # 2017 MC
+        ###############################
+        conditions6 = config.getResultingSection("2017_MC")
+        if(conditions6):
+            fout1.write("## 2017_MC \n \n")
+            for key in conditions6:
+                if("scenario" in key):
+                    params = conditions6[key].split(',')
+                    description = getInput('None', '\nWhat differs between '+params[0]+' and '+params[1]+' ?\n[leave empty to stop and go to next item...]: ')
+                    
+                    fout1.write("   * **"+key.replace("_"," ")+"** : ["+params[0]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+") as ["+params[1]+"](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[1]+") with the following [changes](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"): \n")
+                    for line in description.splitlines():
+                        fout1.write("      * "+line+"\n")
+                    fout1.write("\n")
+                    
+                    fout2.write("   * =\'"+dict[key][0]+"\'= ("+dict[key][1]+") : [[https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+"]["+params[0]+"]],[[https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"][diff with previous]]: \n")
+                    for line in description.splitlines():
+                        fout2.write("      * "+line+"\n")
+                    fout2.write("\n")
+                    
+                    fout2.write("[[https://github.com/cms-sw/cmssw/pull/"+thePR+"][Pull Request]]")
+
+
+
         #########################
         # Print output
         #########################
