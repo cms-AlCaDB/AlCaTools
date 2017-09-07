@@ -22,6 +22,11 @@ import sqlite3
 import json
 import tempfile
 from prettytable import PrettyTable
+import sqlalchemy
+import pprint
+import subprocess
+import CondCore.Utilities.conddblib as conddb
+
 
 #####################################################################
 # we need this check to handle different versions of the CondDBFW 
@@ -45,6 +50,49 @@ def getCMSSWRelease( ):
     release = os.getenv(CMSSW_VERSION)
     return release
 
+#####################################################################
+def get_parent_tags(db, theHash):
+#####################################################################
+
+    db = db.replace("sqlite_file:", "").replace("sqlite:", "")
+    db = db.replace("frontier://FrontierProd/CMS_CONDITIONS", "pro")
+    db = db.replace("frontier://FrontierPrep/CMS_CONDITIONS", "dev")
+
+    con = conddb.connect(url = conddb.make_url(db))
+    session = con.session()
+    IOV = session.get_dbtype(conddb.IOV)
+    Tag = session.get_dbtype(conddb.Tag)
+
+    query_result = session.query(IOV.tag_name).filter(IOV.payload_hash == theHash).all()
+    tag_names = map(lambda entry : entry[0], query_result)
+    
+    listOfOccur=[]
+
+    for tag in tag_names:
+        synchro = session.query(Tag.synchronization).filter(Tag.name == tag).all()
+        iovs = session.query(IOV.since).filter(IOV.tag_name == tag).filter(IOV.payload_hash == theHash).all()
+        times = session.query(IOV.insertion_time).filter(IOV.tag_name == tag).filter(IOV.payload_hash == theHash).all()
+
+        synchronization = [item[0] for item in synchro]
+        listOfIOVs  = [item[0] for item in iovs]
+        listOfTimes = [str(item[0]) for item in times]
+        
+        for iEntry in range(0,len(listOfIOVs)):                                
+            listOfOccur.append({"tag": tag,
+                                "synchronization" : synchronization[0],
+                                "since" : listOfIOVs[iEntry] ,
+                                "insertion_time" : listOfTimes[iEntry] })
+                           
+
+        #mapOfOccur[tag] = (synchronization,listOfIOVs,listOfTimes)
+        #mapOfOccur[tag]['synchronization'] = synchronization
+        #mapOfOccur[tag]['sinces'] = listOfIOVs
+        #mapOfOccur[tag]['times']  = listOfTimes
+
+        #print tag,synchronization,listOfIOVs,listOfTimes
+
+    return listOfOccur
+
 
 #####################################################################
 if __name__ == '__main__':
@@ -60,41 +108,23 @@ if __name__ == '__main__':
     
     (options, arguments) = parser.parse_args()
     
-    #### Needs cmsrel inside a CMSSW > 80X
     theRelease = getCMSSWRelease()
-    print "- Getting CondDBFW from release",theRelease
-    connectionString=""
+    print "- Getting conddblib from release",theRelease
+    connectionString="frontier://FrontierProd/CMS_CONDITIONS"
 
-    if isCMSSWBefore81X( theRelease ):
-        connectionString="frontier://pro/CMS_CONDITIONS"
-    else:
-        connectionString="frontier://FrontierProd/CMS_CONDITIONS"
-        
-    from CondCore.Utilities.CondDBFW import querying
-    connection = querying.connect(connectionString)
+    tags = get_parent_tags(connectionString,options.hash)
 
-    payload = connection.payload(hash=options.hash)
-    my_dict = payload.parent_tags().as_dicts()
+    #pp = pprint.PrettyPrinter(indent=4)
+    #pp.pprint(tags)
 
-    fldmap = (
-        'name',  's',
-        'synch', 's',
-        'insertion', '',
-        )
-
-    # Leave these alone for unquoted, tab-delimited record format.
-    head = '\t'.join(fldmap[0:len(fldmap):2]) + '\n'
+    #print tags
+    #for tag in tags:
+    #    print tag
 
     #print head
     t = PrettyTable(['hash', 'since','tag','synch','insertion time'])
-
-    for element in my_dict:
-        # print fmt.format(name=element['name'], synch=element['synchronization'], insertion=element['insertion_time'])
-        TAG = connection.tag(name=element['name']).iovs().as_dicts()
-        for IOV in TAG:
-            if (IOV['payload_hash'] == options.hash):  
-                #print IOV['payload_hash'],IOV['since'],element['name'],element['synchronization'],element['insertion_time']
-                t.add_row([IOV['payload_hash'],IOV['since'],element['name'],element['synchronization'],IOV['insertion_time']])
+    for element in tags:
+        t.add_row([options.hash,element['since'],element['tag'],element['synchronization'],element['insertion_time']])
 
     print t
 
