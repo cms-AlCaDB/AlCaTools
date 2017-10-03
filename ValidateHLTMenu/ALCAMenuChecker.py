@@ -19,8 +19,8 @@ execfile(HLTMenuName)
 
 L1PrescalesTree = ET.parse(L1MenuName)
 root = L1PrescalesTree.getroot()
-columnNamesElement = root[0][1][0].text
-columnNames = [x.split(":")[1] for x in columnNamesElement.split(",")[1:]]
+L1ColumnNamesElement = root[0][1][0].text
+L1ColumnNames = [x.split(":")[1] for x in L1ColumnNamesElement.split(",")[1:]]
 
 print process.process
 pathnames = process.paths.viewkeys()
@@ -31,17 +31,20 @@ pathPrescales = dict()
 L1pathPrescales = dict()
 
 def splitL1seeds(fullSeed):
-    l = fullSeed.split(" OR ") # Spaces around to not pick seeds that have OR in their names
+    fs = fullSeed
+    l = fs.split(" OR ")
     s = [w.strip() for w in l]
     return s
 
 
 # 0) Get the number of HLT columns
-numberOfColumns = len(process.PrescaleService.lvl1Labels)
-columnIndexes = range(0,numberOfColumns)
-print "HLT menu has",numberOfColumns,"columns"
-print "L1 menu has",len(columnNames),"columns"
-print "Columns from L1: ",columnNames
+numberOfL1Columns = len(L1ColumnNames)
+numberOfHLTColumns = len(process.PrescaleService.lvl1Labels)
+L1ColumnIndexes = range(0,numberOfL1Columns)
+HLTColumnIndexes = range(0,numberOfHLTColumns)
+print "HLT menu has",numberOfHLTColumns,"columns"
+print "L1 menu has",numberOfL1Columns,"columns"
+print "Columns from L1: ",L1ColumnNames
 
 # 1) Make the map of path vs list of seeds
 for path in process.paths:
@@ -66,11 +69,11 @@ for i in process.PrescaleService.prescaleTable:
 # 2.1) Add the missing paths, send warnings for missing paths *except* the ones we know are okay
 for pathName in pathsVsSeeds.keys():
 	if pathName not in pathPrescales.keys():
-		pathPrescales[pathName] = [1]*numberOfColumns
+		pathPrescales[pathName] = [1]*numberOfHLTColumns
 		if not("Calibration" in pathName or "HLTriggerFirstPath" in pathName or "HLTriggerFinalPath" in pathName):
 			print RED+'WARNING:'+RESET,pathName,"has no defined HLT prescales"
 	if len(pathsVsSeeds[pathName]) == 0:
-		L1pathPrescales[pathName] = [1]*numberOfColumns
+		L1pathPrescales[pathName] = [1]*numberOfHLTColumns
 		
 
 # 3) Make the map of seed vs prescales
@@ -78,6 +81,9 @@ for row in root[0][1][2]:
     L1seed = row.text.split(",")[0]
     L1prescales = [int(p) for p in row.text.split(",")[1:]]
     seedPrescales[L1seed]=L1prescales
+
+#for key in seedPrescales.keys():
+#    print key,seedPrescales[key]
 
 # 4) Extensive check of columns structure
 for pathName in pathPrescales:
@@ -97,7 +103,7 @@ if (checkForWeirdness == False):
 # Check for weirdness in the L1 prescales
 if checkForWeirdness:
 	for seedName in seedPrescales:
-		for columnIndex in columnIndexes[0:]:
+		for columnIndex in L1ColumnIndexes[0:]:
 			thisPrescale = seedPrescales[seedName][columnIndex]
 			nextPrescale = seedPrescales[seedName][columnIndex+1]
 			if (thisPrescale < nextPrescale and thisPrescale != 0):
@@ -108,7 +114,7 @@ if checkForWeirdness:
 # into the HLT path
 
 for pathName in pathPrescales:
-#for pathName in ["HLT_DoubleEle33_CaloIdL_MW_v10"]:
+#for pathName in ["HLT_DoubleEle33_CaloIdL_MW_v999"]:
     #print "Checking path",pathName
     if pathName not in pathsVsSeeds.keys():
         print "Path",pathName,"does not have L1 seeding modules"
@@ -116,7 +122,7 @@ for pathName in pathPrescales:
     pathSeeds = pathsVsSeeds[pathName]
     #print pathSeeds
     effectiveL1Prescales = list()
-    for columnIndex in columnIndexes[0:]:
+    for columnIndex in HLTColumnIndexes[0:]:
         # Now we check what kind of path this is
         isL1PrescaledPath = False
         isL1ZeroedPath = True
@@ -133,10 +139,20 @@ for pathName in pathPrescales:
         smallestNonNullPrescale = 9999999
         largestPrescale = 0
         # Check L1 prescales for this path
+
+        # Corner case 1: unseeded path
         if (len(pathSeeds) is 0):
             continue
+        # Corner case 2: more HLT columns than L1 columns
+        if columnIndex >= numberOfL1Columns:
+            continue
+
         for seedName in pathSeeds:
-            thisSeedPrescale = seedPrescales[seedName][columnIndex]
+            #print seedName
+            try:
+                thisSeedPrescale = seedPrescales[seedName][columnIndex]
+            except:
+                print "seedName = "+seedName+" NOT FOUND"
             #print "L1 seed ",seedName," has prescale ",thisSeedPrescale," in column ",columnIndex 
             if (thisSeedPrescale < smallestNonNullPrescale and thisSeedPrescale != 0):
                 smallestNonNullPrescale = thisSeedPrescale
