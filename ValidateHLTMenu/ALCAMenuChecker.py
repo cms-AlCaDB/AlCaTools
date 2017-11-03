@@ -1,3 +1,9 @@
+# AlCAMenuChecker.py
+# Purpose: check that the HLT menu has all the AlCa mandatory paths
+# and that the paths are correctly seeded.
+# Author: Thiago Tomei
+# Date: 2017-11-02
+
 import sys
 import os
 import fnmatch
@@ -11,40 +17,41 @@ RESET = "\033[0;0m"
 BOLD    = "\033[;1m"
 REVERSE = "\033[;7m"
 
-### Usually, blindly executing an external file is a security hazard...
 HLTMenuName="hlt.py"
-L1MenuName="l1prescales.xml"
+L1MenuName="l1menu.xml"
 
+# Parse the HLT menu
+### Usually, blindly executing an external file is a security hazard... 
 execfile(HLTMenuName)
 
-L1PrescalesTree = ET.parse(L1MenuName)
-root = L1PrescalesTree.getroot()
-L1ColumnNamesElement = root[0][1][0].text
-L1ColumnNames = [x.split(":")[1] for x in L1ColumnNamesElement.split(",")[1:]]
+# Parse the L1 menu. Notice that here we are parsing the version that is
+# usually available from the Twiki:
+# https://twiki.cern.ch/twiki/bin/view/CMS/GlobalTriggerAvailableMenus
+# If the parsing fails you probably have a different version...
+L1MenuTree = ET.parse(L1MenuName)
+root = L1MenuTree.getroot()
+listOfAvailableSeeds = []
+for algo in root.findall('algorithm'):
+    listOfAvailableSeeds.append(algo[0].text)
 
 print process.process
 pathnames = process.paths.viewkeys()
 
 pathsVsSeeds = dict()
-seedPrescales = dict()
+seedPrescales = dict() # Not available, the L1 menu doesn't have prescales
 pathPrescales = dict()
 L1pathPrescales = dict()
 
 def splitL1seeds(fullSeed):
     fs = fullSeed
-    l = fs.split(" OR ")
+    l = fs.split(" OR ") # FIXME: what if there is a more convoluted logic???
     s = [w.strip() for w in l]
     return s
 
-
 # 0) Get the number of HLT columns
-numberOfL1Columns = len(L1ColumnNames)
 numberOfHLTColumns = len(process.PrescaleService.lvl1Labels)
-L1ColumnIndexes = range(0,numberOfL1Columns)
 HLTColumnIndexes = range(0,numberOfHLTColumns)
 print "HLT menu has",numberOfHLTColumns,"columns"
-print "L1 menu has",numberOfL1Columns,"columns"
-print "Columns from L1: ",L1ColumnNames
 
 # 1) Make the map of path vs list of seeds
 for path in process.paths:
@@ -57,7 +64,7 @@ for path in process.paths:
             pathsVsSeeds[thePath.label()] = listOfSeeds
         if thePath.label() not in pathsVsSeeds:
             pathsVsSeeds[thePath.label()] = list()
-    
+
 # 2) Make the map of path vs prescales
 print "-"*64
 for i in process.PrescaleService.prescaleTable:
@@ -75,159 +82,67 @@ for pathName in pathsVsSeeds.keys():
 	if len(pathsVsSeeds[pathName]) == 0:
 		L1pathPrescales[pathName] = [1]*numberOfHLTColumns
 		
-
-# 3) Make the map of seed vs prescales
-for row in root[0][1][2]:
-    L1seed = row.text.split(",")[0]
-    L1prescales = [int(p) for p in row.text.split(",")[1:]]
-    seedPrescales[L1seed]=L1prescales
-
-#for key in seedPrescales.keys():
-#    print key,seedPrescales[key]
-
-# 4) Extensive check of columns structure
-for pathName in pathPrescales:
-    numberOfHLTColumns = len(pathPrescales[pathName])
-    #print pathName, pathPrescales[pathName]
-    for seedName in seedPrescales:
-        numberOfL1Columns = len(seedPrescales[seedName])
-        #print seedName, seedPrescales[seedName]
-        #if (numberOfL1Columns != numberOfHLTColumns):
-            #print "ERROR: we found a combination of HLT path and L1 seed that doesn't seem to have compatible number of columns!"
-
-checkForWeirdness = False
-print "-"*64
-if (checkForWeirdness == False):
-	print "Skipping weirdness checks (not relevant for ALCA anyway)"
-	
-# Check for weirdness in the L1 prescales
-if checkForWeirdness:
-	for seedName in seedPrescales:
-		for columnIndex in L1ColumnIndexes[0:]:
-			thisPrescale = seedPrescales[seedName][columnIndex]
-			nextPrescale = seedPrescales[seedName][columnIndex+1]
-			if (thisPrescale < nextPrescale and thisPrescale != 0):
-				print "Weird, seed ",seedName," has PS = ",thisPrescale," in column ",columnNames[columnIndex], " and PS = ",nextPrescale," in column ",columnNames[(columnIndex+1)]
-
-# Now analyze each HLT path in detail. Here particularly we will get the
-# "effective L1 prescale", i.e., the lowest non-null prescale that feeds
-# into the HLT path
-
-for pathName in pathPrescales:
-#for pathName in ["HLT_DoubleEle33_CaloIdL_MW_v999"]:
-    #print "Checking path",pathName
-    if pathName not in pathsVsSeeds.keys():
-        print "Path",pathName,"does not have L1 seeding modules"
-        continue
-    pathSeeds = pathsVsSeeds[pathName]
-    #print pathSeeds
-    effectiveL1Prescales = list()
-    for columnIndex in HLTColumnIndexes[0:]:
-        # Now we check what kind of path this is
-        isL1PrescaledPath = False
-        isL1ZeroedPath = True
-        isHLTPrescaledPath = False
-        isHLTZeroedPath = False
-
-        # Check HLT prescales for this path
-        #print "HLT prescale in column ",columnIndex," is ",pathPrescales[pathName][columnIndex]
-        if(pathPrescales[pathName][columnIndex] > 1):
-            isHLTPrescaledPath = True
-        if(pathPrescales[pathName][columnIndex] is 0):
-            isHLTZeroedPath = True
-        
-        smallestNonNullPrescale = 9999999
-        largestPrescale = 0
-        # Check L1 prescales for this path
-
-        # Corner case 1: unseeded path
-        if (len(pathSeeds) is 0):
-            continue
-        # Corner case 2: more HLT columns than L1 columns
-        if columnIndex >= numberOfL1Columns:
-            continue
-
-        for seedName in pathSeeds:
-            #print seedName
-            try:
-                thisSeedPrescale = seedPrescales[seedName][columnIndex]
-            except:
-                print "seedName = "+seedName+" NOT FOUND"
-            #print "L1 seed ",seedName," has prescale ",thisSeedPrescale," in column ",columnIndex 
-            if (thisSeedPrescale < smallestNonNullPrescale and thisSeedPrescale != 0):
-                smallestNonNullPrescale = thisSeedPrescale
-            if thisSeedPrescale > largestPrescale:
-                largestPrescale = thisSeedPrescale
-            if thisSeedPrescale != 0:
-                isL1ZeroedPath = False
-        # Now we have gone through the prescales of all L1 seeds of the path for this column
-        if smallestNonNullPrescale != 1:
-            isL1PrescaledPath = True
-        
-        if checkForWeirdness:
-			if (isL1ZeroedPath is True and isHLTZeroedPath is False):
-				print "ERROR TYPE ALPHA, path ",pathName," has prescale 0 at L1 but not at HLT for column ",columnIndex 
-			if (isL1PrescaledPath is False and isHLTPrescaledPath is True):
-				print "ERROR TYPE BETA, path ",pathName," is unprescaled at L1 but not at HLT for column ",columnIndex 
-        
-        if (largestPrescale is 0):
-            effectiveL1Prescales.append(0)
-        else:
-            effectiveL1Prescales.append(smallestNonNullPrescale)
-        L1pathPrescales[pathName] = effectiveL1Prescales
-
-
-
 # NOW come the AlCa checks proper
-
 
 # 1) Do I have all the AlCa datasets?
 print "-"*64
 datasetNames = process.datasets._Parameterizable__parameterNames
 mandatoryDatasetsAndPaths = {"ExpressPhysics":["HLT_IsoMu20_v*",
-												"HLT_IsoMu24_v*",
-												"HLT_IsoMu27_v*",
-												"HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_v*",
-												"HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL_DZ_v*",
-												"HLT_ZeroBias_v*",
-												"HLT_Random_v*",
-												"HLT_Physics_v*",
-												"HLT_ZeroBias_FirstCollisionAfterAbortGap_v*",
-												"HLT_ZeroBias_IsolatedBunches_v*"],
-							 "ExpressAlignment":["HLT_HT300_Beamspot_v*",
-							 						"HLT_HT450_Beamspot_v*"],
-							 "AlCaLumiPixels":["AlCa_LumiPixels_Random_v*",
-							 					"AlCa_LumiPixels_ZeroBias_v*"],
-							 "AlCaPhiSym":["AlCa_EcalPhiSym_v*",],
-							 "TestEnablesEcalHcal":["HLT_EcalCalibration_v*","HLT_HcalCalibration_v*"],
-							 "TestEnablesEcalHcalDQM":["HLT_EcalCalibration_v*","HLT_HcalCalibration_v*"],
-							 "EcalLaser":["HLT_EcalCalibration_v*"],
-							 "RPCMonitor":["AlCa_RPCMuonNormalisation_v*"]
-							 }
+                                               "HLT_IsoMu24_v*",
+                                               "HLT_IsoMu27_v*",
+                                               "HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_v*",
+                                               "HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL_DZ_v*",
+                                               "HLT_ZeroBias_v*",
+                                               "HLT_Random_v*",
+                                               "HLT_Physics_v*",
+                                               "HLT_ZeroBias_FirstCollisionAfterAbortGap_v*",
+                                               "HLT_ZeroBias_IsolatedBunches_v*"],
+                             "ExpressAlignment":["HLT_HT300_Beamspot_v*",
+                                                 "HLT_HT450_Beamspot_v*"],
+                             "AlCaLumiPixels":["AlCa_LumiPixels_Random_v*",
+                                               "AlCa_LumiPixels_ZeroBias_v*"],
+                             "AlCaPhiSym":["AlCa_EcalPhiSym_v*",],
+                             "TestEnablesEcalHcal":["HLT_EcalCalibration_v*","HLT_HcalCalibration_v*"],
+                             "TestEnablesEcalHcalDQM":["HLT_EcalCalibration_v*","HLT_HcalCalibration_v*"],
+                             "EcalLaser":["HLT_EcalCalibration_v*"],
+                             "RPCMonitor":["AlCa_RPCMuonNormalisation_v*"]
+                             }
 mandatoryDatasets = mandatoryDatasetsAndPaths.keys()
 mandatoryDatasets.sort()
 presentMandatoryDatasets = []
 row_format ='{0: <32}'
 row_format2 = '{0: <48}'
-for mds in mandatoryDatasets:	
-	if mds in datasetNames:
-		print row_format.format(mds),GREEN+"PRESENT"+RESET		
-		presentMandatoryDatasets.append(mds)
-	else:
-		print row_format.format(mds),RED+"ABSENT"+RESET
-presentMandatoryDatasets.sort()
 
+for mds in mandatoryDatasets:	
+    if mds in datasetNames:
+        print row_format.format(mds),GREEN+"PRESENT"+RESET		
+        presentMandatoryDatasets.append(mds)
+    else:
+        print row_format.format(mds),RED+"ABSENT"+RESET
+        presentMandatoryDatasets.sort()
+        
 # 2) Do the datasets have all paths they should have?
 print "-"*64
 for mds in presentMandatoryDatasets:
-	theDataset = getattr(process.datasets,mds)
-	for requestedPath in mandatoryDatasetsAndPaths[mds]:
-			pathIsPresent = False
-			if len(fnmatch.filter(theDataset,requestedPath)) == 0:
-				print row_format.format(mds),row_format2.format(requestedPath),RED+"ABSENT"+RESET
-			for matchingPath in fnmatch.filter(theDataset,requestedPath):
-				totalPrescales = [l1*hlt for l1,hlt in zip(L1pathPrescales[matchingPath], pathPrescales[matchingPath])]
-				print row_format.format(mds),row_format2.format(matchingPath),GREEN+"PRESENT"+RESET,totalPrescales
+    theDataset = getattr(process.datasets,mds)
+    for requestedPath in mandatoryDatasetsAndPaths[mds]:
+        pathIsPresent = False
+        if len(fnmatch.filter(theDataset,requestedPath)) == 0:
+            print row_format.format(mds),row_format2.format(requestedPath),RED+"ABSENT"+RESET
+        # Do the paths have at least one L1 seed available in the menu?    
+        for matchingPath in fnmatch.filter(theDataset,requestedPath):
+            hasL1Seed = False
+            pathSeeds = pathsVsSeeds[matchingPath]
+            if len(pathSeeds) == 0:
+                hasL1Seed = True
+            for seed in pathSeeds:
+                if seed in listOfAvailableSeeds:
+                    hasL1Seed = True
+            if not hasL1Seed:
+                print row_format.format(mds),row_format2.format(matchingPath),GREEN+"PRESENT"+RESET,"but ",RED+"NO L1 SEED"+RESET
+            elif hasL1Seed:
+                print row_format.format(mds),row_format2.format(matchingPath),GREEN+"PRESENT"+RESET,"and ",GREEN+"HAS L1 SEED"+RESET
+
 
 # 3) Check the smart prescales of the Express Datasets:
 print "-"*64
