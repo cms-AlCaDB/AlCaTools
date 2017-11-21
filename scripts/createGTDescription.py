@@ -8,8 +8,8 @@ __author__ = 'Marco Musich'
 __copyright__ = 'Copyright 2015, CERN CMS'
 __credits__ = ['Giacomo Govi', 'Salvatore Di Guida', 'Gregor Mittag', 'Andreas Pfeiffer']
 __license__ = 'Unknown'
-__maintainer__ = 'Marco Musich'
-__email__ = 'marco.musich@cern.ch'
+__maintainer__ = 'AlCa/DB Conveners'
+__email__ = 'cms-PPD-conveners-AlCaDB@cern.ch'
 __version__ = 1
 
 import datetime,time
@@ -181,6 +181,7 @@ def main():
                 'PhaseI_2018_design_scenario': ('phase1_2018_design',"Phase-I 2018 design"),
                 'PhaseI_2018_realistic_scenario': ('phase1_2018_realistic',"Phase-I 2018 realistic"),
                 'PhaseI_2018_cosmics_scenario': ('phase1_2018_cosmics',"Phase-I 2018 cosmics"),
+                'PostLS2_realistic_scenario': ('postLS2_realistic',"postLS2 realistic"),
                 'PhaseII_realistic_scenario' :('phase2_2023_realistic',"Phase-II 2023 realistic")
         }
         
