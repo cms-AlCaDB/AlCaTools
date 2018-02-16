@@ -4,7 +4,7 @@
 
 __author__ = 'Marco Musich'
 __copyright__ = 'Copyright 2016, CERN CMS'
-__credits__ = ['Giacomo Govi', 'Salvatore Di Guida','Joshua Dawes']
+__credits__ = ['Giacomo Govi', 'Salvatore Di Guida']
 __license__ = 'Unknown'
 __maintainer__ = 'Marco Musich'
 __email__ = 'marco.musich@cern.ch'
@@ -15,8 +15,21 @@ import os,sys
 import string, re
 import subprocess
 import ConfigParser
+import calendar
 from optparse import OptionParser,OptionGroup
 from prettytable import PrettyTable
+import CondCore.Utilities.conddblib as conddb
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 
 #####################################################################
 def getCommandOutput(command):
@@ -40,15 +53,15 @@ def main():
     if "CMSSW_RELEASE_BASE" in os.environ:
         print "\n"
         print "=================================================="
-        print "This script is powered by cmsQueryingMiniFramework"
+        print "This script is powered by conddblib"
         print "served to you by",os.getenv('CMSSW_RELEASE_BASE')
         print "==================================================\n"
     else: 
         print "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-        print "+ This tool needs cmsQueryingMiniFramework (https://gitlab.cern.ch/jdawes/cmsQueryingMiniFramework)"
-        print "+ Easiest way to get it is via CMSSW (>800) is"
-        print "+ cmsrel CMSSW_8_0_X  #get your favorite"
-        print "+ cd CMSSW_8_0_X/src"
+        print "+ This tool needs CMSSW libraries"
+        print "+ Easiest way to get it is via CMSSW is"
+        print "+ cmsrel CMSSW_X_Y_Z  #get your favorite"
+        print "+ cd CMSSW_X_Y_Z/src"
         print "+ cmsenv"
         print "+ cd -"
         print "and then you can proceed"
@@ -62,33 +75,82 @@ def main():
     parser.add_option('-T','--TargetGT'   ,help='Target Global Tag'   , dest='tarGT', action='store', default='74X_dataRun2_HLTValidation_Queue')
     parser.add_option('-L','--last'       ,help='compares the very last IOV' , dest='lastIOV',action='store_true', default=False)
     parser.add_option('-v','--verbose'    ,help='returns more info', dest='isVerbose',action='store_true',default=False)
+    parser.add_option('-m','--match'      ,help='print only matching',dest='stringToMatch',action='store',default='')
     (opts, args) = parser.parse_args()
 
-    import CondCore.Utilities.CondDBFW.shell as shell
-    con = shell.connect()
+    ####################################
+    # Set up connections with the DB
+    ####################################
 
-    myGTrefInfo = con.global_tag(name=opts.refGT)
-    myGTtarInfo = con.global_tag(name=opts.tarGT)
+    con = conddb.connect(url = conddb.make_url("pro"))
+    session = con.session()
+    IOV     = session.get_dbtype(conddb.IOV)
+    TAG     = session.get_dbtype(conddb.Tag)
+    GT      = session.get_dbtype(conddb.GlobalTag)
+    GTMAP   = session.get_dbtype(conddb.GlobalTagMap)
+    RUNINFO = session.get_dbtype(conddb.RunInfo)
+
+    ####################################
+    # Get the time info for the test run
+    ####################################
+
+    bestRun = session.query(RUNINFO.run_number, RUNINFO.start_time, RUNINFO.end_time).filter(RUNINFO.run_number == int(opts.testRunNumber)).first()
+    if bestRun is None:
+        raise Exception("Run %s can't be matched with an existing run in the database." % opts.testRunNumber)
+
+    print "Run",opts.testRunNumber," |Start time",bestRun[1]," |End time",bestRun[2],"."
+
+    ####################################
+    # Get the Global Tag snapshots
+    ####################################
+
+    refSnap = session.query(GT.snapshot_time).\
+        filter(GT.name == opts.refGT).all()[0][0]
+
+    tarSnap = session.query(GT.snapshot_time).\
+        filter(GT.name == opts.tarGT).all()[0][0]
+
+    #print refSnap,tarSnap
+
+    ####################################
+    # Get the Global Tag maps
+    ####################################
+    
+    GTMap_ref = session.query(GTMAP.record, GTMAP.label, GTMAP.tag_name).\
+        filter(GTMAP.global_tag_name == opts.refGT).\
+        order_by(GTMAP.record, GTMAP.label).\
+        all()
+
+    GTMap_tar = session.query(GTMAP.record, GTMAP.label, GTMAP.tag_name).\
+        filter(GTMAP.global_tag_name == opts.tarGT).\
+        order_by(GTMAP.record, GTMAP.label).\
+        all()
 
     text_file = open(("diff_%s_vs_%s.twiki") % (opts.refGT,opts.tarGT), "w")
 
-    refSnap = myGTrefInfo.snapshot_time
-    tarSnap = myGTtarInfo.snapshot_time
-
-    myGTref = con.global_tag(name=opts.refGT).tags(amount=1000).as_dicts()
-    myGTtar = con.global_tag(name=opts.tarGT).tags(amount=1000).as_dicts()
-
     differentTags = {}
 
-    for element in myGTref:
-        RefRecord = element["record"]
-        RefLabel  = element["label"]
-        RefTag    = element["tag_name"]
+    for element in GTMap_ref:
+        RefRecord = element[0]
+        RefLabel  = element[1]
+        RefTag    = element[2]
 
-        for element2 in myGTtar:
-            if (RefRecord == element2["record"] and RefLabel==element2["label"]): 
-                if RefTag != element2["tag_name"]:
-                    differentTags[(RefRecord,RefLabel)]=(RefTag,element2["tag_name"])
+        for element2 in GTMap_tar:
+            if (RefRecord == element2[0] and RefLabel==element2[1]): 
+                if RefTag != element2[2]:
+                    differentTags[(RefRecord,RefLabel)]=(RefTag,element2[2])
+
+    ####################################
+    ## Search for Records,Label not-found in the other list
+    ####################################
+
+    temp1 = [item for item in GTMap_ref if (item[0],item[1]) not in zip(zip(*GTMap_tar)[0],zip(*GTMap_tar)[1])]
+    for elem in temp1:
+        differentTags[(elem[0],elem[1])]=(elem[2],"")
+
+    temp2 = [item for item in GTMap_tar if (item[0],item[1]) not in zip(zip(*GTMap_ref)[0],zip(*GTMap_ref)[1])]
+    for elem in temp2:
+        differentTags[(elem[0],elem[1])]=("",elem[2])    
 
     text_file.write("| *Record* | *"+opts.refGT+"* | *"+opts.tarGT+"* | Remarks | \n")
 
@@ -108,12 +170,26 @@ def main():
 
     isDifferent=False
  
+    ####################################
+    # Loop on the difference
+    ####################################
+
     for Rcd in sorted(differentTags):
+         
+        # empty lists at the beginning
+        refTagIOVs=[]
+        tarTagIOVs=[]
 
-        #print Rcd,differentTags[Rcd][2]," 1:",differentTags[Rcd][0]," 2:",differentTags[Rcd][1]
+        if( differentTags[Rcd][0]!=""):
+            refTagIOVs = session.query(IOV.since,IOV.payload_hash,IOV.insertion_time).filter(IOV.tag_name == differentTags[Rcd][0]).all()
+            refTagInfo = session.query(TAG.synchronization,TAG.time_type).filter(TAG.name == differentTags[Rcd][0]).all()[0]
+        if( differentTags[Rcd][1]!=""):
+            tarTagIOVs = session.query(IOV.since,IOV.payload_hash,IOV.insertion_time).filter(IOV.tag_name == differentTags[Rcd][1]).all()
+            tarTagInfo = session.query(TAG.synchronization,TAG.time_type).filter(TAG.name == differentTags[Rcd][1]).all()[0]
 
-        refTagIOVs = con.tag(name=differentTags[Rcd][0]).iovs().as_dicts()
-        tarTagIOVs = con.tag(name=differentTags[Rcd][1]).iovs().as_dicts()
+        if(differentTags[Rcd][0]!="" and differentTags[Rcd][1]!=""): 
+            if(tarTagInfo[1] != refTagInfo[1]):
+                print bcolors.WARNING+" *** Warning *** found mismatched time type for",Rcd,"entry. \n"+differentTags[Rcd][0],"has time type",refTagInfo[1],"while",differentTags[Rcd][1],"has time type",tarTagInfo[1]+". These need to be checked by hand. \n\n"+ bcolors.ENDC
 
         if(opts.lastIOV):
 
@@ -123,17 +199,17 @@ def main():
             lastSinceRef=-1
             lastSinceTar=-1
 
-            for i in refTagIOVs:
-                if (i["since"]>lastSinceRef):
-                    lastSinceRef = i["since"]
-                    hash_lastRefTagIOV = i["payload_hash"]
-                    time_lastRefTagIOV = str(i["insertion_time"])
+            for i in refTagIOVs:            
+                if (i[0]>lastSinceRef):
+                    lastSinceRef = i[0]
+                    hash_lastRefTagIOV = i[1]
+                    time_lastRefTagIOV = str(i[2])
 
             for j in tarTagIOVs:
-                if (j["since"]>lastSinceTar):
-                    lastSinceTar = j["since"]
-                    hash_lastTarTagIOV = j["payload_hash"]
-                    time_lastTarTagIOV = str(j["insertion_time"])
+                if (j[0]>lastSinceTar):
+                    lastSinceTar = j[0]
+                    hash_lastTarTagIOV = j[1]
+                    time_lastTarTagIOV = str(j[2])
 
             if(hash_lastRefTagIOV!=hash_lastTarTagIOV):
                 isDifferent=True
@@ -147,6 +223,8 @@ def main():
 
         else:    
 
+            ### reset all defaults
+            
             theGoodRefIOV=-1
             theGoodTarIOV=-1
             sinceRefTagIOV=0
@@ -155,43 +233,51 @@ def main():
             RefIOVtime = datetime.datetime(1970, 1, 1, 0, 0, 0)
             TarIOVtime = datetime.datetime(1970, 1, 1, 0, 0, 0)
 
-            #print RefIOVtime
-            #print refSnap
-
             theRefPayload=""
             theTarPayload=""
             theRefTime=""
             theTarTime=""
 
-            #print "refIOV[]","RefIOVtime","refSnap","refIOV[]>RefIOVtime","refIOV[]<refSnap"
-            for refIOV in refTagIOVs:            
+            ### loop on the reference IOV list
 
-                #print "|",refIOV["insertion_time"],"|",RefIOVtime,"|",refSnap,(refIOV["insertion_time"]>RefIOVtime),(refIOV["insertion_time"]<refSnap), (refIOV["since"] < int(opts.testRunNumber)),(refIOV["since"]>=sinceRefTagIOV)
-                    
-                if ( (refIOV["since"] <= int(opts.testRunNumber)) and (refIOV["since"]>=sinceRefTagIOV) and (refIOV["insertion_time"]>RefIOVtime) and (refIOV["insertion_time"]<refSnap) ):
-                    sinceRefTagIOV = refIOV["since"]   
-                    RefIOVtime = refIOV["insertion_time"]
+            for refIOV in refTagIOVs:            
+                
+                if ( (refIOV[0] <= int(opts.testRunNumber)) and (refIOV[0]>=sinceRefTagIOV) and (refIOV[2]>RefIOVtime) and (refIOV[2]<refSnap) ):
+                    sinceRefTagIOV = refIOV[0]   
+                    RefIOVtime = refIOV[2]
                     theGoodRefIOV=sinceRefTagIOV                
-                    theRefPayload=refIOV["payload_hash"]
-                    theRefTime=str(refIOV["insertion_time"])
+                    theRefPayload=refIOV[1]
+                    theRefTime=str(refIOV[2])
           
+            ### loop on the target IOV list
+
             for tarIOV in tarTagIOVs:
-                if ( (tarIOV["since"] <= int(opts.testRunNumber)) and (tarIOV["since"]>=sinceTarTagIOV) and (tarIOV["insertion_time"]>TarIOVtime) and (tarIOV["insertion_time"]<tarSnap)):
-                    sinceTarTagIOV = tarIOV["since"]
-                    tarIOVtime = tarIOV["insertion_time"]
+                if ( (tarIOV[0] <= int(opts.testRunNumber)) and (tarIOV[0]>=sinceTarTagIOV) and (tarIOV[2]>TarIOVtime) and (tarIOV[2]<tarSnap)):
+                    sinceTarTagIOV = tarIOV[0]
+                    tarIOVtime = tarIOV[2]
                     theGoodTarIOV=sinceTarTagIOV
-                    theTarPayload=tarIOV["payload_hash"]
-                    theTarTime=str(tarIOV["insertion_time"])
+                    theTarPayload=tarIOV[1]
+                    theTarTime=str(tarIOV[2])
         
             if(theRefPayload!=theTarPayload):
                 isDifferent=True
                 text_file.write("| ="+Rcd[0]+"= ("+Rcd[1]+") | =="+differentTags[Rcd][0]+"==  | =="+differentTags[Rcd][1]+"== |\n")
                 text_file.write("|^|"+theRefPayload+" ("+theRefTime+") | "+theTarPayload+" ("+theTarTime+") |\n")                       
 
+                ### determinte if it is to be shown
+
+                isMatched=False
+                tokens=opts.stringToMatch.split(",")
+                decisions = [bool(Rcd[0].find(x)!=-1) for x in tokens]
+                for decision in decisions:
+                    isMatched = (isMatched or decision)
+                    
                 if(opts.isVerbose):
-                    t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0],differentTags[Rcd][1],str(theRefPayload)+"\n"+str(theRefTime)+"\n"+str(theGoodRefIOV),str(theTarPayload)+"\n"+str(theTarTime)+"\n"+str(theGoodTarIOV)])
+                    if (opts.stringToMatch=="" or isMatched): 
+                        t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0],differentTags[Rcd][1],str(theRefPayload)+"\n"+str(theRefTime)+"\n"+str(theGoodRefIOV),str(theTarPayload)+"\n"+str(theTarTime)+"\n"+str(theGoodTarIOV)])
                 else:
-                    t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0]+"\n"+str(theRefPayload),differentTags[Rcd][1]+"\n"+str(theTarPayload)])
+                    if (opts.stringToMatch=="" or isMatched): 
+                        t.add_row([Rcd[0],Rcd[1],differentTags[Rcd][0]+"\n"+str(theRefPayload),differentTags[Rcd][1]+"\n"+str(theTarPayload)])
             
     if(not isDifferent):
         if(opts.isVerbose):
