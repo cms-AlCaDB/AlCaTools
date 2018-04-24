@@ -1,0 +1,22 @@
+{
+	"Express": ["SiStripPCLHistos", "SiStripCalZeroBias", "SiStripCalMinBias", "SiStripCalMinBiasAAG", "TkAlMinBias", "DtCalib", "LumiPixelsMinBias", "PromptCalibProd", "PromptCalibProdSiStrip", "PromptCalibProdSiPixelAli", "PromptCalibProdSiStripGains", "PromptCalibProdSiStripGainsAAG"],
+	"ExpressAlignment": ["TkAlMinBias","PromptCalibProdBeamSpotHP"],	
+	"TestEnablesEcalHcal": ["EcalTestPulsesRaw", "PromptCalibProdEcalPedestals"],
+	"ExpressCosmics": ["SiStripPCLHistos", "SiStripCalZeroBias", "TkAlCosmics0T", "DtCalibCosmics"],
+	"AlCaPhiSym": ["EcalCalPhiSym"],
+	"AlCaP0": ["EcalCalPi0Calib", "EcalCalEtaCalib"],
+	"Charmonium": ["TkAlJpsiMuMu"],
+	"Commissioning": ["HcalCalIsoTrk", "HcalCalIsolatedBunchSelector"],
+	"DoubleEG": ["EcalUncalZElectron", "EcalUncalWElectron", "HcalCalIterativePhiSym", "HcalCalIsoTrkFilter"],
+	"DoubleMuon": ["TkAlZMuMu"],
+	"HcalNZS": ["HcalCalMinBias"],
+	"HLTPhysics": ["TkAlMinBias"],
+	"JetHT": ["HcalCalIsoTrkFilter", "HcalCalIsolatedBunchFilter"],
+	"MuOnia": ["TkAlUpsilonMuMu"],
+	"MinimumBias": ["TkAlMinBias"],
+	"NoBPTX": ["TkAlCosmicsInCollisions"],
+	"SingleElectron": ["EcalUncalWElectron", "EcalUncalZElectron", "HcalCalIterativePhiSym", "EcalESAlign"],
+	"SingleMuon": ["TkAlMuonIsolated", "HcalCalIterativePhiSym", "DtCalib", "MuAlCalIsolatedMu", "HcalCalHO", "HcalCalHBHEMuonFilter"],
+	"ZeroBias": ["SiStripCalZeroBias", "SiStripCalMinBias", "TkAlMinBias", "LumiPixelsMinBias", "AlCaPCCZeroBiasFromRECO"],
+	"Cosmics": ["TkAlCosmics0T", "DtCalibCosmics"]
+}
