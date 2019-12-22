@@ -14,8 +14,7 @@ import errno
 import sqlite3
 import json
 import tempfile
-from CondCore.Utilities.CondDBFW import querying
-#import CondCore.Utilities.CondDBFW.shell as shell
+import CondCore.Utilities.conddblib as conddb
 
 ##############################################
 def getCommandOutput(command):
@@ -55,27 +54,26 @@ def main():
      (options, arguments) = parser.parse_args()
 
      sqlite_db_url = options.file
-     sqlite_con = querying.connect('sqlite://'+sqlite_db_url,map_blobs=True)
-     my_dict = sqlite_con.tag(name=options.tag).iovs().as_dicts()
-     sinces = []
-     for element in my_dict:
-          # print element
-          # print element['hash']
-          # print element['since']
-          sinces.append(element['since'])
+     db = options.file
+     db = db.replace("sqlite_file:", "").replace("sqlite:", "")
+     db = db.replace("frontier://FrontierProd/CMS_CONDITIONS", "pro")
+     db = db.replace("frontier://FrontierPrep/CMS_CONDITIONS", "dev")
 
-          # would be nice to make it work using CondDBFW (sigh!)
-          # payload = sqlite_con.payload(hash=element["payload_hash"])
-          # sqlite_out = querying.connect('sqlite://testOut.db', map_blobs=True)
-          # sqlite_tag = sqlite_con.tag().all().data()[0]
-          # sqlite_iovs = sqlite_tag.iovs().data()
-          # tag_name = "mytest"
-          # new_tag = sqlite_con.models["tag"](sqlite_tag.as_dicts(convert_timestamps=False), convert_timestamps=False)
-          # new_tag.name = tag_name
-          # sqlite_out.write_and_commit(payload)
-          
+     con = conddb.connect(url = conddb.make_url(db))
+     session = con.session()
+     IOV = session.get_dbtype(conddb.IOV)
+     iovs = set(session.query(IOV.since).filter(IOV.tag_name == options.tag).all())
+     if len(iovs) == 0:
+         print("No IOVs found for tag '"+options.tag+"' in database '"+db+"'.")
+         sys.exit(1)
+
+     session.close()
+
+     sinces = sorted([int(item[0]) for item in iovs])
+     print sinces
+
      for i,since in enumerate(sinces):
-          #print i,since
+          print i,since
 
           print "============================================================"
           if(i<len(sinces)-1):
