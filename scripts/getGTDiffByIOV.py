@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from __future__ import print_function
 '''Script that checks for differences at a given run number (or at the last IOV) between two Global Tags
 '''
 
@@ -14,7 +15,6 @@ import datetime,time
 import os,sys
 import string, re
 import subprocess
-import ConfigParser
 import calendar
 from optparse import OptionParser,OptionGroup
 from prettytable import PrettyTable
@@ -30,7 +30,6 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-
 #####################################################################
 def getCommandOutput(command):
 #####################################################################
@@ -43,7 +42,7 @@ def getCommandOutput(command):
     data = child.read()
     err = child.close()
     if err:
-        print '%s failed w/ exit code %d' % (command, err)
+        print('%s failed w/ exit code %d' % (command, err))
     return data
 
 #################
@@ -51,21 +50,21 @@ def main():
 ### MAIN LOOP ###
 
     if "CMSSW_RELEASE_BASE" in os.environ:
-        print "\n"
-        print "=================================================="
-        print "This script is powered by conddblib"
-        print "served to you by",os.getenv('CMSSW_RELEASE_BASE')
-        print "==================================================\n"
+        print("\n")
+        print("==================================================")
+        print("This script is powered by conddblib")
+        print("served to you by",os.getenv('CMSSW_RELEASE_BASE'))
+        print("==================================================\n")
     else: 
-        print "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-        print "+ This tool needs CMSSW libraries"
-        print "+ Easiest way to get it is via CMSSW is"
-        print "+ cmsrel CMSSW_X_Y_Z  #get your favorite"
-        print "+ cd CMSSW_X_Y_Z/src"
-        print "+ cmsenv"
-        print "+ cd -"
-        print "and then you can proceed"
-        print "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        print("+ This tool needs CMSSW libraries")
+        print("+ Easiest way to get it is via CMSSW is")
+        print("+ cmsrel CMSSW_X_Y_Z  #get your favorite")
+        print("+ cd CMSSW_X_Y_Z/src")
+        print("+ cmsenv")
+        print("+ cd -")
+        print("and then you can proceed")
+        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         sys.exit(1)
 
     desc="""This is a description of %prog."""
@@ -98,7 +97,7 @@ def main():
     if bestRun is None:
         raise Exception("Run %s can't be matched with an existing run in the database." % opts.testRunNumber)
 
-    print "Run",opts.testRunNumber," |Start time",bestRun[1]," |End time",bestRun[2],"."
+    print("Run",opts.testRunNumber," |Start time",bestRun[1]," |End time",bestRun[2],".")
 
     ####################################
     # Get the Global Tag snapshots
@@ -110,7 +109,7 @@ def main():
     tarSnap = session.query(GT.snapshot_time).\
         filter(GT.name == opts.tarGT).all()[0][0]
 
-    #print refSnap,tarSnap
+    print("reference GT (",opts.refGT ,") snapshot: ",refSnap," | target GT (",opts.tarGT,") snapshot",tarSnap)
 
     ####################################
     # Get the Global Tag maps
@@ -144,11 +143,11 @@ def main():
     ## Search for Records,Label not-found in the other list
     ####################################
 
-    temp1 = [item for item in GTMap_ref if (item[0],item[1]) not in zip(zip(*GTMap_tar)[0],zip(*GTMap_tar)[1])]
+    temp1 = [item for item in GTMap_ref if (item[0],item[1]) not in list(zip(list(zip(*GTMap_tar))[0],list(zip(*GTMap_tar))[1]))]
     for elem in temp1:
         differentTags[(elem[0],elem[1])]=(elem[2],"")
 
-    temp2 = [item for item in GTMap_tar if (item[0],item[1]) not in zip(zip(*GTMap_ref)[0],zip(*GTMap_ref)[1])]
+    temp2 = [item for item in GTMap_tar if (item[0],item[1]) not in list(zip(list(zip(*GTMap_ref))[0],list(zip(*GTMap_ref))[1]))]
     for elem in temp2:
         differentTags[(elem[0],elem[1])]=("",elem[2])    
 
@@ -189,12 +188,12 @@ def main():
 
         if(differentTags[Rcd][0]!="" and differentTags[Rcd][1]!=""): 
             if(tarTagInfo[1] != refTagInfo[1]):
-                print bcolors.WARNING+" *** Warning *** found mismatched time type for",Rcd,"entry. \n"+differentTags[Rcd][0],"has time type",refTagInfo[1],"while",differentTags[Rcd][1],"has time type",tarTagInfo[1]+". These need to be checked by hand. \n\n"+ bcolors.ENDC
+                print(bcolors.WARNING+" *** Warning *** found mismatched time type for",Rcd,"entry. \n"+differentTags[Rcd][0],"has time type",refTagInfo[1],"while",differentTags[Rcd][1],"has time type",tarTagInfo[1]+". These need to be checked by hand. \n\n"+ bcolors.ENDC)
 
         if(opts.lastIOV):
 
             if(sorted(differentTags).index(Rcd)==0):
-                print "=== COMPARING ONLY THE LAST IOV ==="
+                print("=== COMPARING ONLY THE LAST IOV ===")
 
             lastSinceRef=-1
             lastSinceTar=-1
@@ -239,10 +238,16 @@ def main():
             theTarTime=""
 
             ### loop on the reference IOV list
+            for refIOV in refTagIOVs:
 
-            for refIOV in refTagIOVs:            
+                ## logic for retrieving the the last payload active on a given IOV
+                ## - the new IOV since is less than the run under consideration
+                ## - the payload insertion time is lower than the GT snapshot
+                ## - finall either:
+                ##   - the new IOV since is larger then the last saved
+                ##   - the new IOV since is equal to the last saved but it has a more recent insertion time
                 
-                if ( (refIOV[0] <= int(opts.testRunNumber)) and (refIOV[0]>=sinceRefTagIOV) and (refIOV[2]>RefIOVtime) and (refIOV[2]<refSnap) ):
+                if ( (refIOV[0] <= int(opts.testRunNumber)) and (refIOV[0]>sinceRefTagIOV) or ((refIOV[0]==sinceRefTagIOV) and (refIOV[2]>RefIOVtime)) and (refIOV[2]<=refSnap) ):
                     sinceRefTagIOV = refIOV[0]   
                     RefIOVtime = refIOV[2]
                     theGoodRefIOV=sinceRefTagIOV                
@@ -250,14 +255,15 @@ def main():
                     theRefTime=str(refIOV[2])
           
             ### loop on the target IOV list
-
             for tarIOV in tarTagIOVs:
-                if ( (tarIOV[0] <= int(opts.testRunNumber)) and (tarIOV[0]>=sinceTarTagIOV) and (tarIOV[2]>TarIOVtime) and (tarIOV[2]<tarSnap)):
+                if ( (tarIOV[0] <= int(opts.testRunNumber)) and (tarIOV[0]>sinceTarTagIOV) or ((tarIOV[0]==sinceTarTagIOV) and (tarIOV[2]>=TarIOVtime)) and (tarIOV[2]<=tarSnap) ):
                     sinceTarTagIOV = tarIOV[0]
                     tarIOVtime = tarIOV[2]
                     theGoodTarIOV=sinceTarTagIOV
                     theTarPayload=tarIOV[1]
                     theTarTime=str(tarIOV[2])
+
+            #print Rcd[0],theRefPayload,theTarPayload
         
             if(theRefPayload!=theTarPayload):
                 isDifferent=True
@@ -284,9 +290,7 @@ def main():
             t.add_row(["None","None","None","None","None","None"])
         else:
             t.add_row(["None","None","None"])
-    print t
+    print(t)
 
 if __name__ == "__main__":        
     main()
-
-
