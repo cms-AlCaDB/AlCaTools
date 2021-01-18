@@ -110,7 +110,7 @@ def main():
     tarSnap = session.query(GT.snapshot_time).\
         filter(GT.name == opts.tarGT).all()[0][0]
 
-    #print refSnap,tarSnap
+    print "reference GT (",opts.refGT ,") snapshot: ",refSnap," | target GT (",opts.tarGT,") snapshot",tarSnap
 
     ####################################
     # Get the Global Tag maps
@@ -239,25 +239,34 @@ def main():
             theTarTime=""
 
             ### loop on the reference IOV list
+            for refIOV in refTagIOVs:
 
-            for refIOV in refTagIOVs:            
+                ## logic for retrieving the the last payload active on a given IOV
+                ## - the new IOV since is less than the run under consideration
+                ## - the payload insertion time is lower than the GT snapshot
+                ## - finall either:
+                ##   - the new IOV since is larger then the last saved
+                ##   - the new IOV since is equal to the last saved but it has a more recent insertion time
                 
-                if ( (refIOV[0] <= int(opts.testRunNumber)) and (refIOV[0]>=sinceRefTagIOV) and (refIOV[2]>RefIOVtime) and (refIOV[2]<refSnap) ):
+                if ( (refIOV[0] <= int(opts.testRunNumber)) and (refIOV[0]>sinceRefTagIOV) or ((refIOV[0]==sinceRefTagIOV) and (refIOV[2]>RefIOVtime)) and (refIOV[2]<=refSnap) ):
                     sinceRefTagIOV = refIOV[0]   
                     RefIOVtime = refIOV[2]
                     theGoodRefIOV=sinceRefTagIOV                
                     theRefPayload=refIOV[1]
                     theRefTime=str(refIOV[2])
+                    print Rcd[0],"updated!",sinceRefTagIOV
+
           
             ### loop on the target IOV list
-
             for tarIOV in tarTagIOVs:
-                if ( (tarIOV[0] <= int(opts.testRunNumber)) and (tarIOV[0]>=sinceTarTagIOV) and (tarIOV[2]>TarIOVtime) and (tarIOV[2]<tarSnap)):
+                if ( (tarIOV[0] <= int(opts.testRunNumber)) and (tarIOV[0]>sinceTarTagIOV) or ((tarIOV[0]==sinceTarTagIOV) and (tarIOV[2]>=TarIOVtime)) and (tarIOV[2]<=tarSnap) ):
                     sinceTarTagIOV = tarIOV[0]
                     tarIOVtime = tarIOV[2]
                     theGoodTarIOV=sinceTarTagIOV
                     theTarPayload=tarIOV[1]
                     theTarTime=str(tarIOV[2])
+
+            #print Rcd[0],theRefPayload,theTarPayload
         
             if(theRefPayload!=theTarPayload):
                 isDifferent=True
@@ -288,5 +297,3 @@ def main():
 
 if __name__ == "__main__":        
     main()
-
-
