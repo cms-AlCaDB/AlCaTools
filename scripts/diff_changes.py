@@ -1,7 +1,8 @@
 #! /usr/bin/env python
 """
-Perform difference between global tag listed
-in autoCond and the corresponding queue.
+Performs the difference between the GTs in your CMSSW release
+directory (including the modifications) with those in $CMSSW_RELEASE_BASE
+and prints out a list of URLs showing the set of GT diffs for use in a PR description.
 """
 import re
 import os
@@ -73,10 +74,28 @@ def global_tags(new_gt):
     # remove trailing newline as well
     return output[:-1].split('\n')
 
+def checkEnvironment():
+
+    currDir = os.getcwd()
+
+    if not "CMSSW" in currDir:
+        sys.exit('!! WARNING !! this script should be executed from the $CMSSW_BASE/src dirctory, exiting!')
+
+    if "CMSSW_BASE" not in os.environ:
+        sys.exit('!! WARNING !! This script should be executed after invoking the \'cmsenv\' command, exiting!')
+
+    cmsswBase = os.environ["CMSSW_BASE"]
+    if cmsswBase+'/src' != currDir:
+        sys.exit('!! WARNING !! This script should be executed in the same $CMSSW_BASE/src directory used to invoke the \'cmsenv\' command, exiting!')
+
+    if not os.path.isdir(currDir+'/Configuration/AlCa'):
+        sys.exit('!! WARNING !! Please checkout the Configuration/AlCa package before running this script, exiting!')
+
 def main():
     """Performs the difference between the GTs in your CMSSW release
     directory (including the modifications) with those in $CMSSW_RELEASE_BASE
     and prints out a list of URLs showing the set of GT diffs for use in a PR description."""
+    checkEnvironment()
     new_gts = global_tags(True)
     old_gts = global_tags(False)
     diff_links_base = "https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"
