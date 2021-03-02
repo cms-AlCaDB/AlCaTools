@@ -74,8 +74,9 @@ def global_tags(new_gt):
     return output[:-1].split('\n')
 
 def main():
-    """Perform difference between autoCond in release
-    and the corresponding queue."""
+    """Performs the difference between the GTs in your CMSSW release
+    directory (including the modifications) with those in $CMSSW_RELEASE_BASE
+    and prints out a list of URLs showing the set of GT diffs for use in a PR description."""
     new_gts = global_tags(True)
     old_gts = global_tags(False)
     diff_links_base = "https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"
