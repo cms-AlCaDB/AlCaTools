@@ -101,6 +101,9 @@ def main():
     diff_links_base = "https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"
     diff_links = []
 
+    if new_gts[0] == '':
+        sys.exit('There is no difference between the local autoCond.py and the $CMSSW_RELEASE_BASE version, exiting!')
+
     for new_gt in new_gts:
         gt_base = re.sub('_v[0-9]*', '_', new_gt)
         if int(gt_base.split('_')[0][0:2]) < 111:
