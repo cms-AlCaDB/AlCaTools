@@ -1,5 +1,5 @@
 export CMSSW_BRANCH=$1
-export MASTER_BRANCH=11_3_X
+export MASTER_BRANCH=12_0_X
 if [[ ${CMSSW_BRANCH} = "10_6_X" ]]
 then
     export SCRAM_ARCH=slc7_amd64_gcc700
