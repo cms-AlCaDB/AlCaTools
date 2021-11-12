@@ -37,7 +37,7 @@ from Configuration.AlCa.autoCond import autoCond
 
 # Setting global tag manually
 # process.load("Configuration.StandardSequences.CondDBESSource_cff")
-# process.GlobalTag.globaltag = '80X_dataRun2_v13' #autoCond['run2_data'] #choose your tag
+# process.GlobalTag.globaltag = '120X_dataRun3_HLT_v3' #autoCond['run3_hlt'] #choose your tag
 
 # Specifying database and tag
 process.load("Configuration.StandardSequences.CondDBESSource_cff")
