@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 # variables overwritten with ValidateHLTMenu
-run_number = 271700
+run_number = 346512
 alca_reco_hlt_paths_tag = "AlCaRecoHLTpaths8e29_1e31_v7_hlt"
 
 # instanciate Process
