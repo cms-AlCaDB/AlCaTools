@@ -4,7 +4,7 @@ Documented at: https://twiki.cern.ch/twiki/bin/view/CMS/ValidateHLTMenu
 
 ## Inputs:
 
-   * twiki of AlCaReco Matrix: AlCaRecoMatrix.wiki
+   * twiki of AlCaReco Matrix: [AlCaRecoMatrix.wiki](https://twiki.cern.ch/twiki/bin/view/CMS/AlCaRecoMatrix)
    * script : 
       * AlCaRecoTriggerBitsRcdRead_FromTag_cfg.py
       * ValidateHLTMenu.py
@@ -12,7 +12,7 @@ Documented at: https://twiki.cern.ch/twiki/bin/view/CMS/ValidateHLTMenu
 ## Example to run :
 
 ```
-python ValidateHLTMenu.py /online/collisions/2016/25ns10e33/v1.0/HLT/V3 AlCaRecoHLTpaths8e29_1e31_v7_hlt 271700
+python3 ValidateHLTMenu.py adg:/cdaq/special/PilotBeamTest2021/CollisionsGPU/V4 AlCaRecoHLTpaths8e29_1e31_v7_hlt 346512
 ```
 
    * arguments:

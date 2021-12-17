@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/bin/env python3
 
 # This script dumps the content of the AlCaRecoTriggerBits tag provided in input and checks that all the hlt selection paths are selecting some triggers
 # by looking at the HLT menu also provided as input. It does the mapping between AlCaRecos and Primary Datasets with the AlCaRecoMatrix.
@@ -9,36 +9,44 @@ import sys
 import os
 
 if len(sys.argv) < 3 or len(sys.argv) > 4:
-    print "Usage: ValidateHLTMenu.py HLTMenu AlCaRecoHLTpathsTag [RunNumber]"
-    print "Example: ./ValidateHLTMenu.py /online/collisions/2012/7e33/v2.1/HLT AlCaRecoHLTpaths8e29_5e33_v2_prompt"
-    print "If no run number is provided the number 1000000 will be used."
+    print("Usage: ValidateHLTMenu.py HLTMenu AlCaRecoHLTpathsTag [RunNumber]")
+    print("Example: ./ValidateHLTMenu.py /online/collisions/2012/7e33/v2.1/HLT AlCaRecoHLTpaths8e29_5e33_v2_prompt")
+    print("If no run number is provided the number 1000000 will be used.")
     sys.exit()
 
-HLTMenuName = sys.argv[1]
-AlCaRecoHLTPathsTag = sys.argv[2]
-RunNumber = 1000000
+hlt_menu_name = sys.argv[1]
+alca_reco_hlt_paths_tag = sys.argv[2]
+run_number = sys.argv[3] if len(sys.argv) == 4 else 1000000
 
-if len(sys.argv) == 4:
-    RunNumber = sys.argv[3]
+# Create new cfg file from template
+template_fname = 'AlCaRecoTriggerBitsRcdRead_FromTag_cfg.py'
+validation_fname = alca_reco_hlt_paths_tag + '_BitsRcdRead_FromTag_cfg.py'
+cmd = f'cp {template_fname} {validation_fname}'
+os.system(cmd)
 
-#os.system("cmscond_2XML -c frontier://PromptProd/CMS_COND_31X_HLT -t "+AlCaRecoHLTPathsTag+" -b " + str(runNumber))
-#os.system("edmConfigFromDB --configName "+HLTMenuName+" > hlt.py")
-#os.system("conddb_ -c frontier://FrontierProd/CMS_CONDITIONS -c sqlite:"+AlCaRecoHLTPathsTag+".db -i "+AlCaRecoHLTPathsTag+" -t tmp1 -b " + str(runNumber))
+# Overwrite `alca_reco_hlt_paths_tag` from validation file
+cmd = f"sed -i 's/alca_reco_hlt_paths_tag = None/alca_reco_hlt_paths_tag = \"{alca_reco_hlt_paths_tag}\"/g' {validation_fname}"
+os.system(cmd)
 
-os.system("cp AlCaRecoTriggerBitsRcdRead_FromTag_cfg.py "+AlCaRecoHLTPathsTag+"_BitsRcdRead_FromTag_cfg.py")
-os.system("sed -i 's~AlCaRecoHLTPathsTag~"+AlCaRecoHLTPathsTag+"~g' "+AlCaRecoHLTPathsTag+"_BitsRcdRead_FromTag_cfg.py")
-os.system("sed -i 's~RunNumber~"+str(RunNumber)+"~g' "+AlCaRecoHLTPathsTag+"_BitsRcdRead_FromTag_cfg.py")
+# Overwrite `run_number` from validation file
+cmd = f"sed -i 's/run_number = None/run_number = {run_number}/g' {validation_fname}"
+os.system(cmd)
 
-os.system("cmsRun "+AlCaRecoHLTPathsTag+"_BitsRcdRead_FromTag_cfg.py")
+# Run cfg with cmsRun to generate twiki
+cmd = f"cmsRun {validation_fname}"
+os.system(cmd)
 
-os.system("hltGetConfiguration "+HLTMenuName+" --unprescale --offline > hlt.py")
-os.system("hltDumpStream hlt.py > dumpStream.txt")
+# Dump menu
+cmd1 = f'hltGetConfiguration {hlt_menu_name} --unprescale --offline > hlt.py'
+cmd2 = 'hltDumpStream hlt.py > dumpStream.txt'
+os.system(cmd1)
+os.system(cmd2)
 
+print("Validating AlCaRecoTriggerBits with HLT menu")
+print("Extract the list of PDs and associated triggers from the menu")
 
-# print "Validating AlCaRecoTriggerBits with HLT menu"
-# print "Extract the list of PDs and associated triggers from the menu"
-
-# Need to check: trigger names matching the ones in the AlCaRecoTriggerBits, if they are prescaled, if all the PDs required in the alcareco matrix match or not.
+# Need to check: trigger names matching the ones in the AlCaRecoTriggerBits, 
+# if they are prescaled, if all the PDs required in the alcareco matrix match or not.
 
 outputFile = open("validation.txt", "w")
 
@@ -94,7 +102,7 @@ for line in open("dumpStream.txt"):
 
 # Read the AlCaRecoTriggerBits xml dump and find the triggers in the menu
 isAlCaRecoName = True
-for line in open("triggerBits_"+AlCaRecoHLTPathsTag+".twiki") : #"AlCaRecoHLTpaths8e29_5e33_v2_prompt.xml"):
+for line in open("triggerBits_"+alca_reco_hlt_paths_tag+".twiki") : #"AlCaRecoHLTpaths8e29_5e33_v2_prompt.xml"):
     if line.find("|") != -1:
         #print 'AlCaReco is ',line.split('|')[1].strip().strip("\'")
         if isAlCaRecoName:
@@ -121,7 +129,7 @@ for line in open("triggerBits_"+AlCaRecoHLTPathsTag+".twiki") : #"AlCaRecoHLTpat
                   for AlCaRecoPD in AlCaRecoMatrix[AlCaReco]:
                      isInHLTMenu=False 
                      for PD in HLTMenu:
-                         print "PD in HLT menu ",PD[0]
+                         print("PD in HLT menu ",PD[0])
                          if PD[0].find("dataset "+AlCaRecoPD) != -1:
                             if PDmatch=='' :
                                PDmatch=AlCaRecoPD
@@ -145,7 +153,7 @@ for line in open("triggerBits_"+AlCaRecoHLTPathsTag+".twiki") : #"AlCaRecoHLTpat
                 if AlCaReco in AlCaRecoMatrix:
                    for triggerSelectionString in triggerSelectionStringList.split(","):
                         triggerSelectionString=triggerSelectionString.strip().strip("\'")
-                        print 'trigger ',triggerSelectionString,' for AlCaReco ',AlCaReco
+                        print('trigger ',triggerSelectionString,' for AlCaReco ',AlCaReco)
                         findHLTPath(AlCaRecoMatrix[AlCaReco], triggerSelectionString, HLTMenu)
                 else:
                     ## print "This AlCaReco is not in the matrix"
@@ -153,5 +161,5 @@ for line in open("triggerBits_"+AlCaRecoHLTPathsTag+".twiki") : #"AlCaRecoHLTpat
 
 outputFile.close()
 
-print "Comparison done. Please, check the validation.txt file for details."
+print("Comparison done. Please, check the validation.txt file for details.")
 
