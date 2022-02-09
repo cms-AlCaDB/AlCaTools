@@ -11,7 +11,8 @@ process = cms.Process("READ")
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 
 # the module writing to DB
-process.load("CondTools.HLT.AlCaRecoTriggerBitsRcdRead_cfi")
+from CondTools.HLT.alCaRecoTriggerBitsRcdRead_cfi import alCaRecoTriggerBitsRcdRead as _alCaRecoTriggerBitsRcdRead
+process.AlCaRecoTriggerBitsRcdRead = _alCaRecoTriggerBitsRcdRead.clone()
 
 # 'twiki' is default - others are text, python (future: html?)
 #process.AlCaRecoTriggerBitsRcdRead.outputType = 'twiki'
