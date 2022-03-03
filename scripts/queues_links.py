@@ -1,7 +1,7 @@
 '''
 script to write the links of the differences between last versioned GT in autoCond and the corresponding Queue
 
-Script usage:
+Script usage, to be run in a release area (after cmsrel, cmsenv, etc.):
 python3 queues_links.py '123X'
 
 where '123X' can be replaced by any release cycle. 
