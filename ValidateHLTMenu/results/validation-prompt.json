@@ -1,0 +1,1442 @@
+{
+    "Metadata": {
+        "CMSSW_VERSION": "CMSSW_12_3_3_patch1",
+        "HLTMenuName": "adg:/cdaq/special/2022/900GeVCollisionsTest/v1.0/HLT/V2",
+        "AlCaRecoHLTPathsTag": "AlCaRecoHLTpaths8e29_5e33_v7_prompt",
+        "Configuration": "prompt",
+        "RunNumber": "351635"
+    },
+    "Analysis": {
+        "AlCaRecoHasNoKeys": {
+            "MuAlBeamHalo": {
+                "AlcaRecoHasKeys": false,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "MuAlBeamHaloOverlaps": {
+                "AlcaRecoHasKeys": false,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "SiStripPCLHistos": {
+                "AlcaRecoHasKeys": false,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlBeamHalo": {
+                "AlcaRecoHasKeys": false,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlCosmics": {
+                "AlcaRecoHasKeys": false,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlCosmics0T": {
+                "AlcaRecoHasKeys": false,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "Cosmics"
+                ],
+                "HLTPaths": "",
+                "MatchingTriggers": [],
+                "MissingTriggers": [],
+                "PDMatch": "",
+                "PDUnMatch": "",
+                "Content": "This AlCaReco has no keys. It is either disabled or accepting everything but the PD  not in the HLT menu"
+            },
+            "TkAlJpsiMuMu": {
+                "AlcaRecoHasKeys": false,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "Charmonium"
+                ],
+                "HLTPaths": "",
+                "MatchingTriggers": [],
+                "MissingTriggers": [],
+                "PDMatch": "",
+                "PDUnMatch": "",
+                "Content": "This AlCaReco has no keys. It is either disabled or accepting everything but the PD  not in the HLT menu"
+            },
+            "TkAlLAS": {
+                "AlcaRecoHasKeys": false,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            }
+        },
+        "AlCaRecoNotInMatrix": {
+            "AlCaEcalTrg": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "AlCa_EcalPhiSym*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "DtCalib": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*', 'HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "DtCalibCosmics": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_L1TrackerCosmics_*', 'HLT_L1SingleMuOpen_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "DtCalibHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HIL1DoubleMu*', 'HLT_HIL1Mu*', 'HLT_HIL2Mu*', 'HLT_HIL3Mu*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "EcalCalElectron": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_Ele*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "EcalCalWElectron": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "EcalCalZElectron": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "EcalRecalElectron": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "EcalTrg": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "AlCa_EcalPhiSym*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "EcalUncalZSCElectron": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "HcalCalDijets": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_Jet*', 'HLT_PF*', 'HLT_Di*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "HcalCalGammaJet": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_L1SingleEG*', 'HLT_Photon*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "HcalCalHBHEMuonFilter": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "HcalCalHOCosmics": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_L1SingleMuOpen_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "HcalCalIsoTrkFilter": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "HcalCalIsolatedBunchFilter": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "HcalCalMinBiasHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HIHcalPhiSym_v*', 'HLT_HIHcalNZS_v*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "HcalCalNoise": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_MET*', 'HLT_PFMET*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "LumiPixelsMinBias": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_*ZeroBias_v*', 'HLT_PAZeroBias_*', 'HLT_*Random_*', 'HLT_*L1AlwaysTrue_*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_part*', 'HLT_PAL1MinimumBiasHF_OR_part*', 'HLT_HIL1MinimumBiasHF_AND_v*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "MuAlGlobalCosmicsInCollisions": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "MuAlOverlaps": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_IsoTkMu*', 'HLT_TkMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "MuAlStandAloneCosmics": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "MuAlZMuMu": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "MuAlcaDtCalibCosmics": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_L1TrackerCosmics_*', 'HLT_L1SingleMuOpen_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "MuAlcaDtCalibHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HIL2Mu*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "MuAlcaDtCalibMu": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*', 'HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "PPSCalMaxTracks": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_PPSMaxTracksPerRP4_v*', 'HLT_PPSMaxTracksPerArm1_v*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "PromptCalibProd": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "PromptCalibProdForBS": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "PromptCalibProdSiStrip": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "PromptCalibProdSiStripGainsAAG": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "SiPixelCalSingleMuon": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "SiPixelCalZeroBias": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_*ZeroBias_v*', 'HLT_Random*', 'HLT_PARandom*', 'HLT_HIRandom*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_HICentralityVeto_v*', 'HLT_L1ETT*', 'HLT_*PixelClusters*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "SiPixelCalZeroBiasHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HICentralityVeto_v*', 'HLT_HIRandom_v*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "SiPixelLorentzAngle": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT1MuonIso', 'HLT2MuonNonIso', 'HLT2MuonJPsi', 'HLT2MuonUpsilon', 'HLT2MuonZ', 'HLT2MuonSameSign",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "SiStripCalMinBiasAAG": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_ZeroBias_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_FirstCollisionAfterAbortGap_v*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "SiStripCalMinBiasAAGHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HI*_FirstCollisionAfterAbortGap_v*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "SiStripCalMinBiasAfterAbortGap": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_ZeroBias_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_FirstCollisionAfterAbortGap_v*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "SiStripCalMinBiasHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HICentralityVeto_v*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "SiStripCalSmallBiasScan": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "NOT HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "SiStripCalZeroBiasHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HICentralityVeto_v*', 'HLT_HIRandom_v*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlJpsiMuMuHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HI*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlMinBiasHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HICentralityVeto*', 'HLT_HIPhysics_v*', 'HLT_HIPuAK4*', 'HLT_HICsAK4*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlMinBiasNOT": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "notExistingPath_GivesWarning_mustNotBecomeEmptyList",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlMuonIsolatedHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HI*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlMuonIsolatedPA": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlUpsilonMuMuHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HI*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlUpsilonMuMuPA": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlZMuMuHI": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_HI*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "TkAlZMuMuPA": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            },
+            "VertexPixelZeroBias": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": false,
+                "PrimaryDataset": null,
+                "HLTPaths": "HLT_*ZeroBias_v*', 'HLT_PAZeroBias_*', 'HLT_*Random_*', 'HLT_*L1AlwaysTrue_*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_part*', 'HLT_PAL1MinimumBiasHF_OR_part*",
+                "MatchingTriggers": [],
+                "MissingTriggers": []
+            }
+        },
+        "AlCaRecoMatch": {
+            "AlCaPCCZeroBias": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "AlCaLumiPixelsCountsPrompt"
+                ],
+                "HLTPaths": "AlCa_LumiPixelsCounts_ZeroBias_v*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "AlCa_LumiPixelsCounts_ZeroBias_v*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "= AlCa_LumiPixelsCounts_ZeroBias_v2                     1    L1_ZeroBias OR L1_AlwaysTrue"
+                        ]
+                    }
+                ],
+                "MissingTriggers": []
+            },
+            "EcalCalEtaCalib": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "AlCaP0"
+                ],
+                "HLTPaths": "AlCa_EcalEta*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "AlCa_EcalEta*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "AlCa_EcalEtaEBonly_v13                                1    L1_AlwaysTrue OR L1_IsolatedBunch OR L1_SingleEG8er2p5 OR L1_SingleEG10er2p5 OR L1_SingleEG15er2p5 OR L1_SingleEG26er2p5 OR L1_SingleEG34er2p5 OR L1_SingleEG36er2p5 OR L1_SingleEG38er2p5 OR L1_SingleEG40er2p5 OR L1_SingleEG42er2p5 OR L1_SingleEG45er2p5 OR L1_SingleEG60 OR L1_SingleIsoEG26er2p5 OR L1_SingleIsoEG28er2p5 OR L1_SingleIsoEG30er2p5 OR L1_SingleIsoEG32er2p5 OR L1_SingleIsoEG34er2p5 OR L1_SingleIsoEG24er2p1 OR L1_SingleIsoEG26er2p1 OR L1_SingleIsoEG28er2p1 OR L1_SingleIsoEG30er2p1 OR L1_SingleIsoEG32er2p1 OR L1_DoubleEG_22_10_er2p5 OR L1_DoubleEG_25_14_er2p5 OR L1_DoubleEG_25_12_er2p5 OR L1_SingleJet35 OR L1_SingleJet60 OR L1_SingleJet90 OR L1_SingleJet120 OR L1_SingleJet140er2p5 OR L1_SingleJet160er2p5 OR L1_SingleJet180 OR L1_SingleJet200 OR L1_DoubleJet40er2p5 OR L1_DoubleJet100er2p5 OR L1_DoubleJet120er2p5 OR L1_QuadJet60er2p5 OR L1_HTT120er OR L1_HTT160er OR L1_HTT200er OR L1_HTT255er OR L1_HTT280er OR L1_HTT320er",
+                            "AlCa_EcalEtaEEonly_v13                                1    L1_AlwaysTrue OR L1_IsolatedBunch OR L1_SingleEG8er2p5 OR L1_SingleEG10er2p5 OR L1_SingleEG15er2p5 OR L1_SingleEG26er2p5 OR L1_SingleEG34er2p5 OR L1_SingleEG36er2p5 OR L1_SingleEG38er2p5 OR L1_SingleEG40er2p5 OR L1_SingleEG42er2p5 OR L1_SingleEG45er2p5 OR L1_SingleEG60 OR L1_SingleIsoEG26er2p5 OR L1_SingleIsoEG28er2p5 OR L1_SingleIsoEG30er2p5 OR L1_SingleIsoEG32er2p5 OR L1_SingleIsoEG34er2p5 OR L1_SingleIsoEG24er2p1 OR L1_SingleIsoEG26er2p1 OR L1_SingleIsoEG28er2p1 OR L1_SingleIsoEG30er2p1 OR L1_SingleIsoEG32er2p1 OR L1_DoubleEG_22_10_er2p5 OR L1_DoubleEG_25_14_er2p5 OR L1_DoubleEG_25_12_er2p5 OR L1_SingleJet35 OR L1_SingleJet60 OR L1_SingleJet90 OR L1_SingleJet120 OR L1_SingleJet140er2p5 OR L1_SingleJet160er2p5 OR L1_SingleJet180 OR L1_SingleJet200 OR L1_DoubleJet40er2p5 OR L1_DoubleJet100er2p5 OR L1_DoubleJet120er2p5 OR L1_QuadJet60er2p5 OR L1_HTT120er OR L1_HTT160er OR L1_HTT200er OR L1_HTT255er OR L1_HTT280er OR L1_HTT320er"
+                        ]
+                    }
+                ],
+                "MissingTriggers": []
+            },
+            "EcalCalPhiSym": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "AlCaPhiSym"
+                ],
+                "HLTPaths": "AlCa_EcalPhiSym*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "AlCa_EcalPhiSym*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "AlCa_EcalPhiSym_v9                                    1    L1_ZeroBias OR L1_AlwaysTrue OR L1_IsolatedBunch"
+                        ]
+                    }
+                ],
+                "MissingTriggers": []
+            },
+            "EcalCalPi0Calib": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "AlCaP0"
+                ],
+                "HLTPaths": "AlCa_EcalPi0*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "AlCa_EcalPi0*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "AlCa_EcalPi0EBonly_v13                                1    L1_AlwaysTrue OR L1_IsolatedBunch OR L1_SingleEG8er2p5 OR L1_SingleEG10er2p5 OR L1_SingleEG15er2p5 OR L1_SingleEG26er2p5 OR L1_SingleEG34er2p5 OR L1_SingleEG36er2p5 OR L1_SingleEG38er2p5 OR L1_SingleEG40er2p5 OR L1_SingleEG42er2p5 OR L1_SingleEG45er2p5 OR L1_SingleEG60 OR L1_SingleIsoEG26er2p5 OR L1_SingleIsoEG28er2p5 OR L1_SingleIsoEG30er2p5 OR L1_SingleIsoEG32er2p5 OR L1_SingleIsoEG34er2p5 OR L1_SingleIsoEG24er2p1 OR L1_SingleIsoEG26er2p1 OR L1_SingleIsoEG28er2p1 OR L1_SingleIsoEG30er2p1 OR L1_SingleIsoEG32er2p1 OR L1_DoubleEG_22_10_er2p5 OR L1_DoubleEG_25_14_er2p5 OR L1_DoubleEG_25_12_er2p5 OR L1_SingleJet35 OR L1_SingleJet60 OR L1_SingleJet90 OR L1_SingleJet120 OR L1_SingleJet140er2p5 OR L1_SingleJet160er2p5 OR L1_SingleJet180 OR L1_SingleJet200 OR L1_DoubleJet40er2p5 OR L1_DoubleJet100er2p5 OR L1_DoubleJet120er2p5 OR L1_QuadJet60er2p5 OR L1_HTT120er OR L1_HTT160er OR L1_HTT200er OR L1_HTT255er OR L1_HTT280er OR L1_HTT320er",
+                            "AlCa_EcalPi0EEonly_v13                                1    L1_AlwaysTrue OR L1_IsolatedBunch OR L1_SingleEG8er2p5 OR L1_SingleEG10er2p5 OR L1_SingleEG15er2p5 OR L1_SingleEG26er2p5 OR L1_SingleEG34er2p5 OR L1_SingleEG36er2p5 OR L1_SingleEG38er2p5 OR L1_SingleEG40er2p5 OR L1_SingleEG42er2p5 OR L1_SingleEG45er2p5 OR L1_SingleEG60 OR L1_SingleIsoEG26er2p5 OR L1_SingleIsoEG28er2p5 OR L1_SingleIsoEG30er2p5 OR L1_SingleIsoEG32er2p5 OR L1_SingleIsoEG34er2p5 OR L1_SingleIsoEG24er2p1 OR L1_SingleIsoEG26er2p1 OR L1_SingleIsoEG28er2p1 OR L1_SingleIsoEG30er2p1 OR L1_SingleIsoEG32er2p1 OR L1_DoubleEG_22_10_er2p5 OR L1_DoubleEG_25_14_er2p5 OR L1_DoubleEG_25_12_er2p5 OR L1_SingleJet35 OR L1_SingleJet60 OR L1_SingleJet90 OR L1_SingleJet120 OR L1_SingleJet140er2p5 OR L1_SingleJet160er2p5 OR L1_SingleJet180 OR L1_SingleJet200 OR L1_DoubleJet40er2p5 OR L1_DoubleJet100er2p5 OR L1_DoubleJet120er2p5 OR L1_QuadJet60er2p5 OR L1_HTT120er OR L1_HTT160er OR L1_HTT200er OR L1_HTT255er OR L1_HTT280er OR L1_HTT320er"
+                        ]
+                    }
+                ],
+                "MissingTriggers": []
+            },
+            "EcalESAlign": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "EGamma"
+                ],
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "EcalUncalWElectron": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "EGamma"
+                ],
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "EcalUncalZElectron": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "EGamma"
+                ],
+                "HLTPaths": "*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "HcalCalHO": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "MinimumBias",
+                    "SingleMuon"
+                ],
+                "HLTPaths": "HLT_Mu*', 'HLT_IsoMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*', 'HLT_L1ETT*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_Mu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_IsoMu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_HIL3Mu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_HIMu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_L1ETT*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "HcalCalIsoTrk": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "Commissioning"
+                ],
+                "HLTPaths": "HLT_IsoTrack*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "HLT_IsoTrack*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "HLT_IsoTrackHB_v4                                     1    L1_SingleJet60 OR L1_SingleJet200 OR L1_DoubleJet120er2p5",
+                            "HLT_IsoTrackHE_v4                                     1    L1_SingleJet60 OR L1_SingleJet200 OR L1_DoubleJet120er2p5"
+                        ]
+                    }
+                ],
+                "MissingTriggers": []
+            },
+            "HcalCalIsolatedBunchSelector": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "Commissioning"
+                ],
+                "HLTPaths": "*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "HLT_IsoTrackHB_v4                                     1    L1_SingleJet60 OR L1_SingleJet200 OR L1_DoubleJet120er2p5",
+                            "HLT_IsoTrackHE_v4                                     1    L1_SingleJet60 OR L1_SingleJet200 OR L1_DoubleJet120er2p5"
+                        ]
+                    }
+                ],
+                "MissingTriggers": []
+            },
+            "HcalCalIterativePhiSym": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "EGamma",
+                    "MinimumBias",
+                    "SingleMuon"
+                ],
+                "HLTPaths": "HLT_HIEle*', 'HLT_HIDoubleEle*', 'HLT_HIL1Mu*', 'HLT_HIL2Mu*', 'HLT_HIL3Mu*', 'HLT_L1ETT*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_HIEle*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_HIDoubleEle*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_HIL1Mu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_HIL2Mu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_HIL3Mu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_L1ETT*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "HcalCalMinBias": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "HcalNZS"
+                ],
+                "HLTPaths": "HLT_HcalPhiSym_*', 'HLT_PAHcalPhiSym_*', 'HLT_HcalNZS*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "HLT_HcalPhiSym_*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "HLT_HcalPhiSym_v15                                    1    L1_SingleEG8er2p5 OR L1_SingleEG10er2p5 OR L1_SingleEG15er2p5 OR L1_SingleEG26er2p5 OR L1_SingleEG34er2p5 OR L1_SingleEG36er2p5 OR L1_SingleEG38er2p5 OR L1_SingleEG40er2p5 OR L1_SingleEG42er2p5 OR L1_SingleEG45er2p5 OR L1_SingleEG50 OR L1_SingleMuOpen OR L1_SingleMu3 OR L1_SingleMu5 OR L1_SingleMu7 OR L1_SingleMu18 OR L1_SingleMu20 OR L1_SingleMu22 OR L1_SingleMu25 OR L1_DoubleMu_12_5 OR L1_SingleIsoEG26er2p5 OR L1_SingleIsoEG28er2p5 OR L1_SingleIsoEG30er2p5 OR L1_SingleIsoEG32er2p5 OR L1_SingleIsoEG34er2p5 OR L1_DoubleEG_22_10_er2p5 OR L1_DoubleEG_25_12_er2p5 OR L1_DoubleEG_25_14_er2p5 OR L1_TripleEG_18_17_8_er2p5 OR L1_TripleMu_5_3_3 OR L1_TripleMu_5_5_3 OR L1_DoubleMu_15_7"
+                        ]
+                    },
+                    {
+                        "HLTPath": "HLT_HcalNZS*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "HLT_HcalNZS_v13                                       1    L1_ZeroBias OR L1_AlwaysTrue OR L1_SingleJet35 OR L1_SingleJet60 OR L1_SingleJet90 OR L1_SingleJet120 OR L1_SingleJet140er2p5 OR L1_SingleJet160er2p5 OR L1_SingleJet180 OR L1_SingleJet200 OR L1_DoubleJet40er2p5 OR L1_DoubleJet100er2p5 OR L1_DoubleJet120er2p5 OR L1_QuadJet60er2p5 OR L1_HTT120er OR L1_HTT160er OR L1_HTT200er OR L1_HTT255er OR L1_HTT280er OR L1_HTT320er"
+                        ]
+                    }
+                ],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_PAHcalPhiSym_*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "HcalCalPedestal": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "TestEnablesEcalHcal"
+                ],
+                "HLTPaths": "*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "HLT_EcalCalibration_v4                                1    (none)",
+                            "HLT_HcalCalibration_v5                                1    (none)",
+                            "AlCa_EcalEtaEBonly_v13                                1    L1_AlwaysTrue OR L1_IsolatedBunch OR L1_SingleEG8er2p5 OR L1_SingleEG10er2p5 OR L1_SingleEG15er2p5 OR L1_SingleEG26er2p5 OR L1_SingleEG34er2p5 OR L1_SingleEG36er2p5 OR L1_SingleEG38er2p5 OR L1_SingleEG40er2p5 OR L1_SingleEG42er2p5 OR L1_SingleEG45er2p5 OR L1_SingleEG60 OR L1_SingleIsoEG26er2p5 OR L1_SingleIsoEG28er2p5 OR L1_SingleIsoEG30er2p5 OR L1_SingleIsoEG32er2p5 OR L1_SingleIsoEG34er2p5 OR L1_SingleIsoEG24er2p1 OR L1_SingleIsoEG26er2p1 OR L1_SingleIsoEG28er2p1 OR L1_SingleIsoEG30er2p1 OR L1_SingleIsoEG32er2p1 OR L1_DoubleEG_22_10_er2p5 OR L1_DoubleEG_25_14_er2p5 OR L1_DoubleEG_25_12_er2p5 OR L1_SingleJet35 OR L1_SingleJet60 OR L1_SingleJet90 OR L1_SingleJet120 OR L1_SingleJet140er2p5 OR L1_SingleJet160er2p5 OR L1_SingleJet180 OR L1_SingleJet200 OR L1_DoubleJet40er2p5 OR L1_DoubleJet100er2p5 OR L1_DoubleJet120er2p5 OR L1_QuadJet60er2p5 OR L1_HTT120er OR L1_HTT160er OR L1_HTT200er OR L1_HTT255er OR L1_HTT280er OR L1_HTT320er",
+                            "HLT_EcalCalibration_v4                                1    (none)",
+                            "HLT_HcalCalibration_v5                                1    (none)"
+                        ]
+                    }
+                ],
+                "MissingTriggers": []
+            },
+            "MuAlCalIsolatedMu": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "DoubleMuon",
+                    "SingleMuon"
+                ],
+                "HLTPaths": "HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_IsoTkMu*', 'HLT_TkMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_Mu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_IsoMu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_DoubleMu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_IsoTkMu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_TkMu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_PAL3Mu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_PAL3DoubleMu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_HIL3Mu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_HIMu*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "MuAlGlobalCosmics": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "Cosmics"
+                ],
+                "HLTPaths": "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_L1SingleMuOpen_*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_L1TrackerCosmics_*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "SiPixelCalCosmics": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "Cosmics"
+                ],
+                "HLTPaths": "HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "SiStripCalCosmics": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "Cosmics"
+                ],
+                "HLTPaths": "HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "SiStripCalMinBias": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "MinimumBias",
+                    "ZeroBias"
+                ],
+                "HLTPaths": "HLT_*ZeroBias_v*', 'HLT_FullTracks_*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_HICentralityVeto_v*', 'HLT_L1ETT*', 'HLT_*PixelClusters*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "HLT_*ZeroBias_v*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_v6                                       1    L1_ZeroBias OR L1_AlwaysTrue"
+                        ]
+                    },
+                    {
+                        "HLTPath": "HLT_*PixelClusters*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue"
+                        ]
+                    }
+                ],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_FullTracks_*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_PAL1MinimumBiasHF_OR_ForExpress_v*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_PAL1MinimumBiasHF_AND_v*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_HICentralityVeto_v*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_L1ETT*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "SiStripCalZeroBias": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "MinimumBias",
+                    "ZeroBias"
+                ],
+                "HLTPaths": "HLT_*ZeroBias_v*', 'HLT_Random*', 'HLT_PARandom*', 'HLT_HIRandom*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_HICentralityVeto_v*', 'HLT_L1ETT*', 'HLT_*PixelClusters*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "HLT_*ZeroBias_v*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_v6                                       1    L1_ZeroBias OR L1_AlwaysTrue"
+                        ]
+                    },
+                    {
+                        "HLTPath": "HLT_Random*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "HLT_Random_v3                                         1    (none)"
+                        ]
+                    },
+                    {
+                        "HLTPath": "HLT_*PixelClusters*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue"
+                        ]
+                    }
+                ],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_PARandom*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_HIRandom*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_PAL1MinimumBiasHF_OR_ForExpress_v*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_PAL1MinimumBiasHF_AND_v*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_HICentralityVeto_v*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_L1ETT*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "TkAlCosmicsInCollisions": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "NoBPTX"
+                ],
+                "HLTPaths": "*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "HLT_CDC_L2cosmic_10_er1p0_v1                          1    L1_CDC_SingleMu_3_er1p2_TOP120_DPHI2p618_3p142",
+                            "HLT_CDC_L2cosmic_5p5_er1p0_v1                         1    L1_CDC_SingleMu_3_er1p2_TOP120_DPHI2p618_3p142"
+                        ]
+                    }
+                ],
+                "MissingTriggers": []
+            },
+            "TkAlMinBias": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "HLTPhysics",
+                    "JetHT",
+                    "MinimumBias",
+                    "ZeroBias"
+                ],
+                "HLTPaths": "HLT_ZeroBias_*', 'HLT_Random_*', 'HLT_Physics_*', 'HLT_L1ETT*', 'HLT_*PixelClusters*', 'HLT_*Beamspot*",
+                "MatchingTriggers": [
+                    {
+                        "HLTPath": "HLT_ZeroBias_*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "HLT_ZeroBias_FirstBXAfterTrain_v3                     1    L1_FirstBunchAfterTrain",
+                            "HLT_ZeroBias_FirstCollisionAfterAbortGap_v5           1    L1_FirstCollisionInOrbit",
+                            "HLT_ZeroBias_FirstCollisionInTrain_v4                 1    L1_FirstCollisionInTrain AND (NOT L1_FirstCollisionInOrbit)",
+                            "HLT_ZeroBias_IsolatedBunches_v5                       1    L1_IsolatedBunch",
+                            "HLT_ZeroBias_LastCollisionInTrain_v3                  1    L1_LastCollisionInTrain",
+                            "= HLT_ZeroBias_v6                                       1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_ZeroBias_split_v1                                 1    L1_ZeroBias OR L1_AlwaysTrue"
+                        ]
+                    },
+                    {
+                        "HLTPath": "HLT_Random_*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "HLT_Random_v3                                         1    (none)"
+                        ]
+                    },
+                    {
+                        "HLTPath": "HLT_Physics_*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "HLT_Physics_v7                                        1    (none)"
+                        ]
+                    },
+                    {
+                        "HLTPath": "HLT_*PixelClusters*",
+                        "HasMatchingTriggers": true,
+                        "MatchingTriggers": [
+                            "= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue",
+                            "= HLT_PixelClusters_WP2_ZeroBias_split_v1               1    L1_ZeroBias OR L1_AlwaysTrue"
+                        ]
+                    }
+                ],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_L1ETT*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    },
+                    {
+                        "HLTPath": "HLT_*Beamspot*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "TkAlMuonIsolated": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "SingleMuon"
+                ],
+                "HLTPaths": "HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "TkAlUpsilonMuMu": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "MuOnia"
+                ],
+                "HLTPaths": "HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            },
+            "TkAlZMuMu": {
+                "AlcaRecoHasKeys": true,
+                "IsInMatrix": true,
+                "PrimaryDataset": [
+                    "DoubleMuon"
+                ],
+                "HLTPaths": "HLT_*",
+                "MatchingTriggers": [],
+                "MissingTriggers": [
+                    {
+                        "HLTPath": "HLT_*",
+                        "HasMatchingTriggers": false,
+                        "MatchingTriggers": []
+                    }
+                ]
+            }
+        }
+    },
+    "ValidationMissing": [
+        "| *TriggerBitKey* | *PrimaryDatasets* | *MissingHLTPaths* |",
+        "| EcalESAlign | EGamma | * |",
+        "| EcalUncalWElectron | EGamma | * |",
+        "| EcalUncalZElectron | EGamma | * |",
+        "| HcalCalHO | MinimumBias, SingleMuon | HLT_Mu*, HLT_IsoMu*, HLT_HIL3Mu*, HLT_HIMu*, HLT_L1ETT* |",
+        "| HcalCalIterativePhiSym | EGamma, MinimumBias, SingleMuon | HLT_HIEle*, HLT_HIDoubleEle*, HLT_HIL1Mu*, HLT_HIL2Mu*, HLT_HIL3Mu*, HLT_L1ETT* |",
+        "| HcalCalMinBias | HcalNZS | HLT_PAHcalPhiSym_* |",
+        "| MuAlCalIsolatedMu | DoubleMuon, SingleMuon | HLT_Mu*, HLT_IsoMu*, HLT_DoubleMu*, HLT_IsoTkMu*, HLT_TkMu*, HLT_PAL3Mu*, HLT_PAL3DoubleMu*, HLT_HIL3Mu*, HLT_HIMu* |",
+        "| MuAlGlobalCosmics | Cosmics | HLT_L1SingleMuOpen_*, HLT_L1TrackerCosmics_* |",
+        "| SiPixelCalCosmics | Cosmics | HLT_* |",
+        "| SiStripCalCosmics | Cosmics | HLT_* |",
+        "| SiStripCalMinBias | MinimumBias, ZeroBias | HLT_FullTracks_*, HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*, HLT_PAL1MinimumBiasHF_OR_ForExpress_v*, HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*, HLT_PAL1MinimumBiasHF_AND_v*, HLT_HICentralityVeto_v*, HLT_L1ETT* |",
+        "| SiStripCalZeroBias | MinimumBias, ZeroBias | HLT_PARandom*, HLT_HIRandom*, HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*, HLT_PAL1MinimumBiasHF_OR_ForExpress_v*, HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*, HLT_PAL1MinimumBiasHF_AND_v*, HLT_HICentralityVeto_v*, HLT_L1ETT* |",
+        "| TkAlMinBias | HLTPhysics, JetHT, MinimumBias, ZeroBias | HLT_L1ETT*, HLT_*Beamspot* |",
+        "| TkAlMuonIsolated | SingleMuon | HLT_* |",
+        "| TkAlUpsilonMuMu | MuOnia | HLT_* |",
+        "| TkAlZMuMu | DoubleMuon | HLT_* |"
+    ],
+    "CrossCheck": {
+        "AlCaRecoMatrix (AlCaRecos to be run: PrimaryDataset)": {
+            "EcalCalPhiSym": [
+                "AlCaPhiSym"
+            ],
+            "EcalCalPi0Calib": [
+                "AlCaP0"
+            ],
+            "EcalCalEtaCalib": [
+                "AlCaP0"
+            ],
+            "AlCaPCCZeroBias": [
+                "AlCaLumiPixelsCountsPrompt"
+            ],
+            "RawPCCProducer": [
+                "AlCaLumiPixelsCountsPrompt"
+            ],
+            "TkAlJpsiMuMu": [
+                "Charmonium"
+            ],
+            "HcalCalIsoTrk": [
+                "Commissioning"
+            ],
+            "HcalCalIsolatedBunchSelector": [
+                "Commissioning"
+            ],
+            "SiStripCalCosmics": [
+                "Cosmics"
+            ],
+            "SiPixelCalCosmics": [
+                "Cosmics"
+            ],
+            "TkAlCosmics0T": [
+                "Cosmics"
+            ],
+            "MuAlGlobalCosmics": [
+                "Cosmics"
+            ],
+            "TkAlZMuMu": [
+                "DoubleMuon"
+            ],
+            "MuAlCalIsolatedMu": [
+                "DoubleMuon",
+                "SingleMuon"
+            ],
+            "TkAlDiMuonAndVertex": [
+                "DoubleMuon"
+            ],
+            "EcalUncalZElectron": [
+                "EGamma"
+            ],
+            "EcalUncalWElectron": [
+                "EGamma"
+            ],
+            "HcalCalIterativePhiSym": [
+                "EGamma",
+                "MinimumBias",
+                "SingleMuon"
+            ],
+            "HcalCalIsoTrkProducerFilter": [
+                "EGamma",
+                "JetHT",
+                "MinimumBias"
+            ],
+            "EcalESAlign": [
+                "EGamma"
+            ],
+            "HcalCalMinBias": [
+                "HcalNZS"
+            ],
+            "TkAlMinBias": [
+                "HLTPhysics",
+                "JetHT",
+                "MinimumBias",
+                "ZeroBias"
+            ],
+            "SiStripCalZeroBias": [
+                "MinimumBias",
+                "ZeroBias"
+            ],
+            "SiStripCalMinBias": [
+                "MinimumBias",
+                "ZeroBias"
+            ],
+            "HcalCalHBHEMuonProducerFilter": [
+                "MinimumBias",
+                "SingleMuon"
+            ],
+            "HcalCalHO": [
+                "MinimumBias",
+                "SingleMuon"
+            ],
+            "TkAlUpsilonMuMu": [
+                "MuOnia"
+            ],
+            "TkAlCosmicsInCollisions": [
+                "NoBPTX"
+            ],
+            "TkAlMuonIsolated": [
+                "SingleMuon"
+            ],
+            "SiPixelCalSingleMuonLoose": [
+                "SingleMuon"
+            ],
+            "SiPixelCalSingleMuonTight": [
+                "SingleMuon"
+            ],
+            "EcalTestPulsesRaw": [
+                "TestEnablesEcalHcal"
+            ],
+            "PromptCalibProdEcalPedestals": [
+                "TestEnablesEcalHcal"
+            ],
+            "HcalCalPedestal": [
+                "TestEnablesEcalHcal"
+            ]
+        },
+        "AlCaRecoTriggerBits (TriggerBitKey: HLTPaths)": {
+            "AlCaEcalTrg": "AlCa_EcalPhiSym*",
+            "AlCaPCCZeroBias": "AlCa_LumiPixelsCounts_ZeroBias_v*",
+            "DtCalib": "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*', 'HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*",
+            "DtCalibCosmics": "HLT_L1TrackerCosmics_*', 'HLT_L1SingleMuOpen_*",
+            "DtCalibHI": "HLT_HIL1DoubleMu*', 'HLT_HIL1Mu*', 'HLT_HIL2Mu*', 'HLT_HIL3Mu*",
+            "EcalCalElectron": "HLT_Ele*",
+            "EcalCalEtaCalib": "AlCa_EcalEta*",
+            "EcalCalPhiSym": "AlCa_EcalPhiSym*",
+            "EcalCalPi0Calib": "AlCa_EcalPi0*",
+            "EcalCalWElectron": "*",
+            "EcalCalZElectron": "*",
+            "EcalESAlign": "*",
+            "EcalRecalElectron": "*",
+            "EcalTrg": "AlCa_EcalPhiSym*",
+            "EcalUncalWElectron": "*",
+            "EcalUncalZElectron": "*",
+            "EcalUncalZSCElectron": "*",
+            "HcalCalDijets": "HLT_Jet*', 'HLT_PF*', 'HLT_Di*",
+            "HcalCalGammaJet": "HLT_L1SingleEG*', 'HLT_Photon*",
+            "HcalCalHBHEMuonFilter": "*",
+            "HcalCalHO": "HLT_Mu*', 'HLT_IsoMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*', 'HLT_L1ETT*",
+            "HcalCalHOCosmics": "HLT_L1SingleMuOpen_*",
+            "HcalCalIsoTrk": "HLT_IsoTrack*",
+            "HcalCalIsoTrkFilter": "*",
+            "HcalCalIsolatedBunchFilter": "*",
+            "HcalCalIsolatedBunchSelector": "*",
+            "HcalCalIterativePhiSym": "HLT_HIEle*', 'HLT_HIDoubleEle*', 'HLT_HIL1Mu*', 'HLT_HIL2Mu*', 'HLT_HIL3Mu*', 'HLT_L1ETT*",
+            "HcalCalMinBias": "HLT_HcalPhiSym_*', 'HLT_PAHcalPhiSym_*', 'HLT_HcalNZS*",
+            "HcalCalMinBiasHI": "HLT_HIHcalPhiSym_v*', 'HLT_HIHcalNZS_v*",
+            "HcalCalNoise": "HLT_MET*', 'HLT_PFMET*",
+            "HcalCalPedestal": "*",
+            "LumiPixelsMinBias": "HLT_*ZeroBias_v*', 'HLT_PAZeroBias_*', 'HLT_*Random_*', 'HLT_*L1AlwaysTrue_*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_part*', 'HLT_PAL1MinimumBiasHF_OR_part*', 'HLT_HIL1MinimumBiasHF_AND_v*",
+            "MuAlBeamHalo": "",
+            "MuAlBeamHaloOverlaps": "",
+            "MuAlCalIsolatedMu": "HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_IsoTkMu*', 'HLT_TkMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*",
+            "MuAlGlobalCosmics": "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*",
+            "MuAlGlobalCosmicsInCollisions": "*",
+            "MuAlOverlaps": "HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_IsoTkMu*', 'HLT_TkMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*",
+            "MuAlStandAloneCosmics": "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*",
+            "MuAlZMuMu": "HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*",
+            "MuAlcaDtCalibCosmics": "HLT_L1TrackerCosmics_*', 'HLT_L1SingleMuOpen_*",
+            "MuAlcaDtCalibHI": "HLT_HIL2Mu*",
+            "MuAlcaDtCalibMu": "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*', 'HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*",
+            "PPSCalMaxTracks": "HLT_PPSMaxTracksPerRP4_v*', 'HLT_PPSMaxTracksPerArm1_v*",
+            "PromptCalibProd": "HLT_*",
+            "PromptCalibProdForBS": "HLT_*",
+            "PromptCalibProdSiStrip": "*",
+            "PromptCalibProdSiStripGainsAAG": "*",
+            "SiPixelCalCosmics": "HLT_*",
+            "SiPixelCalSingleMuon": "HLT_*",
+            "SiPixelCalZeroBias": "HLT_*ZeroBias_v*', 'HLT_Random*', 'HLT_PARandom*', 'HLT_HIRandom*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_HICentralityVeto_v*', 'HLT_L1ETT*', 'HLT_*PixelClusters*",
+            "SiPixelCalZeroBiasHI": "HLT_HICentralityVeto_v*', 'HLT_HIRandom_v*",
+            "SiPixelLorentzAngle": "HLT1MuonIso', 'HLT2MuonNonIso', 'HLT2MuonJPsi', 'HLT2MuonUpsilon', 'HLT2MuonZ', 'HLT2MuonSameSign",
+            "SiStripCalCosmics": "HLT_*",
+            "SiStripCalMinBias": "HLT_*ZeroBias_v*', 'HLT_FullTracks_*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_HICentralityVeto_v*', 'HLT_L1ETT*', 'HLT_*PixelClusters*",
+            "SiStripCalMinBiasAAG": "HLT_ZeroBias_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_FirstCollisionAfterAbortGap_v*",
+            "SiStripCalMinBiasAAGHI": "HLT_HI*_FirstCollisionAfterAbortGap_v*",
+            "SiStripCalMinBiasAfterAbortGap": "HLT_ZeroBias_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_FirstCollisionAfterAbortGap_v*",
+            "SiStripCalMinBiasHI": "HLT_HICentralityVeto_v*",
+            "SiStripCalSmallBiasScan": "NOT HLT_*",
+            "SiStripCalZeroBias": "HLT_*ZeroBias_v*', 'HLT_Random*', 'HLT_PARandom*', 'HLT_HIRandom*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_HICentralityVeto_v*', 'HLT_L1ETT*', 'HLT_*PixelClusters*",
+            "SiStripCalZeroBiasHI": "HLT_HICentralityVeto_v*', 'HLT_HIRandom_v*",
+            "SiStripPCLHistos": "",
+            "TkAlBeamHalo": "",
+            "TkAlCosmics": "",
+            "TkAlCosmics0T": "",
+            "TkAlCosmicsInCollisions": "*",
+            "TkAlJpsiMuMu": "",
+            "TkAlJpsiMuMuHI": "HLT_HI*",
+            "TkAlLAS": "",
+            "TkAlMinBias": "HLT_ZeroBias_*', 'HLT_Random_*', 'HLT_Physics_*', 'HLT_L1ETT*', 'HLT_*PixelClusters*', 'HLT_*Beamspot*",
+            "TkAlMinBiasHI": "HLT_HICentralityVeto*', 'HLT_HIPhysics_v*', 'HLT_HIPuAK4*', 'HLT_HICsAK4*",
+            "TkAlMinBiasNOT": "notExistingPath_GivesWarning_mustNotBecomeEmptyList",
+            "TkAlMuonIsolated": "HLT_*",
+            "TkAlMuonIsolatedHI": "HLT_HI*",
+            "TkAlMuonIsolatedPA": "HLT_*",
+            "TkAlUpsilonMuMu": "HLT_*",
+            "TkAlUpsilonMuMuHI": "HLT_HI*",
+            "TkAlUpsilonMuMuPA": "HLT_*",
+            "TkAlZMuMu": "HLT_*",
+            "TkAlZMuMuHI": "HLT_HI*",
+            "TkAlZMuMuPA": "HLT_*",
+            "VertexPixelZeroBias": "HLT_*ZeroBias_v*', 'HLT_PAZeroBias_*', 'HLT_*Random_*', 'HLT_*L1AlwaysTrue_*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_part*', 'HLT_PAL1MinimumBiasHF_OR_part*"
+        }
+    }
+}
