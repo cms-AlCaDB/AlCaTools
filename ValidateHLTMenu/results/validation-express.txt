@@ -1,0 +1,760 @@
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "AlCaEcalTrg" with selection string: "AlCa_EcalPhiSym*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "AlCaPCCRandom" with selection string: "AlCa_LumiPixelsCounts_Random_v*"
+---------------------------------------------------------------------------------------------------
+
+The following matching triggers were found in the Primary Dataset AlCaLumiPixelsCountsExpress for trigger selection string "AlCa_LumiPixelsCounts_Random_v(.*)":
+
+AlCa_LumiPixelsCounts_Random_v2                       1    (none)
+
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "DtCalib" with selection string: "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*', 'HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "DtCalibCosmics" with selection string: "HLT_L1TrackerCosmics_*', 'HLT_L1SingleMuOpen_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "DtCalibHI" with selection string: "HLT_HIL1DoubleMu*', 'HLT_HIL1Mu*', 'HLT_HIL2Mu*', 'HLT_HIL3Mu*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalCalElectron" with selection string: "HLT_Ele*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalCalEtaCalib" with selection string: "AlCa_EcalEta*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalCalPhiSym" with selection string: "AlCa_EcalPhiSym*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalCalPi0Calib" with selection string: "AlCa_EcalPi0*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalCalWElectron" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalCalZElectron" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalESAlign" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalRecalElectron" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalTrg" with selection string: "AlCa_EcalPhiSym*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalUncalWElectron" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalUncalZElectron" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "EcalUncalZSCElectron" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalDijets" with selection string: "HLT_Jet*', 'HLT_PF*', 'HLT_Di*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalGammaJet" with selection string: "HLT_L1SingleEG*', 'HLT_Photon*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalHBHEMuonFilter" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalHO" with selection string: "HLT_Mu*', 'HLT_IsoMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*', 'HLT_L1ETT*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalHOCosmics" with selection string: "HLT_L1SingleMuOpen_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalIsoTrk" with selection string: "HLT_IsoTrack*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalIsoTrkFilter" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalIsolatedBunchFilter" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalIsolatedBunchSelector" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalIterativePhiSym" with selection string: "HLT_HIEle*', 'HLT_HIDoubleEle*', 'HLT_HIL1Mu*', 'HLT_HIL2Mu*', 'HLT_HIL3Mu*', 'HLT_L1ETT*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalMinBias" with selection string: "HLT_HcalPhiSym_*', 'HLT_PAHcalPhiSym_*', 'HLT_HcalNZS*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalMinBiasHI" with selection string: "HLT_HIHcalPhiSym_v*', 'HLT_HIHcalNZS_v*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalNoise" with selection string: "HLT_MET*', 'HLT_PFMET*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "HcalCalPedestal" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "LumiPixelsMinBias" with selection string: "HLT_*ZeroBias_v*', 'HLT_PAZeroBias_*', 'HLT_*Random_*', 'HLT_*L1AlwaysTrue_*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_part*', 'HLT_PAL1MinimumBiasHF_OR_part*', 'HLT_HIL1MinimumBiasHF_AND_v*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "MuAlBeamHalo" with selection string: ""
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "MuAlBeamHaloOverlaps" with selection string: ""
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "MuAlCalIsolatedMu" with selection string: "HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_IsoTkMu*', 'HLT_TkMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "MuAlGlobalCosmics" with selection string: "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "MuAlGlobalCosmicsInCollisions" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "MuAlOverlaps" with selection string: "HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_IsoTkMu*', 'HLT_TkMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "MuAlStandAloneCosmics" with selection string: "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "MuAlZMuMu" with selection string: "HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*', 'HLT_HIL3Mu*', 'HLT_HIMu*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "MuAlcaDtCalibCosmics" with selection string: "HLT_L1TrackerCosmics_*', 'HLT_L1SingleMuOpen_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "MuAlcaDtCalibHI" with selection string: "HLT_HIL2Mu*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "MuAlcaDtCalibMu" with selection string: "HLT_L1SingleMuOpen_*', 'HLT_L1TrackerCosmics_*', 'HLT_Mu*', 'HLT_IsoMu*', 'HLT_DoubleMu*', 'HLT_PAL3Mu*', 'HLT_PAL3DoubleMu*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "PPSCalMaxTracks" with selection string: "HLT_PPSMaxTracksPerRP4_v*', 'HLT_PPSMaxTracksPerArm1_v*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "PromptCalibProd" with selection string: "HLT_*"
+---------------------------------------------------------------------------------------------------
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "HLT_(.*)":
+
+HLT_MinimumBias_v1                                    1    L1_MinimumBiasHF0_AND_BptxAND
+HLT_Physics_v7                                        1    (none)
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+HLT_Random_v3                                         1    (none)
+HLT_ZeroBias_FirstCollisionAfterAbortGap_v5           1    L1_FirstCollisionInOrbit
+= HLT_ZeroBias_HighExpress_v6                           1    L1_ZeroBias OR L1_AlwaysTrue
+= HLT_ZeroBias_v6                                       1    L1_ZeroBias OR L1_AlwaysTrue
+
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "PromptCalibProdForBS" with selection string: "HLT_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "PromptCalibProdSiStrip" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "(.*)":
+
+HLT_MinimumBias_v1                                    1    L1_MinimumBiasHF0_AND_BptxAND
+HLT_Physics_v7                                        1    (none)
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+HLT_Random_v3                                         1    (none)
+HLT_ZeroBias_FirstCollisionAfterAbortGap_v5           1    L1_FirstCollisionInOrbit
+= HLT_ZeroBias_HighExpress_v6                           1    L1_ZeroBias OR L1_AlwaysTrue
+= HLT_ZeroBias_v6                                       1    L1_ZeroBias OR L1_AlwaysTrue
+
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "PromptCalibProdSiStripGainsAAG" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "(.*)":
+
+HLT_MinimumBias_v1                                    1    L1_MinimumBiasHF0_AND_BptxAND
+HLT_Physics_v7                                        1    (none)
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+HLT_Random_v3                                         1    (none)
+HLT_ZeroBias_FirstCollisionAfterAbortGap_v5           1    L1_FirstCollisionInOrbit
+= HLT_ZeroBias_HighExpress_v6                           1    L1_ZeroBias OR L1_AlwaysTrue
+= HLT_ZeroBias_v6                                       1    L1_ZeroBias OR L1_AlwaysTrue
+
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiPixelCalCosmics" with selection string: "HLT_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiPixelCalSingleMuon" with selection string: "HLT_*"
+---------------------------------------------------------------------------------------------------
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "HLT_(.*)":
+
+HLT_MinimumBias_v1                                    1    L1_MinimumBiasHF0_AND_BptxAND
+HLT_Physics_v7                                        1    (none)
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+HLT_Random_v3                                         1    (none)
+HLT_ZeroBias_FirstCollisionAfterAbortGap_v5           1    L1_FirstCollisionInOrbit
+= HLT_ZeroBias_HighExpress_v6                           1    L1_ZeroBias OR L1_AlwaysTrue
+= HLT_ZeroBias_v6                                       1    L1_ZeroBias OR L1_AlwaysTrue
+
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiPixelCalZeroBias" with selection string: "HLT_*ZeroBias_v*', 'HLT_Random*', 'HLT_PARandom*', 'HLT_HIRandom*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_HICentralityVeto_v*', 'HLT_L1ETT*', 'HLT_*PixelClusters*"
+---------------------------------------------------------------------------------------------------
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "HLT_(.*)ZeroBias_v(.*)":
+
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+= HLT_ZeroBias_v6                                       1    L1_ZeroBias OR L1_AlwaysTrue
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "HLT_Random(.*)":
+
+HLT_Random_v3                                         1    (none)
+
+
+Error: no matching triggers found for selection string HLT_PARandom(.*)
+
+
+Error: no matching triggers found for selection string HLT_HIRandom(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_OR_ForExpress_v(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_AND_v(.*)
+
+
+Error: no matching triggers found for selection string HLT_HICentralityVeto_v(.*)
+
+
+Error: no matching triggers found for selection string HLT_L1ETT(.*)
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "HLT_(.*)PixelClusters(.*)":
+
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiPixelCalZeroBiasHI" with selection string: "HLT_HICentralityVeto_v*', 'HLT_HIRandom_v*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiPixelLorentzAngle" with selection string: "HLT1MuonIso', 'HLT2MuonNonIso', 'HLT2MuonJPsi', 'HLT2MuonUpsilon', 'HLT2MuonZ', 'HLT2MuonSameSign"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiStripCalCosmics" with selection string: "HLT_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiStripCalMinBias" with selection string: "HLT_*ZeroBias_v*', 'HLT_FullTracks_*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_HICentralityVeto_v*', 'HLT_L1ETT*', 'HLT_*PixelClusters*"
+---------------------------------------------------------------------------------------------------
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "HLT_(.*)ZeroBias_v(.*)":
+
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+= HLT_ZeroBias_v6                                       1    L1_ZeroBias OR L1_AlwaysTrue
+
+
+Error: no matching triggers found for selection string HLT_FullTracks_(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_OR_ForExpress_v(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_AND_v(.*)
+
+
+Error: no matching triggers found for selection string HLT_HICentralityVeto_v(.*)
+
+
+Error: no matching triggers found for selection string HLT_L1ETT(.*)
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "HLT_(.*)PixelClusters(.*)":
+
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiStripCalMinBiasAAG" with selection string: "HLT_ZeroBias_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_FirstCollisionAfterAbortGap_v*"
+---------------------------------------------------------------------------------------------------
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "HLT_ZeroBias_FirstCollisionAfterAbortGap(.*)":
+
+HLT_ZeroBias_FirstCollisionAfterAbortGap_v5           1    L1_FirstCollisionInOrbit
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_FirstCollisionAfterAbortGap(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_OR_FirstCollisionAfterAbortGap_v(.*)
+
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiStripCalMinBiasAAGHI" with selection string: "HLT_HI*_FirstCollisionAfterAbortGap_v*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiStripCalMinBiasAfterAbortGap" with selection string: "HLT_ZeroBias_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_FirstCollisionAfterAbortGap*', 'HLT_PAL1MinimumBiasHF_OR_FirstCollisionAfterAbortGap_v*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiStripCalMinBiasHI" with selection string: "HLT_HICentralityVeto_v*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiStripCalSmallBiasScan" with selection string: "NOT HLT_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiStripCalZeroBias" with selection string: "HLT_*ZeroBias_v*', 'HLT_Random*', 'HLT_PARandom*', 'HLT_HIRandom*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_HICentralityVeto_v*', 'HLT_L1ETT*', 'HLT_*PixelClusters*"
+---------------------------------------------------------------------------------------------------
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "HLT_(.*)ZeroBias_v(.*)":
+
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+= HLT_ZeroBias_v6                                       1    L1_ZeroBias OR L1_AlwaysTrue
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "HLT_Random(.*)":
+
+HLT_Random_v3                                         1    (none)
+
+
+Error: no matching triggers found for selection string HLT_PARandom(.*)
+
+
+Error: no matching triggers found for selection string HLT_HIRandom(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_OR_ForExpress_v(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack(.*)
+
+
+Error: no matching triggers found for selection string HLT_PAL1MinimumBiasHF_AND_v(.*)
+
+
+Error: no matching triggers found for selection string HLT_HICentralityVeto_v(.*)
+
+
+Error: no matching triggers found for selection string HLT_L1ETT(.*)
+
+The following matching triggers were found in the Primary Dataset ExpressPhysics for trigger selection string "HLT_(.*)PixelClusters(.*)":
+
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiStripCalZeroBiasHI" with selection string: "HLT_HICentralityVeto_v*', 'HLT_HIRandom_v*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "SiStripPCLHistos" with selection string: ""
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco has no keys. It is either disabled or accepting everything in the PD ExpressPhysics in the menu
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlBeamHalo" with selection string: ""
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlCosmics" with selection string: ""
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlCosmics0T" with selection string: ""
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco has no keys. But It is either disabled or accepting everything but the PD  not in the HLT menu
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlCosmicsInCollisions" with selection string: "*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlJpsiMuMu" with selection string: ""
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlJpsiMuMuHI" with selection string: "HLT_HI*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlLAS" with selection string: ""
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlMinBias" with selection string: "HLT_ZeroBias_*', 'HLT_Random_*', 'HLT_Physics_*', 'HLT_L1ETT*', 'HLT_*PixelClusters*', 'HLT_*Beamspot*"
+---------------------------------------------------------------------------------------------------
+
+The following matching triggers were found in the Primary Dataset ExpressAlignment,ExpressPhysics for trigger selection string "HLT_ZeroBias_(.*)":
+
+= HLT_ZeroBias_Alignment_v1                             1    L1_ZeroBias OR L1_AlwaysTrue
+= HLT_ZeroBias_Beamspot_v4                              1    L1_ZeroBias OR L1_AlwaysTrue
+HLT_ZeroBias_FirstCollisionAfterAbortGap_v5           1    L1_FirstCollisionInOrbit
+= HLT_ZeroBias_HighExpress_v6                           1    L1_ZeroBias OR L1_AlwaysTrue
+= HLT_ZeroBias_v6                                       1    L1_ZeroBias OR L1_AlwaysTrue
+
+The following matching triggers were found in the Primary Dataset ExpressAlignment,ExpressPhysics for trigger selection string "HLT_Random_(.*)":
+
+HLT_Random_v3                                         1    (none)
+
+The following matching triggers were found in the Primary Dataset ExpressAlignment,ExpressPhysics for trigger selection string "HLT_Physics_(.*)":
+
+HLT_Physics_v7                                        1    (none)
+
+
+Error: no matching triggers found for selection string HLT_L1ETT(.*)
+
+The following matching triggers were found in the Primary Dataset ExpressAlignment,ExpressPhysics for trigger selection string "HLT_(.*)PixelClusters(.*)":
+
+= HLT_HT300_Beamspot_PixelClustersWP2_v1                1    L1_ZeroBias OR L1_AlwaysTrue
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+= HLT_PixelClusters_WP1_ZeroBias_v1                     1    L1_ZeroBias OR L1_AlwaysTrue
+
+The following matching triggers were found in the Primary Dataset ExpressAlignment,ExpressPhysics for trigger selection string "HLT_(.*)Beamspot(.*)":
+
+= HLT_HT300_Beamspot_PixelClustersWP2_v1                1    L1_ZeroBias OR L1_AlwaysTrue
+HLT_HT300_Beamspot_v11                                1    L1_HTT120er OR L1_HTT160er OR L1_HTT200er OR L1_HTT255er OR L1_HTT280er OR L1_HTT320er OR L1_HTT360er OR L1_ETT2000 OR L1_HTT400er OR L1_HTT450er OR L1_SingleJet120 OR L1_SingleJet140er2p5 OR L1_SingleJet160er2p5 OR L1_SingleJet180 OR L1_SingleJet200 OR L1_DoubleJet40er2p5 OR L1_DoubleJet100er2p5 OR L1_DoubleJet120er2p5
+= HLT_ZeroBias_Beamspot_v4                              1    L1_ZeroBias OR L1_AlwaysTrue
+
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlMinBiasHI" with selection string: "HLT_HICentralityVeto*', 'HLT_HIPhysics_v*', 'HLT_HIPuAK4*', 'HLT_HICsAK4*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlMinBiasNOT" with selection string: "notExistingPath_GivesWarning_mustNotBecomeEmptyList"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlMuonIsolated" with selection string: "HLT_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlMuonIsolatedHI" with selection string: "HLT_HI*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlMuonIsolatedPA" with selection string: "HLT_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlUpsilonMuMu" with selection string: "HLT_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlUpsilonMuMuHI" with selection string: "HLT_HI*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlUpsilonMuMuPA" with selection string: "HLT_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlZMuMu" with selection string: "HLT_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlZMuMuHI" with selection string: "HLT_HI*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "TkAlZMuMuPA" with selection string: "HLT_*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
+
+
+---------------------------------------------------------------------------------------------------
+Checking AlCaReco: "VertexPixelZeroBias" with selection string: "HLT_*ZeroBias_v*', 'HLT_PAZeroBias_*', 'HLT_*Random_*', 'HLT_*L1AlwaysTrue_*', 'HLT_PAL1MinimumBiasHF_AND_SinglePixelTrack*', 'HLT_PAL1MinimumBiasHF_AND_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_ForExpress*', 'HLT_PAL1MinimumBiasHF_OR_ForExpress_v*', 'HLT_PAL1MinimumBiasHF_OR_SinglePixelTrack_part*', 'HLT_PAL1MinimumBiasHF_OR_part*"
+---------------------------------------------------------------------------------------------------
+
+This AlCaReco is not in the matrix
