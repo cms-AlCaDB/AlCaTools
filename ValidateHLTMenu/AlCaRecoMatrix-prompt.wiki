@@ -1,0 +1,18 @@
+| *Primary Dataset* | *AlCaRecos to be run* |
+| AlCaPhiSym | EcalCalPhiSym |
+| AlCaP0 | EcalCalPi0Calib, EcalCalEtaCalib |
+| AlCaLumiPixelsCountsPrompt | AlCaPCCZeroBias, RawPCCProducer |
+| Charmonium | TkAlJpsiMuMu |
+| Commissioning | HcalCalIsoTrk, HcalCalIsolatedBunchSelector |
+| Cosmics | SiStripCalCosmics, SiPixelCalCosmics, TkAlCosmics0T, MuAlGlobalCosmics |
+| DoubleMuon | TkAlZMuMu, MuAlCalIsolatedMu, TkAlDiMuonAndVertex |
+| EGamma | EcalUncalZElectron, EcalUncalWElectron, HcalCalIterativePhiSym, HcalCalIsoTrkProducerFilter, EcalESAlign |
+| HcalNZS | HcalCalMinBias |
+| HLTPhysics | TkAlMinBias |
+| JetHT | HcalCalIsoTrkProducerFilter, TkAlMinBias |
+| MinimumBias | SiStripCalZeroBias, SiStripCalMinBias, TkAlMinBias, HcalCalHBHEMuonProducerFilter, HcalCalIsoTrkProducerFilter, HcalCalHO, HcalCalIterativePhiSym |
+| MuOnia | TkAlUpsilonMuMu |
+| NoBPTX | TkAlCosmicsInCollisions |
+| SingleMuon | TkAlMuonIsolated, HcalCalIterativePhiSym, MuAlCalIsolatedMu, HcalCalHO, HcalCalHBHEMuonProducerFilter, SiPixelCalSingleMuonLoose, SiPixelCalSingleMuonTight |
+| TestEnablesEcalHcal | EcalTestPulsesRaw, PromptCalibProdEcalPedestals, HcalCalPedestal |
+| ZeroBias | SiStripCalZeroBias, SiStripCalMinBias, TkAlMinBias  |
