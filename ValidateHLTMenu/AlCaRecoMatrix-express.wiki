@@ -1,6 +1,7 @@
 | *Primary Dataset* | *AlCaRecos to be run* |
 | TestEnablesEcalHcal | EcalTestPulsesRaw, PromptCalibProdEcalPedestals |
-| ExpressCosmics | SiStripPCLHistos, SiStripCalZeroBias, SiPixelCalZeroBias, TkAlCosmics0T, PromptCalibProdSiStrip |
-| ExpressAlignment | TkAlMinBias, PromptCalibProdBeamSpotHP |
-| ExpressPhysics | SiPixelCalZeroBias, SiStripPCLHistos, SiStripCalZeroBias, SiStripCalMinBias, SiStripCalMinBiasAAG, TkAlMinBias, SiPixelCalSingleMuon, PromptCalibProd, PromptCalibProdSiStrip, PromptCalibProdSiPixelAli, PromptCalibProdSiStripGains, PromptCalibProdSiStripGainsAAG, PromptCalibProdSiPixel, PromptCalibProdSiPixelLorentzAngle, PromptCalibProdSiStripHitEfficiency |
-| AlCaLumiPixelsCountsExpress | AlCaPCCRandom, PromptCalibProdLumiPCC |
+| ExpressCosmics | SiStripPCLHistos, SiStripCalZeroBias, SiPixelCalZeroBias, TkAlCosmics0T , PromptCalibProdSiStrip  |
+| ExpressAlignment | TkAlMinBias , PromptCalibProdBeamSpotHP |
+| ExpressPhysics | SiPixelCalZeroBias, SiStripPCLHistos, SiStripCalZeroBias, SiStripCalMinBias, SiStripCalMinBiasAAG, TkAlMinBias, SiPixelCalSingleMuon , PromptCalibProd, PromptCalibProdSiStrip, PromptCalibProdSiPixelAli, PromptCalibProdSiStripGains, PromptCalibProdSiStripGainsAAG, PromptCalibProdSiPixel, PromptCalibProdSiPixelLA, PromptCalibProdSiStripHitEff  |
+| AlCaLumiPixelsCountsExpress | AlCaPCCRandom ,	PromptCalibProdLumiPCC  |
+| AlCaPPS | PPSCalMaxTracks , PromptCalibProdPPSTimingCalib, PromptCalibProdPPSAlignment, PromptCalibProdPPSDiamondSampic |
