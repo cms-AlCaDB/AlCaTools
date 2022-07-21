@@ -1,0 +1,10 @@
+RAW2DIGI,L1Reco,RECO,RECOSIM,EI,ENDJOB
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_4_0/bin/slc7_amd64_gcc10/cmsDriver.py", line 56, in <module>
+    run()
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_4_0/bin/slc7_amd64_gcc10/cmsDriver.py", line 15, in run
+    configBuilder = ConfigBuilder(options, with_output = True, with_input = True)
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_4_0/python/Configuration/Applications/ConfigBuilder.py", line 235, in __init__
+    raise ValueError("Step "+stepName+" unknown")
+ValueError: Step EI unknown
