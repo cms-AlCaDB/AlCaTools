@@ -2,6 +2,6 @@
 | TestEnablesEcalHcal | EcalTestPulsesRaw, PromptCalibProdEcalPedestals |
 | ExpressCosmics | SiStripPCLHistos, SiStripCalZeroBias, SiPixelCalZeroBias, TkAlCosmics0T , PromptCalibProdSiStrip  |
 | ExpressAlignment | TkAlMinBias , PromptCalibProdBeamSpotHP |
-| ExpressPhysics | SiPixelCalZeroBias, SiStripPCLHistos, SiStripCalZeroBias, SiStripCalMinBias, SiStripCalMinBiasAAG, TkAlMinBias, SiPixelCalSingleMuon , PromptCalibProd, PromptCalibProdSiStrip, PromptCalibProdSiPixelAli, PromptCalibProdSiStripGains, PromptCalibProdSiStripGainsAAG, PromptCalibProdSiPixel, PromptCalibProdSiPixelLA, PromptCalibProdSiStripHitEff  |
+| ExpressPhysics | SiPixelCalZeroBias, SiStripPCLHistos, SiStripCalZeroBias, SiStripCalMinBias, SiStripCalMinBiasAAG, TkAlMinBias, SiPixelCalSingleMuon , PromptCalibProd, PromptCalibProdSiStrip, PromptCalibProdSiPixelAli, PromptCalibProdSiStripGains, PromptCalibProdSiStripGainsAAG, PromptCalibProdSiPixel, PromptCalibProdSiPixelLA, PromptCalibProdSiStripHitEff, PromptCalibProdSiPixelLorentzAngle  |
 | AlCaLumiPixelsCountsExpress | AlCaPCCRandom ,	PromptCalibProdLumiPCC  |
-| AlCaPPS | PPSCalMaxTracks , PromptCalibProdPPSTimingCalib, PromptCalibProdPPSAlignment, PromptCalibProdPPSDiamondSampic |
+| AlCaPPSExpress  | PPSCalMaxTracks , PromptCalibProdPPSTimingCalib, PromptCalibProdPPSAlignment |
