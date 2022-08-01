@@ -5,7 +5,7 @@
 | AlCaLumiPixelsCountsPrompt | AlCaPCCZeroBias, RawPCCProducer |
 | Commissioning | HcalCalIsoTrk, HcalCalIsolatedBunchSelector |
 | Cosmics | SiStripCalCosmics, SiPixelCalCosmics, TkAlCosmics0T, MuAlGlobalCosmics, SiStripCalCosmicsNano |
-| ParkingDoubleMuonLowMass0-7| TkAlJpsiMuMu, TkAlUpsilonMuMu |
+| ParkingDoubleMuonLowMass | TkAlJpsiMuMu, TkAlUpsilonMuMu |
 | EGamma | EcalUncalZElectron, EcalUncalWElectron, HcalCalIterativePhiSym, HcalCalIsoTrkProducerFilter, EcalESAlign |
 | HcalNZS | HcalCalMinBias |
 | HLTPhysics | TkAlMinBias |
