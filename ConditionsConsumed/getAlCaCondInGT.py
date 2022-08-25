@@ -15,7 +15,6 @@ if(isData):
     logFiles.append("output_step4_MINIAOD.log")
     logFiles.append("output_step5_NANOAOD.log")
 else:
-    logFiles.append("output_step1_GEN.log")
     logFiles.append("output_step2_SIM.log")
     logFiles.append("output_step3_DIGI.log")
     logFiles.append("output_step4_L1.log")
@@ -29,7 +28,7 @@ else:
 if(isData):
     tableTitle = "|Tags|L1|HLT|AOD|MINIAOD|NANOAOD|\n"
 else:
-    tableTitle = "|Tags|GEN|SIM|DIGI|L1|DIGI2RAW|HLT|AOD|MINIAOD|NANOAOD|\n"
+    tableTitle = "|Tags|GEN-SIM|DIGI|L1|DIGI2RAW|HLT|AOD|MINIAOD|NANOAOD|\n"
 
 outputForTwiki = open("outputForTwiki.txt", 'w')
 def checkTagInFile(tag, logFile):
