@@ -2,8 +2,7 @@
 echo "------------------------------"
 echo "Running step-1/9: GEN"
 echo "------------------------------"
-cmsDriver.py TTbar_13TeV_TuneCUETP8M1_cfi  --conditions auto:phase1_2022_realistic -n 5 --era Run2_2018 -s GEN --fileout output_step1_GEN.root --beamspot Realistic50ns13TeVCollision  --customise_commands='process.GlobalTag.DumpStat =cms.untracked.bool(True)'|& tee output_step1_GEN.log
-
+cmsDriver.py TTbar_13TeV_TuneCUETP8M1_cfi  --conditions auto:run2_mc -n 5 --era Run2_2016 -s GEN --fileout output_step1_GEN.root --beamspot Realistic50ns13TeVCollision  --customise_commands='process.GlobalTag.DumpStat =cms.untracked.bool(True)'|& tee output_step1_GEN.log
 #2: SIM
 echo "------------------------------"
 echo "Running step-2/9: SIM"
