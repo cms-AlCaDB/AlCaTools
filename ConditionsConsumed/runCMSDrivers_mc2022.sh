@@ -66,7 +66,7 @@ cmsDriver.py step8 --runUnscheduled --conditions auto:phase1_2022_realistic -n 5
 echo "------------------------------"
 echo "Running step-7/7: NANOAODSIM"
 echo "------------------------------"
-# cmsDriver.py step5 --runUnscheduled --conditions auto:phase1_2022_realistic -n 5 --era Run3 -s NANO --datatier NANOAODSIM --eventcontent NANOAODSIM --filein file:output_step7_AODSIM.root --fileout output_step9_NANOAODSIM.root --customise_commands='process.GlobalTag.DumpStat=cms.untracked.bool(True)' |& tee output_step9_NANOAODSIM.log
+# cmsDriver.py step5 --runUnscheduled --conditions auto:phase1_2022_realistic -n 5 --era Run3 -s NANO --datatier NANOAODSIM --eventcontent NANOAODSIM --filein file:output_step8_MINIAODSIM.root --fileout output_step9_NANOAODSIM.root --customise_commands='process.GlobalTag.DumpStat=cms.untracked.bool(True)' |& tee output_step9_NANOAODSIM.log
 cmsDriver.py step5 --runUnscheduled --conditions auto:phase1_2022_realistic -n 5 --era Run3 -s RAW2DIGI,L1Reco,RECO,RECOSIM,PAT,NANO --datatier NANOAODSIM --eventcontent NANOAODSIM --filein file:output_step8_MINIAODSIM.root --fileout output_step9_NANOAODSIM.root --customise_commands='process.GlobalTag.DumpStat=cms.untracked.bool(True)' |& tee output_step9_NANOAODSIM.log
 
 
