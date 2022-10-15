@@ -1,36 +1,12 @@
 
 ############################################
 # get AlCa conditions consumed in the CMSSW
-# https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideCalAliTrigger2019
+# https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideCalAliTrigger2022
 ############################################
+import os
+import sys
+import optparse
 
-#input
-isData = False
-tagFile = "allAlCaTags.txt"
-logFiles = []
-if(isData):
-    logFiles.append("output_step1_L1.log")
-    logFiles.append("output_step2_HLT.log")
-    logFiles.append("output_step3_AOD.log")
-    logFiles.append("output_step4_MINIAOD.log")
-    logFiles.append("output_step5_NANOAOD.log")
-else:
-    logFiles.append("output_step2_SIM.log")
-    logFiles.append("output_step3_DIGI.log")
-    logFiles.append("output_step4_L1.log")
-    logFiles.append("output_step5_DIGI2RAW.log")
-    logFiles.append("output_step6_HLT.log")
-    logFiles.append("output_step7_AODSIM.log")
-    logFiles.append("output_step8_MINIAODSIM.log")
-    logFiles.append("output_step9_NANOAODSIM.log")
-
-#output
-if(isData):
-    tableTitle = "|Tags|L1|HLT|AOD|MINIAOD|NANOAOD|\n"
-else:
-    tableTitle = "|Tags|GEN-SIM|DIGI|L1|DIGI2RAW|HLT|AOD|MINIAOD|NANOAOD|\n"
-
-outputForTwiki = open("outputForTwiki.txt", 'w')
 def checkTagInFile(tag, logFile):
     found = False
     checkTagLine =0
@@ -59,11 +35,58 @@ def getOneRow(tag, logFiles):
         rowName = rowName + " | " + checkTagInFile_
     return rowName + " | \n"
 
-def printAllRow(tagFile, logFiles, outForTwiki):
+def printAllRow(tagFile, logFiles, outForTwiki, tableTitle):
     outForTwiki.write(tableTitle)
     for tag in open(tagFile):
         getOneRow_ = getOneRow(tag, logFiles)
-        print getOneRow_
+        #print (getOneRow_)
         outForTwiki.write(getOneRow_)
 
-printAllRow(tagFile, logFiles, outputForTwiki)
+def main():
+    
+    #Default input
+    defaultData = False
+    
+    parser = optparse.OptionParser(usage = 'Usage: python3 getAlCaCondInGT.py [options] \n')
+
+    parser.add_option('-d', '--data',
+                      dest = 'isData',
+                      default = defaultData,
+                      help = 'enter True for data, False for MC. Default: False')
+
+    (options, arguments) = parser.parse_args()
+
+    #isData = False
+    output_table = "MC" 
+    tagFile = "allAlCaTags.txt"
+    logFiles = []
+    if(options.isData):
+        logFiles.append("output_step1_L1.log")
+        logFiles.append("output_step2_HLT.log")
+        logFiles.append("output_step3_AOD.log")
+        logFiles.append("output_step4_MINIAOD.log")
+        logFiles.append("output_step5_NANOAOD.log")
+    else:
+        logFiles.append("output_step2_SIM.log")
+        logFiles.append("output_step3_DIGI.log")
+        logFiles.append("output_step4_L1.log")
+        logFiles.append("output_step5_DIGI2RAW.log")
+        logFiles.append("output_step6_HLT.log")
+        logFiles.append("output_step7_AODSIM.log")
+        logFiles.append("output_step8_MINIAODSIM.log")
+        logFiles.append("output_step9_NANOAODSIM.log")
+
+    #output
+    if(options.isData):
+        output_table = "DATA"
+        tableTitle = "|Tags|L1|HLT|AOD|MINIAOD|NANOAOD|\n"
+    else:
+        tableTitle = "|Tags|GEN-SIM|DIGI|L1|DIGI2RAW|HLT|AOD|MINIAOD|NANOAOD|\n"
+
+    outputForTwiki = open(f"outputForTwiki_{output_table}.txt", 'w')
+
+    printAllRow(tagFile, logFiles, outputForTwiki, tableTitle)
+
+if __name__ == '__main__':
+    main()
+
