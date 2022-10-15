@@ -2,7 +2,6 @@
 ############################################
 # get AlCa conditions consumed in the CMSSW
 # https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideCalAliTrigger2022
-# Usage: python3 getAlCaCondInGT.py --data True 
 ############################################
 import os
 import sys
@@ -58,6 +57,7 @@ def main():
     (options, arguments) = parser.parse_args()
 
     #isData = False
+    output_table = "MC" 
     tagFile = "allAlCaTags.txt"
     logFiles = []
     if(options.isData):
@@ -78,11 +78,12 @@ def main():
 
     #output
     if(options.isData):
+        output_table = "DATA"
         tableTitle = "|Tags|L1|HLT|AOD|MINIAOD|NANOAOD|\n"
     else:
         tableTitle = "|Tags|GEN-SIM|DIGI|L1|DIGI2RAW|HLT|AOD|MINIAOD|NANOAOD|\n"
 
-    outputForTwiki = open("outputForTwiki.txt", 'w')
+    outputForTwiki = open(f"outputForTwiki_{output_table}.txt", 'w')
 
     printAllRow(tagFile, logFiles, outputForTwiki, tableTitle)
 
