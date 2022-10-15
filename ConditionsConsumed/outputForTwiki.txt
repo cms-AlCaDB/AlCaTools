@@ -1,495 +1,495 @@
-|Tags|GEN-SIM|DIGI|L1|DIGI2RAW|HLT|AOD|MINIAOD|NANOAOD|
-|AlCaRecoTriggerBitsRcd / |  |  |  |  |  |  |  |  | 
-|AlCaRecoTriggerBitsRcd / JetMETDQMTrigger |  |  |  |  |  |  |  |  | 
-|AlCaRecoTriggerBitsRcd / MuonDQMTrigger |  |  |  |  |  |  |  |  | 
-|AlCaRecoTriggerBitsRcd / SiStripDQMTrigger |  |  |  |  |  |  |  |  | 
-|BTagTrackProbability2DRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|BTagTrackProbability3DRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|BTauGenericMVAJetTagComputerRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|BTauGenericMVAJetTagComputerRcd / HLT |  |  |  |  |  |  |  |  | 
-|BeamSpotObjectsRcd / | %GREEN% Yes %ENDCOLOR% |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|CSCAlignmentErrorExtendedRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|CSCAlignmentRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|CSCBadChambersRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|CSCBadStripsRcd / |  |  |  |  |  |  |  |  | 
-|CSCBadWiresRcd / |  |  |  |  |  |  |  |  | 
-|CSCChamberMapRcd / |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|CSCChamberTimeCorrectionsRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|CSCCrateMapRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|CSCDBChipSpeedCorrectionRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|CSCDBCrosstalkRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|CSCDBGainsRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|CSCDBGasGainCorrectionRcd / |  |  |  |  |  |  |  |  | 
-|CSCDBL1TPParametersRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  | 
-|CSCDBNoiseMatrixRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|CSCDBPedestalsRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|CSCDDUMapRcd / |  |  |  |  |  |  |  |  | 
-|CSCRecoDigiParametersRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|CSCRecoGeometryRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|CastorChannelQualityRcd / |  |  |  |  |  |  |  |  | 
-|CastorElectronicsMapRcd / |  |  |  |  |  |  |  |  | 
-|CastorGainWidthsRcd / |  |  |  |  |  |  |  |  | 
-|CastorGainsRcd / |  |  |  |  |  |  |  |  | 
-|CastorPedestalWidthsRcd / |  |  |  |  |  |  |  |  | 
-|CastorPedestalsRcd / |  |  |  |  |  |  |  |  | 
-|CastorQIEDataRcd / |  |  |  |  |  |  |  |  | 
-|CastorRecoParamsRcd / |  |  |  |  |  |  |  |  | 
-|CastorSaturationCorrsRcd / |  |  |  |  |  |  |  |  | 
-|DQMReferenceHistogramRootFileRcd / |  |  |  |  |  |  |  |  | 
-|DQMXMLFileRcd / SiPixelDQMQTests |  |  |  |  |  |  |  |  | 
-|DQMXMLFileRcd / SiStripDQMQTests |  |  |  |  |  |  |  |  | 
-|DTAlignmentErrorExtendedRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|DTAlignmentRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|DTCCBConfigRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  | 
-|DTDeadFlagRcd / |  |  |  |  |  |  |  |  | 
-|DTKeyedConfigContainerRcd / |  |  |  |  |  |  |  |  | 
-|DTKeyedConfigListRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  | 
-|DTMtimeRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|DTReadOutMappingRcd / |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|DTRecoConditionsUncertRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|DTRecoGeometryRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|DTRecoUncertaintiesRcd / |  |  |  |  |  |  |  |  | 
-|DTStatusFlagRcd / |  |  |  |  |  |  |  |  | 
-|DTT0Rcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|DTTPGParametersRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  | 
-|DTTtrigRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|DTTtrigRcd / cosmics |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|DYTThrObjectRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EBAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|EEAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|ESAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|ESAngleCorrectionFactorsRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|ESChannelStatusRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|ESEEIntercalibConstantsRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|ESGainRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|ESIntercalibConstantsRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|ESMIPToGeVConstantRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|ESMissingEnergyCalibrationRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|ESPedestalsRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|ESRecHitRatioCutsRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|ESThresholdsRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|ESTimeSampleWeightsRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalADCToGeVConstantRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|EcalChannelStatusRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|EcalClusterCrackCorrParametersRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalClusterEnergyCorrectionObjectSpecificParametersRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalClusterEnergyCorrectionParametersRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalClusterEnergyUncertaintyParametersRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalClusterLocalContCorrParametersRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalDAQTowerStatusRcd / |  |  |  |  |  |  |  |  | 
-|EcalDCSTowerStatusRcd / |  |  |  |  |  |  |  |  | 
-|EcalGainRatiosRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalIntercalibConstantsMCRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalIntercalibConstantsRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|EcalIntercalibErrorsRcd / |  |  |  |  |  |  |  |  | 
-|EcalLaserAPDPNRatiosRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|EcalLaserAPDPNRatiosRefRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|EcalLaserAlphasRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|EcalLinearCorrectionsRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|EcalMappingElectronicsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalPedestalsRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalPulseCovariancesRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalPulseShapesRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalSRSettingsRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalSRSettingsRcd / fullReadout |  |  |  |  |  |  |  |  | 
-|EcalSampleMaskRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalSamplesCorrelationRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalTBWeightsRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalTPGCrystalStatusRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGFineGrainEBGroupRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGFineGrainEBIdMapRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGFineGrainStripEERcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGFineGrainTowerEERcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGLinearizationConstRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGLutGroupRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|EcalTPGLutIdMapRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|EcalTPGPedestalsRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGPhysicsConstRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|EcalTPGSlidingWindowRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGSpikeRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGStripStatusRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGTowerStatusRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGWeightGroupRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTPGWeightIdMapRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|EcalTimeBiasCorrectionsRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalTimeCalibConstantsRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalTimeOffsetConstantRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|EcalWeightXtalGroupsRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_mean_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_mean_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_sigma_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_sigma_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_mean_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_mean_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_sigma_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_sigma_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_mean_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_mean_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_sigma_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_sigma_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_mean_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_mean_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_sigma_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_sigma_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_mean_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_mean_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_sigma_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_sigma_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_mean_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_mean_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_sigma_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_sigma_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_mean_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_mean_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_sigma_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_sigma_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_mean_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_mean_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_sigma_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_sigma_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_mean_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_mean_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_sigma_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_sigma_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_mean_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_mean_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_sigma_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_sigma_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / electron_eb_ECALTRK |  |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | 
-|GBRDWrapperRcd / electron_eb_ECALTRK_var |  |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | 
-|GBRDWrapperRcd / electron_eb_ECALonly |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / electron_eb_ECALonly_var |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / electron_ee_ECALTRK |  |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | 
-|GBRDWrapperRcd / electron_ee_ECALTRK_var |  |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | 
-|GBRDWrapperRcd / electron_ee_ECALonly |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / electron_ee_ECALonly_var |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / gedelectron_EBCorrection_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedelectron_EBCorrection_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedelectron_EBUncertainty_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedelectron_EBUncertainty_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedelectron_EECorrection_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedelectron_EECorrection_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedelectron_EEUncertainty_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedelectron_EEUncertainty_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedphoton_EBCorrection_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedphoton_EBCorrection_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedphoton_EBUncertainty_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedphoton_EBUncertainty_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedphoton_EECorrection_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedphoton_EECorrection_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedphoton_EEUncertainty_25ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / gedphoton_EEUncertainty_50ns |  |  |  |  |  |  |  |  | 
-|GBRDWrapperRcd / pfscecal_EBCorrection_offline_v2 |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / pfscecal_EBCorrection_online |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|GBRDWrapperRcd / pfscecal_EBUncertainty_offline_v2 |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / pfscecal_EBUncertainty_online |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|GBRDWrapperRcd / pfscecal_EECorrection_offline_v2 |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / pfscecal_EECorrection_online |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|GBRDWrapperRcd / pfscecal_EEUncertainty_offline_v2 |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / pfscecal_EEUncertainty_online |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|GBRDWrapperRcd / photon_eb_ECALonly |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / photon_eb_ECALonly_var |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / photon_ee_ECALonly |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / photon_ee_ECALonly_var |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRWrapperRcd / MVADuplicate |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRWrapperRcd / MVASelectorIter0 |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRWrapperRcd / MVASelectorIter0_13TeV |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter1 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter1_13TeV |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter2 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter2_13TeV |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter3 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter3_13TeV |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter4 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter4_13TeV |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter5 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter5_13TeV |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter6 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / MVASelectorIter6_13TeV |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / PFEcalResolution |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / PFGCorrectionBar |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / PFGCorrectionEndHighR9 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / PFGCorrectionEndLowR9 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / PFGlobalCorrection |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / PFLCCorrection |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / PFLCorrectionBar |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / PFLCorrectionEnd |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / PFResolution |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / btag_CombinedMVAv2_BDT |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|GBRWrapperRcd / btag_SoftPFElectron_BDT |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|GBRWrapperRcd / btag_SoftPFMuon_BDT |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|GBRWrapperRcd / gedelectron_EBCorrection_offline_v1 |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRWrapperRcd / gedelectron_EBUncertainty_offline_v1 |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRWrapperRcd / gedelectron_EECorrection_offline_v1 |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRWrapperRcd / gedelectron_EEUncertainty_offline_v1 |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRWrapperRcd / gedelectron_p4combination_25ns |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / gedelectron_p4combination_50ns |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / gedelectron_p4combination_offline |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRWrapperRcd / gedphoton_EBCorrection_offline_v1 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / gedphoton_EBUncertainty_offline_v1 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / gedphoton_EECorrection_offline_v1 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / gedphoton_EEUncertainty_offline_v1 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / pfscecal_EBCorrection_offline_v1 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / pfscecal_EECorrection_offline_v1 |  |  |  |  |  |  |  |  | 
-|GBRWrapperRcd / wgbrph_EBCorrection |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRWrapperRcd / wgbrph_EBUncertainty |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRWrapperRcd / wgbrph_EECorrection |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRWrapperRcd / wgbrph_EEUncertainty |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GEMRecoGeometryRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|GeometryFileRcd / Extended | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  |  | 
-|GeometryFileRcd / Extended2015CastorMeasured |  |  |  |  |  |  |  |  | 
-|GeometryFileRcd / Extended2015CastorSystMinus |  |  |  |  |  |  |  |  | 
-|GeometryFileRcd / Extended2015CastorSystPlus |  |  |  |  |  |  |  |  | 
-|GeometryFileRcd / Extended2015ZeroMaterial |  |  |  |  |  |  |  |  | 
-|GeometryFileRcd / Extended2015dev |  |  |  |  |  |  |  |  | 
-|GeometryFileRcd / Ideal |  |  |  |  |  |  |  |  | 
-|GeometryFileRcd / Ideal2015dev |  |  |  |  |  |  |  |  | 
-|GlobalPositionRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|HBAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|HBHENegativeEFilterRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HEAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|HFAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|HFPhase1PMTParamsRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HOAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|HcalChannelQualityRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|HcalElectronicsMapRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalFlagHFDigiTimeParamsRcd / |  |  |  |  |  |  |  |  | 
-|HcalFrontEndMapRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalGainsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalL1TriggerObjectsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalLUTCorrsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalLongRecoParamsRcd / |  |  |  |  |  |  |  |  | 
-|HcalLutMetadataRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalMCParamsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalOOTPileupCompatibilityRcd / |  |  |  |  |  |  |  |  | 
-|HcalOOTPileupCorrectionMapCollRcd / |  |  |  |  |  |  |  |  | 
-|HcalPFCorrsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalParametersRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|HcalPedestalWidthsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalPedestalsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalQIEDataRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalQIETypesRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalRecoParamsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalRespCorrsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalSiPMCharacteristicsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalSiPMParametersRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalTPChannelParametersRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalTPParametersRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalTimeCorrsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HcalZSThresholdsRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|HeavyIonRcd / HFhitsAMPT_2760GeV |  |  |  |  |  |  |  |  | 
-|HeavyIonRcd / HFhitsHydjet_Bass |  |  |  |  |  |  |  |  | 
-|HeavyIonRcd / HFhitsHydjet_Drum |  |  |  |  |  |  |  |  | 
-|HeavyIonRcd / HFtowersHydjet_Bass |  |  |  |  |  |  |  |  | 
-|HeavyIonRcd / HFtowersHydjet_Drum |  |  |  |  |  |  |  |  | 
-|HeavyIonRcd / PixelHitsAMPT_2760GeV |  |  |  |  |  |  |  |  | 
-|HeavyIonRcd / PixelHitsHydjet_Bass |  |  |  |  |  |  |  |  | 
-|HeavyIonRcd / PixelHitsHydjet_Drum |  |  |  |  |  |  |  |  | 
-|HeavyIonRcd / PixelTracksHydjet_Bass |  |  |  |  |  |  |  |  | 
-|HeavyIonRcd / PixelTracksHydjet_Drum |  |  |  |  |  |  |  |  | 
-|HeavyIonRcd / TracksHydjet_Bass |  |  |  |  |  |  |  |  | 
-|HeavyIonRcd / TracksHydjet_Drum |  |  |  |  |  |  |  |  | 
-|IdealGeometryRecord / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|JetCorrectionsRecord / AK10PF |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK10PFchs |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK1PF |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK1PFchs |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK2PF |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK2PFchs |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK3PF |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK3PFchs |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK4Calo |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|JetCorrectionsRecord / AK4CaloHLT |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|JetCorrectionsRecord / AK4JPT |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK4PF |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
-|JetCorrectionsRecord / AK4PFHLT |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|JetCorrectionsRecord / AK4PFPuppi |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
-|JetCorrectionsRecord / AK4PFchs |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
-|JetCorrectionsRecord / AK5Calo |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK5CaloHLT |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK5JPT |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK5PF |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK5PFHLT |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK5PFchs |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK5PFchsHLT |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK5TRK |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK6PF |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK6PFchs |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK7Calo |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK7JPT |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK7PF |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK7PFchs |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK8CaloHLT |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|JetCorrectionsRecord / AK8PF |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
-|JetCorrectionsRecord / AK8PFHLT |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|JetCorrectionsRecord / AK8PFPuppi |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
-|JetCorrectionsRecord / AK8PFchs |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK9PF |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / AK9PFchs |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / IC5Calo |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / IC5PF |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / KT4Calo |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / KT4PF |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / KT6Calo |  |  |  |  |  |  |  |  | 
-|JetCorrectionsRecord / KT6PF |  |  |  |  |  |  |  |  | 
-|JetResolutionRcd / AK4PFPuppi_phi |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
-|JetResolutionRcd / AK4PFPuppi_pt |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
-|JetResolutionRcd / AK4PF_phi |  |  |  |  |  |  |  |  | 
-|JetResolutionRcd / AK4PF_pt |  |  |  |  |  |  |  |  | 
-|JetResolutionRcd / AK4PFchs_phi |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
-|JetResolutionRcd / AK4PFchs_pt |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
-|JetResolutionRcd / AK8PFPuppi_phi |  |  |  |  |  |  |  |  | 
-|JetResolutionRcd / AK8PFPuppi_pt |  |  |  |  |  |  |  |  | 
-|JetResolutionRcd / AK8PF_phi |  |  |  |  |  |  |  |  | 
-|JetResolutionRcd / AK8PF_pt |  |  |  |  |  |  |  |  | 
-|JetResolutionRcd / AK8PFchs_phi |  |  |  |  |  |  |  |  | 
-|JetResolutionRcd / AK8PFchs_pt |  |  |  |  |  |  |  |  | 
-|JetResolutionScaleFactorRcd / AK4PF |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
-|JetResolutionScaleFactorRcd / AK4PFPuppi |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
-|JetResolutionScaleFactorRcd / AK4PFchs |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
-|JetResolutionScaleFactorRcd / AK8PF |  |  |  |  |  |  |  |  | 
-|JetResolutionScaleFactorRcd / AK8PFPuppi |  |  |  |  |  |  |  |  | 
-|JetResolutionScaleFactorRcd / AK8PFchs |  |  |  |  |  |  |  |  | 
-|L1CaloEcalScaleRcd / |  |  |  |  |  |  |  |  | 
-|L1CaloGeometryRecord / |  |  |  |  |  |  |  |  | 
-|L1CaloHcalScaleRcd / |  |  |  |  |  |  |  |  | 
-|L1EmEtScaleRcd / |  |  |  |  |  |  |  |  | 
-|L1GctChannelMaskRcd / |  |  |  |  |  |  |  |  | 
-|L1GctJetFinderParamsRcd / |  |  |  |  |  |  |  |  | 
-|L1GtBoardMapsRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|L1GtParametersRcd / |  |  |  |  |  |  |  |  | 
-|L1GtPrescaleFactorsAlgoTrigRcd / |  |  |  |  |  |  |  |  | 
-|L1GtPrescaleFactorsTechTrigRcd / |  |  |  |  |  |  |  |  | 
-|L1GtPsbSetupRcd / |  |  |  |  |  |  |  |  | 
-|L1GtStableParametersRcd / |  |  |  |  |  |  |  |  | 
-|L1GtTriggerMaskAlgoTrigRcd / |  |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | 
-|L1GtTriggerMaskTechTrigRcd / |  |  |  |  |  |  |  |  | 
-|L1GtTriggerMaskVetoAlgoTrigRcd / |  |  |  |  |  |  |  |  | 
-|L1GtTriggerMaskVetoTechTrigRcd / |  |  |  |  |  |  |  |  | 
-|L1GtTriggerMenuRcd / |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
-|L1HfRingEtScaleRcd / |  |  |  |  |  |  |  |  | 
-|L1HtMissScaleRcd / |  |  |  |  |  |  |  |  | 
-|L1JetEtScaleRcd / |  |  |  |  |  |  |  |  | 
-|L1MuCSCPtLutRcd / |  |  |  |  |  |  |  |  | 
-|L1MuCSCTFAlignmentRcd / |  |  |  |  |  |  |  |  | 
-|L1MuCSCTFConfigurationRcd / |  |  |  |  |  |  |  |  | 
-|L1MuDTEtaPatternLutRcd / |  |  |  |  |  |  |  |  | 
-|L1MuDTExtLutRcd / |  |  |  |  |  |  |  |  | 
-|L1MuDTPhiLutRcd / |  |  |  |  |  |  |  |  | 
-|L1MuDTPtaLutRcd / |  |  |  |  |  |  |  |  | 
-|L1MuDTQualPatternLutRcd / |  |  |  |  |  |  |  |  | 
-|L1MuDTTFMasksRcd / |  |  |  |  |  |  |  |  | 
-|L1MuDTTFParametersRcd / |  |  |  |  |  |  |  |  | 
-|L1MuGMTChannelMaskRcd / |  |  |  |  |  |  |  |  | 
-|L1MuGMTParametersRcd / |  |  |  |  |  |  |  |  | 
-|L1MuGMTScalesRcd / |  |  |  |  |  |  |  |  | 
-|L1MuTriggerPtScaleRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|L1MuTriggerScalesRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|L1RCTChannelMaskRcd / |  |  |  |  |  |  |  |  | 
-|L1RCTNoisyChannelMaskRcd / |  |  |  |  |  |  |  |  | 
-|L1RCTParametersRcd / |  |  |  |  |  |  |  |  | 
-|L1RPCBxOrConfigRcd / |  |  |  |  |  |  |  |  | 
-|L1RPCConeDefinitionRcd / |  |  |  |  |  |  |  |  | 
-|L1RPCConfigRcd / |  |  |  |  |  |  |  |  | 
-|L1RPCHsbConfigRcd / |  |  |  |  |  |  |  |  | 
-|L1RPCHwConfigRcd / |  |  |  |  |  |  |  |  | 
-|L1TCaloParamsRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  | 
-|L1TUtmTriggerMenuRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
-|L1TriggerKeyListRcd / |  |  |  |  |  |  |  |  | 
-|L1TriggerKeyRcd / |  |  |  |  |  |  |  |  | 
-|LumiSectionDataRcd / |  |  |  |  |  |  |  |  | 
-|MFGeometryFileRcd / 120812 |  |  |  |  |  |  |  |  | 
-|MFGeometryFileRcd / 130503 |  |  |  |  |  |  |  |  | 
-|MFGeometryFileRcd / 90322 |  |  |  |  |  |  |  |  | 
-|MagFieldConfigRcd / 0T |  |  |  |  |  |  |  |  | 
-|MagFieldConfigRcd / 2T |  |  |  |  |  |  |  |  | 
-|MagFieldConfigRcd / 3.5T |  |  |  |  |  |  |  |  | 
-|MagFieldConfigRcd / 3.8T | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|MagFieldConfigRcd / 3T |  |  |  |  |  |  |  |  | 
-|MagFieldConfigRcd / 4T |  |  |  |  |  |  |  |  | 
-|PCaloTowerRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|PCastorRcd / |  |  |  |  |  |  |  |  | 
-|PEcalBarrelRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|PEcalEndcapRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|PEcalPreshowerRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|PFCalibrationRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|PFCalibrationRcd / HLT |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|PGeometricDetExtraRcd / |  |  |  |  |  |  |  |  | 
-|PHcalRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|PTrackerParametersRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|PZdcRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|PerformancePayloadRecord / BTagTTBARMCBTAGCSVtable_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformancePayloadRecord / BTagTTBARMCBTAGJBPtable_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformancePayloadRecord / BTagTTBARMCBTAGJPtable_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformancePayloadRecord / BTagTTBARMCBTAGSSVHEtable_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformancePayloadRecord / BTagTTBARMCBTAGSSVHPtable_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformancePayloadRecord / BTagTTBARMCBTAGTCHEtable_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformancePayloadRecord / BTagTTBARMCBTAGTCHPtable_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformanceWPRecord / BTagTTBARMCBTAGCSVwp_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformanceWPRecord / BTagTTBARMCBTAGJBPwp_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformanceWPRecord / BTagTTBARMCBTAGJPwp_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformanceWPRecord / BTagTTBARMCBTAGSSVHEwp_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformanceWPRecord / BTagTTBARMCBTAGSSVHPwp_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformanceWPRecord / BTagTTBARMCBTAGTCHEwp_v8_offline |  |  |  |  |  |  |  |  | 
-|PerformanceWPRecord / BTagTTBARMCBTAGTCHPwp_v8_offline |  |  |  |  |  |  |  |  | 
-|PhotonConversionMVAComputerRcd / |  |  |  |  |  |  |  |  | 
-|QGLikelihoodRcd / QGL_AK4PF |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
-|QGLikelihoodRcd / QGL_AK4PF_antib |  |  |  |  |  |  |  |  | 
-|QGLikelihoodRcd / QGL_AK4PFchs |  |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
-|QGLikelihoodRcd / QGL_AK4PFchs_antib |  |  |  |  |  |  |  |  | 
-|RPCClusterSizeRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|RPCEMapRcd / |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|RPCRecoGeometryRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|RPCStripNoisesRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|RunInfoRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|SiPixelCPEGenericErrorParmRcd / |  |  |  |  |  |  |  |  | 
-|SiPixelDetVOffRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiPixelDynamicInefficiencyRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|SiPixelDynamicInefficiencyRcd / 50ns |  |  |  |  |  |  |  |  | 
-|SiPixelFedCablingMapRcd / |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiPixelGainCalibrationForHLTRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|SiPixelGainCalibrationForHLTSimRcd / |  |  |  |  |  |  |  |  | 
-|SiPixelGainCalibrationOfflineRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiPixelGainCalibrationOfflineSimRcd / |  |  |  |  |  |  |  |  | 
-|SiPixelGenErrorDBObjectRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiPixelLorentzAngleRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiPixelLorentzAngleRcd / forWidth |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiPixelLorentzAngleRcd / fromAlignment |  |  |  |  |  |  |  |  | 
-|SiPixelLorentzAngleSimRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|SiPixelQualityFromDbRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiPixelTemplateDBObjectRcd / |  |  |  |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiPixelTemplateDBObjectRcd / 0T |  |  |  |  |  |  |  |  | 
-|SiPixelTemplateDBObjectRcd / 2T |  |  |  |  |  |  |  |  | 
-|SiPixelTemplateDBObjectRcd / 35T |  |  |  |  |  |  |  |  | 
-|SiPixelTemplateDBObjectRcd / 3T |  |  |  |  |  |  |  |  | 
-|SiPixelTemplateDBObjectRcd / 4T |  |  |  |  |  |  |  |  | 
-|SiStripApvGain2Rcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripApvGainRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripApvGainSimRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|SiStripBackPlaneCorrectionRcd / deconvolution |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripBackPlaneCorrectionRcd / peak |  |  |  |  |  |  |  |  | 
-|SiStripBadChannelRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripBadFiberRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripBadModuleRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripBadStripRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripClusterThresholdRcd / |  |  |  |  |  |  |  |  | 
-|SiStripConfObjectRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripConfObjectRcd / apvphaseoffsets |  |  |  |  |  |  |  |  | 
-|SiStripDeDxElectron_3D_Rcd / |  |  |  |  |  |  |  |  | 
-|SiStripDeDxKaon_3D_Rcd / |  |  |  |  |  |  |  |  | 
-|SiStripDeDxMip_3D_Rcd / |  |  |  |  |  |  |  |  | 
-|SiStripDeDxPion_3D_Rcd / |  |  |  |  |  |  |  |  | 
-|SiStripDeDxProton_3D_Rcd / |  |  |  |  |  |  |  |  | 
-|SiStripDetVOffRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripFedCablingRcd / |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripLatencyRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripLorentzAngleRcd / deconvolution |  |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripLorentzAngleSimRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  |  |  |  | 
-|SiStripNoisesRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripPedestalsRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|SiStripThresholdRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
-|TauTagMVAComputerRcd / |  |  |  |  |  |  |  |  | 
-|TauTagMVAComputerRcd / hpstanc |  |  |  |  |  |  |  |  | 
-|TrackerAlignmentErrorExtendedRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|TrackerAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
-|TrackerSurfaceDeformationRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|Tags|L1|HLT|AOD|MINIAOD|NANOAOD|
+|AlCaRecoTriggerBitsRcd / |  |  |  |  |  | 
+|AlCaRecoTriggerBitsRcd / JetMETDQMTrigger |  |  |  |  |  | 
+|AlCaRecoTriggerBitsRcd / MuonDQMTrigger |  |  |  |  |  | 
+|AlCaRecoTriggerBitsRcd / SiStripDQMTrigger |  |  |  |  |  | 
+|BTagTrackProbability2DRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|BTagTrackProbability3DRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|BTauGenericMVAJetTagComputerRcd / |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|BTauGenericMVAJetTagComputerRcd / HLT |  |  |  |  |  | 
+|BeamSpotObjectsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|CSCAlignmentErrorExtendedRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|CSCAlignmentRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|CSCBadChambersRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|CSCBadStripsRcd / |  |  |  |  |  | 
+|CSCBadWiresRcd / |  |  |  |  |  | 
+|CSCChamberMapRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|CSCChamberTimeCorrectionsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|CSCCrateMapRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|CSCDBChipSpeedCorrectionRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|CSCDBCrosstalkRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|CSCDBGainsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|CSCDBGasGainCorrectionRcd / |  |  |  |  |  | 
+|CSCDBL1TPParametersRcd / | %GREEN% Yes %ENDCOLOR% |  |  |  |  | 
+|CSCDBNoiseMatrixRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|CSCDBPedestalsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|CSCDDUMapRcd / |  |  |  |  |  | 
+|CSCRecoDigiParametersRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|CSCRecoGeometryRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|CastorChannelQualityRcd / |  |  |  |  |  | 
+|CastorElectronicsMapRcd / |  |  |  |  |  | 
+|CastorGainWidthsRcd / |  |  |  |  |  | 
+|CastorGainsRcd / |  |  |  |  |  | 
+|CastorPedestalWidthsRcd / |  |  |  |  |  | 
+|CastorPedestalsRcd / |  |  |  |  |  | 
+|CastorQIEDataRcd / |  |  |  |  |  | 
+|CastorRecoParamsRcd / |  |  |  |  |  | 
+|CastorSaturationCorrsRcd / |  |  |  |  |  | 
+|DQMReferenceHistogramRootFileRcd / |  |  |  |  |  | 
+|DQMXMLFileRcd / SiPixelDQMQTests |  |  |  |  |  | 
+|DQMXMLFileRcd / SiStripDQMQTests |  |  |  |  |  | 
+|DTAlignmentErrorExtendedRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|DTAlignmentRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|DTCCBConfigRcd / | %GREEN% Yes %ENDCOLOR% |  |  |  |  | 
+|DTDeadFlagRcd / |  |  |  |  |  | 
+|DTKeyedConfigContainerRcd / |  |  |  |  |  | 
+|DTKeyedConfigListRcd / | %GREEN% Yes %ENDCOLOR% |  |  |  |  | 
+|DTMtimeRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|DTReadOutMappingRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|DTRecoConditionsUncertRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|DTRecoGeometryRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|DTRecoUncertaintiesRcd / |  |  |  |  |  | 
+|DTStatusFlagRcd / |  |  |  |  |  | 
+|DTT0Rcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|DTTPGParametersRcd / | %GREEN% Yes %ENDCOLOR% |  |  |  |  | 
+|DTTtrigRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|DTTtrigRcd / cosmics |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|DYTThrObjectRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EBAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|EEAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|ESAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|ESAngleCorrectionFactorsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|ESChannelStatusRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|ESEEIntercalibConstantsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|ESGainRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|ESIntercalibConstantsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|ESMIPToGeVConstantRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|ESMissingEnergyCalibrationRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|ESPedestalsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|ESRecHitRatioCutsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|ESThresholdsRcd / |  |  |  |  |  | 
+|ESTimeSampleWeightsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalADCToGeVConstantRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|EcalChannelStatusRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|EcalClusterCrackCorrParametersRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalClusterEnergyCorrectionObjectSpecificParametersRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalClusterEnergyCorrectionParametersRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalClusterEnergyUncertaintyParametersRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalClusterLocalContCorrParametersRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalDAQTowerStatusRcd / |  |  |  |  |  | 
+|EcalDCSTowerStatusRcd / |  |  |  |  |  | 
+|EcalGainRatiosRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalIntercalibConstantsMCRcd / |  |  |  |  |  | 
+|EcalIntercalibConstantsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|EcalIntercalibErrorsRcd / |  |  |  |  |  | 
+|EcalLaserAPDPNRatiosRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|EcalLaserAPDPNRatiosRefRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|EcalLaserAlphasRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|EcalLinearCorrectionsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|EcalMappingElectronicsRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalPedestalsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalPulseCovariancesRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalPulseShapesRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalSRSettingsRcd / |  |  |  |  |  | 
+|EcalSRSettingsRcd / fullReadout |  |  |  |  |  | 
+|EcalSampleMaskRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalSamplesCorrelationRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalTBWeightsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalTPGCrystalStatusRcd / |  |  |  |  |  | 
+|EcalTPGFineGrainEBGroupRcd / |  |  |  |  |  | 
+|EcalTPGFineGrainEBIdMapRcd / |  |  |  |  |  | 
+|EcalTPGFineGrainStripEERcd / |  |  |  |  |  | 
+|EcalTPGFineGrainTowerEERcd / |  |  |  |  |  | 
+|EcalTPGLinearizationConstRcd / |  |  |  |  |  | 
+|EcalTPGLutGroupRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|EcalTPGLutIdMapRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|EcalTPGPedestalsRcd / |  |  |  |  |  | 
+|EcalTPGPhysicsConstRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|EcalTPGSlidingWindowRcd / |  |  |  |  |  | 
+|EcalTPGSpikeRcd / |  |  |  |  |  | 
+|EcalTPGStripStatusRcd / |  |  |  |  |  | 
+|EcalTPGTowerStatusRcd / |  |  |  |  |  | 
+|EcalTPGWeightGroupRcd / |  |  |  |  |  | 
+|EcalTPGWeightIdMapRcd / |  |  |  |  |  | 
+|EcalTimeBiasCorrectionsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalTimeCalibConstantsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalTimeOffsetConstantRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|EcalWeightXtalGroupsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_mean_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_mean_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_sigma_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_sigma_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_mean_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_mean_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_sigma_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_sigma_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_mean_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_mean_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_sigma_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_sigma_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_mean_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_mean_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_sigma_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_sigma_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_mean_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_mean_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_sigma_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_sigma_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_mean_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_mean_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_sigma_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_sigma_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_mean_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_mean_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_sigma_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_sigma_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_mean_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_mean_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_sigma_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_sigma_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_mean_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_mean_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_sigma_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_sigma_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_mean_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_mean_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_sigma_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_sigma_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / electron_eb_ECALTRK |  |  |  |  |  | 
+|GBRDWrapperRcd / electron_eb_ECALTRK_var |  |  |  |  |  | 
+|GBRDWrapperRcd / electron_eb_ECALonly |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / electron_eb_ECALonly_var |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / electron_ee_ECALTRK |  |  |  |  |  | 
+|GBRDWrapperRcd / electron_ee_ECALTRK_var |  |  |  |  |  | 
+|GBRDWrapperRcd / electron_ee_ECALonly |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / electron_ee_ECALonly_var |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / gedelectron_EBCorrection_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedelectron_EBCorrection_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedelectron_EBUncertainty_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedelectron_EBUncertainty_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedelectron_EECorrection_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedelectron_EECorrection_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedelectron_EEUncertainty_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedelectron_EEUncertainty_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedphoton_EBCorrection_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedphoton_EBCorrection_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedphoton_EBUncertainty_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedphoton_EBUncertainty_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedphoton_EECorrection_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedphoton_EECorrection_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedphoton_EEUncertainty_25ns |  |  |  |  |  | 
+|GBRDWrapperRcd / gedphoton_EEUncertainty_50ns |  |  |  |  |  | 
+|GBRDWrapperRcd / pfscecal_EBCorrection_offline_v2 |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / pfscecal_EBCorrection_online |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
+|GBRDWrapperRcd / pfscecal_EBUncertainty_offline_v2 |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / pfscecal_EBUncertainty_online |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
+|GBRDWrapperRcd / pfscecal_EECorrection_offline_v2 |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / pfscecal_EECorrection_online |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
+|GBRDWrapperRcd / pfscecal_EEUncertainty_offline_v2 |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / pfscecal_EEUncertainty_online |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
+|GBRDWrapperRcd / photon_eb_ECALonly |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / photon_eb_ECALonly_var |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / photon_ee_ECALonly |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRDWrapperRcd / photon_ee_ECALonly_var |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRWrapperRcd / MVADuplicate |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRWrapperRcd / MVASelectorIter0 |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRWrapperRcd / MVASelectorIter0_13TeV |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter1 |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter1_13TeV |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter2 |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter2_13TeV |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter3 |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter3_13TeV |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter4 |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter4_13TeV |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter5 |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter5_13TeV |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter6 |  |  |  |  |  | 
+|GBRWrapperRcd / MVASelectorIter6_13TeV |  |  |  |  |  | 
+|GBRWrapperRcd / PFEcalResolution |  |  |  |  |  | 
+|GBRWrapperRcd / PFGCorrectionBar |  |  |  |  |  | 
+|GBRWrapperRcd / PFGCorrectionEndHighR9 |  |  |  |  |  | 
+|GBRWrapperRcd / PFGCorrectionEndLowR9 |  |  |  |  |  | 
+|GBRWrapperRcd / PFGlobalCorrection |  |  |  |  |  | 
+|GBRWrapperRcd / PFLCCorrection |  |  |  |  |  | 
+|GBRWrapperRcd / PFLCorrectionBar |  |  |  |  |  | 
+|GBRWrapperRcd / PFLCorrectionEnd |  |  |  |  |  | 
+|GBRWrapperRcd / PFResolution |  |  |  |  |  | 
+|GBRWrapperRcd / btag_CombinedMVAv2_BDT |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|GBRWrapperRcd / btag_SoftPFElectron_BDT |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|GBRWrapperRcd / btag_SoftPFMuon_BDT |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|GBRWrapperRcd / gedelectron_EBCorrection_offline_v1 |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRWrapperRcd / gedelectron_EBUncertainty_offline_v1 |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRWrapperRcd / gedelectron_EECorrection_offline_v1 |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRWrapperRcd / gedelectron_EEUncertainty_offline_v1 |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRWrapperRcd / gedelectron_p4combination_25ns |  |  |  |  |  | 
+|GBRWrapperRcd / gedelectron_p4combination_50ns |  |  |  |  |  | 
+|GBRWrapperRcd / gedelectron_p4combination_offline |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRWrapperRcd / gedphoton_EBCorrection_offline_v1 |  |  |  |  |  | 
+|GBRWrapperRcd / gedphoton_EBUncertainty_offline_v1 |  |  |  |  |  | 
+|GBRWrapperRcd / gedphoton_EECorrection_offline_v1 |  |  |  |  |  | 
+|GBRWrapperRcd / gedphoton_EEUncertainty_offline_v1 |  |  |  |  |  | 
+|GBRWrapperRcd / pfscecal_EBCorrection_offline_v1 |  |  |  |  |  | 
+|GBRWrapperRcd / pfscecal_EECorrection_offline_v1 |  |  |  |  |  | 
+|GBRWrapperRcd / wgbrph_EBCorrection |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRWrapperRcd / wgbrph_EBUncertainty |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRWrapperRcd / wgbrph_EECorrection |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GBRWrapperRcd / wgbrph_EEUncertainty |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|GEMRecoGeometryRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|GeometryFileRcd / Extended |  |  |  |  |  | 
+|GeometryFileRcd / Extended2015CastorMeasured |  |  |  |  |  | 
+|GeometryFileRcd / Extended2015CastorSystMinus |  |  |  |  |  | 
+|GeometryFileRcd / Extended2015CastorSystPlus |  |  |  |  |  | 
+|GeometryFileRcd / Extended2015ZeroMaterial |  |  |  |  |  | 
+|GeometryFileRcd / Extended2015dev |  |  |  |  |  | 
+|GeometryFileRcd / Ideal |  |  |  |  |  | 
+|GeometryFileRcd / Ideal2015dev |  |  |  |  |  | 
+|GlobalPositionRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|HBAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|HBHENegativeEFilterRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HEAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|HFAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|HFPhase1PMTParamsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HOAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|HcalChannelQualityRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|HcalElectronicsMapRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalFlagHFDigiTimeParamsRcd / |  |  |  |  |  | 
+|HcalFrontEndMapRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalGainsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalL1TriggerObjectsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalLUTCorrsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalLongRecoParamsRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalLutMetadataRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalMCParamsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalOOTPileupCompatibilityRcd / |  |  |  |  |  | 
+|HcalOOTPileupCorrectionMapCollRcd / |  |  |  |  |  | 
+|HcalPFCorrsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalParametersRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|HcalPedestalWidthsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalPedestalsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalQIEDataRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalQIETypesRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalRecoParamsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalRespCorrsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalSiPMCharacteristicsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalSiPMParametersRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalTPChannelParametersRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalTPParametersRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalTimeCorrsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HcalZSThresholdsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|HeavyIonRcd / HFhitsAMPT_2760GeV |  |  |  |  |  | 
+|HeavyIonRcd / HFhitsHydjet_Bass |  |  |  |  |  | 
+|HeavyIonRcd / HFhitsHydjet_Drum |  |  |  |  |  | 
+|HeavyIonRcd / HFtowersHydjet_Bass |  |  |  |  |  | 
+|HeavyIonRcd / HFtowersHydjet_Drum |  |  |  |  |  | 
+|HeavyIonRcd / PixelHitsAMPT_2760GeV |  |  |  |  |  | 
+|HeavyIonRcd / PixelHitsHydjet_Bass |  |  |  |  |  | 
+|HeavyIonRcd / PixelHitsHydjet_Drum |  |  |  |  |  | 
+|HeavyIonRcd / PixelTracksHydjet_Bass |  |  |  |  |  | 
+|HeavyIonRcd / PixelTracksHydjet_Drum |  |  |  |  |  | 
+|HeavyIonRcd / TracksHydjet_Bass |  |  |  |  |  | 
+|HeavyIonRcd / TracksHydjet_Drum |  |  |  |  |  | 
+|IdealGeometryRecord / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|JetCorrectionsRecord / AK10PF |  |  |  |  |  | 
+|JetCorrectionsRecord / AK10PFchs |  |  |  |  |  | 
+|JetCorrectionsRecord / AK1PF |  |  |  |  |  | 
+|JetCorrectionsRecord / AK1PFchs |  |  |  |  |  | 
+|JetCorrectionsRecord / AK2PF |  |  |  |  |  | 
+|JetCorrectionsRecord / AK2PFchs |  |  |  |  |  | 
+|JetCorrectionsRecord / AK3PF |  |  |  |  |  | 
+|JetCorrectionsRecord / AK3PFchs |  |  |  |  |  | 
+|JetCorrectionsRecord / AK4Calo |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
+|JetCorrectionsRecord / AK4CaloHLT |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
+|JetCorrectionsRecord / AK4JPT |  |  |  |  |  | 
+|JetCorrectionsRecord / AK4PF |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetCorrectionsRecord / AK4PFHLT |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
+|JetCorrectionsRecord / AK4PFPuppi |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetCorrectionsRecord / AK4PFchs |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetCorrectionsRecord / AK5Calo |  |  |  |  |  | 
+|JetCorrectionsRecord / AK5CaloHLT |  |  |  |  |  | 
+|JetCorrectionsRecord / AK5JPT |  |  |  |  |  | 
+|JetCorrectionsRecord / AK5PF |  |  |  |  |  | 
+|JetCorrectionsRecord / AK5PFHLT |  |  |  |  |  | 
+|JetCorrectionsRecord / AK5PFchs |  |  |  |  |  | 
+|JetCorrectionsRecord / AK5PFchsHLT |  |  |  |  |  | 
+|JetCorrectionsRecord / AK5TRK |  |  |  |  |  | 
+|JetCorrectionsRecord / AK6PF |  |  |  |  |  | 
+|JetCorrectionsRecord / AK6PFchs |  |  |  |  |  | 
+|JetCorrectionsRecord / AK7Calo |  |  |  |  |  | 
+|JetCorrectionsRecord / AK7JPT |  |  |  |  |  | 
+|JetCorrectionsRecord / AK7PF |  |  |  |  |  | 
+|JetCorrectionsRecord / AK7PFchs |  |  |  |  |  | 
+|JetCorrectionsRecord / AK8CaloHLT |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
+|JetCorrectionsRecord / AK8PF |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetCorrectionsRecord / AK8PFHLT |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
+|JetCorrectionsRecord / AK8PFPuppi |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetCorrectionsRecord / AK8PFchs |  |  |  |  |  | 
+|JetCorrectionsRecord / AK9PF |  |  |  |  |  | 
+|JetCorrectionsRecord / AK9PFchs |  |  |  |  |  | 
+|JetCorrectionsRecord / IC5Calo |  |  |  |  |  | 
+|JetCorrectionsRecord / IC5PF |  |  |  |  |  | 
+|JetCorrectionsRecord / KT4Calo |  |  |  |  |  | 
+|JetCorrectionsRecord / KT4PF |  |  |  |  |  | 
+|JetCorrectionsRecord / KT6Calo |  |  |  |  |  | 
+|JetCorrectionsRecord / KT6PF |  |  |  |  |  | 
+|JetResolutionRcd / AK4PFPuppi_phi |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetResolutionRcd / AK4PFPuppi_pt |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetResolutionRcd / AK4PF_phi |  |  |  |  |  | 
+|JetResolutionRcd / AK4PF_pt |  |  |  |  |  | 
+|JetResolutionRcd / AK4PFchs_phi |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetResolutionRcd / AK4PFchs_pt |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetResolutionRcd / AK8PFPuppi_phi |  |  |  |  |  | 
+|JetResolutionRcd / AK8PFPuppi_pt |  |  |  |  |  | 
+|JetResolutionRcd / AK8PF_phi |  |  |  |  |  | 
+|JetResolutionRcd / AK8PF_pt |  |  |  |  |  | 
+|JetResolutionRcd / AK8PFchs_phi |  |  |  |  |  | 
+|JetResolutionRcd / AK8PFchs_pt |  |  |  |  |  | 
+|JetResolutionScaleFactorRcd / AK4PF |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetResolutionScaleFactorRcd / AK4PFPuppi |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetResolutionScaleFactorRcd / AK4PFchs |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetResolutionScaleFactorRcd / AK8PF |  |  |  |  |  | 
+|JetResolutionScaleFactorRcd / AK8PFPuppi |  |  |  |  |  | 
+|JetResolutionScaleFactorRcd / AK8PFchs |  |  |  |  |  | 
+|L1CaloEcalScaleRcd / |  |  |  |  |  | 
+|L1CaloGeometryRecord / |  |  |  |  |  | 
+|L1CaloHcalScaleRcd / |  |  |  |  |  | 
+|L1EmEtScaleRcd / |  |  |  |  |  | 
+|L1GctChannelMaskRcd / |  |  |  |  |  | 
+|L1GctJetFinderParamsRcd / |  |  |  |  |  | 
+|L1GtBoardMapsRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|L1GtParametersRcd / |  |  |  |  |  | 
+|L1GtPrescaleFactorsAlgoTrigRcd / |  |  |  |  |  | 
+|L1GtPrescaleFactorsTechTrigRcd / |  |  |  |  |  | 
+|L1GtPsbSetupRcd / |  |  |  |  |  | 
+|L1GtStableParametersRcd / |  |  |  |  |  | 
+|L1GtTriggerMaskAlgoTrigRcd / |  |  |  |  |  | 
+|L1GtTriggerMaskTechTrigRcd / |  |  |  |  |  | 
+|L1GtTriggerMaskVetoAlgoTrigRcd / |  |  |  |  |  | 
+|L1GtTriggerMaskVetoTechTrigRcd / |  |  |  |  |  | 
+|L1GtTriggerMenuRcd / |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|L1HfRingEtScaleRcd / |  |  |  |  |  | 
+|L1HtMissScaleRcd / |  |  |  |  |  | 
+|L1JetEtScaleRcd / |  |  |  |  |  | 
+|L1MuCSCPtLutRcd / |  |  |  |  |  | 
+|L1MuCSCTFAlignmentRcd / |  |  |  |  |  | 
+|L1MuCSCTFConfigurationRcd / |  |  |  |  |  | 
+|L1MuDTEtaPatternLutRcd / |  |  |  |  |  | 
+|L1MuDTExtLutRcd / |  |  |  |  |  | 
+|L1MuDTPhiLutRcd / |  |  |  |  |  | 
+|L1MuDTPtaLutRcd / |  |  |  |  |  | 
+|L1MuDTQualPatternLutRcd / |  |  |  |  |  | 
+|L1MuDTTFMasksRcd / |  |  |  |  |  | 
+|L1MuDTTFParametersRcd / |  |  |  |  |  | 
+|L1MuGMTChannelMaskRcd / |  |  |  |  |  | 
+|L1MuGMTParametersRcd / |  |  |  |  |  | 
+|L1MuGMTScalesRcd / |  |  |  |  |  | 
+|L1MuTriggerPtScaleRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|L1MuTriggerScalesRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|L1RCTChannelMaskRcd / |  |  |  |  |  | 
+|L1RCTNoisyChannelMaskRcd / |  |  |  |  |  | 
+|L1RCTParametersRcd / |  |  |  |  |  | 
+|L1RPCBxOrConfigRcd / |  |  |  |  |  | 
+|L1RPCConeDefinitionRcd / |  |  |  |  |  | 
+|L1RPCConfigRcd / |  |  |  |  |  | 
+|L1RPCHsbConfigRcd / |  |  |  |  |  | 
+|L1RPCHwConfigRcd / |  |  |  |  |  | 
+|L1TCaloParamsRcd / | %GREEN% Yes %ENDCOLOR% |  |  |  |  | 
+|L1TUtmTriggerMenuRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% |  | 
+|L1TriggerKeyListRcd / |  |  |  |  |  | 
+|L1TriggerKeyRcd / |  |  |  |  |  | 
+|LumiSectionDataRcd / |  |  |  |  |  | 
+|MFGeometryFileRcd / 120812 |  |  |  |  |  | 
+|MFGeometryFileRcd / 130503 |  |  |  |  |  | 
+|MFGeometryFileRcd / 90322 |  |  |  |  |  | 
+|MagFieldConfigRcd / 0T |  |  |  |  |  | 
+|MagFieldConfigRcd / 2T |  |  |  |  |  | 
+|MagFieldConfigRcd / 3.5T |  |  |  |  |  | 
+|MagFieldConfigRcd / 3.8T | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|MagFieldConfigRcd / 3T |  |  |  |  |  | 
+|MagFieldConfigRcd / 4T |  |  |  |  |  | 
+|PCaloTowerRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|PCastorRcd / |  |  |  |  |  | 
+|PEcalBarrelRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|PEcalEndcapRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|PEcalPreshowerRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|PFCalibrationRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|PFCalibrationRcd / HLT |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
+|PGeometricDetExtraRcd / |  |  |  |  |  | 
+|PHcalRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|PTrackerParametersRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|PZdcRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|PerformancePayloadRecord / BTagTTBARMCBTAGCSVtable_v8_offline |  |  |  |  |  | 
+|PerformancePayloadRecord / BTagTTBARMCBTAGJBPtable_v8_offline |  |  |  |  |  | 
+|PerformancePayloadRecord / BTagTTBARMCBTAGJPtable_v8_offline |  |  |  |  |  | 
+|PerformancePayloadRecord / BTagTTBARMCBTAGSSVHEtable_v8_offline |  |  |  |  |  | 
+|PerformancePayloadRecord / BTagTTBARMCBTAGSSVHPtable_v8_offline |  |  |  |  |  | 
+|PerformancePayloadRecord / BTagTTBARMCBTAGTCHEtable_v8_offline |  |  |  |  |  | 
+|PerformancePayloadRecord / BTagTTBARMCBTAGTCHPtable_v8_offline |  |  |  |  |  | 
+|PerformanceWPRecord / BTagTTBARMCBTAGCSVwp_v8_offline |  |  |  |  |  | 
+|PerformanceWPRecord / BTagTTBARMCBTAGJBPwp_v8_offline |  |  |  |  |  | 
+|PerformanceWPRecord / BTagTTBARMCBTAGJPwp_v8_offline |  |  |  |  |  | 
+|PerformanceWPRecord / BTagTTBARMCBTAGSSVHEwp_v8_offline |  |  |  |  |  | 
+|PerformanceWPRecord / BTagTTBARMCBTAGSSVHPwp_v8_offline |  |  |  |  |  | 
+|PerformanceWPRecord / BTagTTBARMCBTAGTCHEwp_v8_offline |  |  |  |  |  | 
+|PerformanceWPRecord / BTagTTBARMCBTAGTCHPwp_v8_offline |  |  |  |  |  | 
+|PhotonConversionMVAComputerRcd / |  |  |  |  |  | 
+|QGLikelihoodRcd / QGL_AK4PF |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|QGLikelihoodRcd / QGL_AK4PF_antib |  |  |  |  |  | 
+|QGLikelihoodRcd / QGL_AK4PFchs |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|QGLikelihoodRcd / QGL_AK4PFchs_antib |  |  |  |  |  | 
+|RPCClusterSizeRcd / |  |  |  |  |  | 
+|RPCEMapRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|RPCRecoGeometryRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|RPCStripNoisesRcd / |  |  |  |  |  | 
+|RunInfoRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|SiPixelCPEGenericErrorParmRcd / |  |  |  |  |  | 
+|SiPixelDetVOffRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiPixelDynamicInefficiencyRcd / |  |  |  |  |  | 
+|SiPixelDynamicInefficiencyRcd / 50ns |  |  |  |  |  | 
+|SiPixelFedCablingMapRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiPixelGainCalibrationForHLTRcd / |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
+|SiPixelGainCalibrationForHLTSimRcd / |  |  |  |  |  | 
+|SiPixelGainCalibrationOfflineRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiPixelGainCalibrationOfflineSimRcd / |  |  |  |  |  | 
+|SiPixelGenErrorDBObjectRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiPixelLorentzAngleRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiPixelLorentzAngleRcd / forWidth |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiPixelLorentzAngleRcd / fromAlignment |  |  |  |  |  | 
+|SiPixelLorentzAngleSimRcd / |  |  |  |  |  | 
+|SiPixelQualityFromDbRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiPixelTemplateDBObjectRcd / |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiPixelTemplateDBObjectRcd / 0T |  |  |  |  |  | 
+|SiPixelTemplateDBObjectRcd / 2T |  |  |  |  |  | 
+|SiPixelTemplateDBObjectRcd / 35T |  |  |  |  |  | 
+|SiPixelTemplateDBObjectRcd / 3T |  |  |  |  |  | 
+|SiPixelTemplateDBObjectRcd / 4T |  |  |  |  |  | 
+|SiStripApvGain2Rcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripApvGainRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripApvGainSimRcd / |  |  |  |  |  | 
+|SiStripBackPlaneCorrectionRcd / deconvolution |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripBackPlaneCorrectionRcd / peak |  |  |  |  |  | 
+|SiStripBadChannelRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripBadFiberRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripBadModuleRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripBadStripRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripClusterThresholdRcd / |  |  |  |  |  | 
+|SiStripConfObjectRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripConfObjectRcd / apvphaseoffsets |  |  |  |  |  | 
+|SiStripDeDxElectron_3D_Rcd / |  |  |  |  |  | 
+|SiStripDeDxKaon_3D_Rcd / |  |  |  |  |  | 
+|SiStripDeDxMip_3D_Rcd / |  |  |  |  |  | 
+|SiStripDeDxPion_3D_Rcd / |  |  |  |  |  | 
+|SiStripDeDxProton_3D_Rcd / |  |  |  |  |  | 
+|SiStripDetVOffRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripFedCablingRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripLatencyRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripLorentzAngleRcd / deconvolution |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripLorentzAngleSimRcd / |  |  |  |  |  | 
+|SiStripNoisesRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripPedestalsRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|SiStripThresholdRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  |  | 
+|TauTagMVAComputerRcd / |  |  |  |  |  | 
+|TauTagMVAComputerRcd / hpstanc |  |  |  |  |  | 
+|TrackerAlignmentErrorExtendedRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|TrackerAlignmentRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
+|TrackerSurfaceDeformationRcd / |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | 
