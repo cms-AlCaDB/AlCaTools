@@ -41,4 +41,4 @@ cmsDriver.py step4  --conditions auto:run3_data_relval -s PAT --datatier MINIAOD
 echo "------------------------------"
 echo "Running step-5/5: NANOAOD"
 echo "------------------------------"
-cmsDriver.py step5  --conditions auto:run3_data_relval -s NANO:PhysicsTools/NanoAOD/V10/nano_cff --datatier MINIAOD --eventcontent MINIAOD --data  --scenario pp --era Run3 --customise Configuration/DataProcessing/RecoTLR.customisePostEra_Run3 -n 10  --filein  file:step4.root  --fileout file:step5.root  --customise_commands='process.GlobalTag.DumpStat =cms.untracked.bool(True)' > output_step5_NANOAOD.log  
+cmsDriver.py step5  --conditions auto:run3_data_relval -s NANO --datatier NANOAOD --eventcontent NANOEDMAOD --data  --scenario pp --era Run3 --customise Configuration/DataProcessing/RecoTLR.customisePostEra_Run3 -n 10  --filein  file:step4.root  --fileout file:step5.root  --customise_commands='process.GlobalTag.DumpStat =cms.untracked.bool(True)' > output_step5_NANOAOD.log  

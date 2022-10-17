@@ -155,12 +155,12 @@
 |GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_mean_50ns |  |  |  |  |  | 
 |GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_sigma_25ns |  |  |  |  |  | 
 |GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_sigma_50ns |  |  |  |  |  | 
-|GBRDWrapperRcd / electron_eb_ECALTRK |  |  |  |  |  | 
-|GBRDWrapperRcd / electron_eb_ECALTRK_var |  |  |  |  |  | 
+|GBRDWrapperRcd / electron_eb_ECALTRK |  |  |  |  | %GREEN% Yes %ENDCOLOR% | 
+|GBRDWrapperRcd / electron_eb_ECALTRK_var |  |  |  |  | %GREEN% Yes %ENDCOLOR% | 
 |GBRDWrapperRcd / electron_eb_ECALonly |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
 |GBRDWrapperRcd / electron_eb_ECALonly_var |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
-|GBRDWrapperRcd / electron_ee_ECALTRK |  |  |  |  |  | 
-|GBRDWrapperRcd / electron_ee_ECALTRK_var |  |  |  |  |  | 
+|GBRDWrapperRcd / electron_ee_ECALTRK |  |  |  |  | %GREEN% Yes %ENDCOLOR% | 
+|GBRDWrapperRcd / electron_ee_ECALTRK_var |  |  |  |  | %GREEN% Yes %ENDCOLOR% | 
 |GBRDWrapperRcd / electron_ee_ECALonly |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
 |GBRDWrapperRcd / electron_ee_ECALonly_var |  |  | %GREEN% Yes %ENDCOLOR% |  |  | 
 |GBRDWrapperRcd / gedelectron_EBCorrection_25ns |  |  |  |  |  | 
@@ -301,9 +301,9 @@
 |JetCorrectionsRecord / AK4Calo |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
 |JetCorrectionsRecord / AK4CaloHLT |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
 |JetCorrectionsRecord / AK4JPT |  |  |  |  |  | 
-|JetCorrectionsRecord / AK4PF |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetCorrectionsRecord / AK4PF |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
 |JetCorrectionsRecord / AK4PFHLT |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|JetCorrectionsRecord / AK4PFPuppi |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetCorrectionsRecord / AK4PFPuppi |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
 |JetCorrectionsRecord / AK4PFchs |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
 |JetCorrectionsRecord / AK5Calo |  |  |  |  |  | 
 |JetCorrectionsRecord / AK5CaloHLT |  |  |  |  |  | 
@@ -320,9 +320,9 @@
 |JetCorrectionsRecord / AK7PF |  |  |  |  |  | 
 |JetCorrectionsRecord / AK7PFchs |  |  |  |  |  | 
 |JetCorrectionsRecord / AK8CaloHLT |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|JetCorrectionsRecord / AK8PF |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetCorrectionsRecord / AK8PF |  | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
 |JetCorrectionsRecord / AK8PFHLT |  | %GREEN% Yes %ENDCOLOR% |  |  |  | 
-|JetCorrectionsRecord / AK8PFPuppi |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|JetCorrectionsRecord / AK8PFPuppi |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
 |JetCorrectionsRecord / AK8PFchs |  |  |  |  |  | 
 |JetCorrectionsRecord / AK9PF |  |  |  |  |  | 
 |JetCorrectionsRecord / AK9PFchs |  |  |  |  |  | 
@@ -362,11 +362,11 @@
 |L1GtPrescaleFactorsTechTrigRcd / |  |  |  |  |  | 
 |L1GtPsbSetupRcd / |  |  |  |  |  | 
 |L1GtStableParametersRcd / |  |  |  |  |  | 
-|L1GtTriggerMaskAlgoTrigRcd / |  |  |  |  |  | 
+|L1GtTriggerMaskAlgoTrigRcd / |  |  |  |  | %GREEN% Yes %ENDCOLOR% | 
 |L1GtTriggerMaskTechTrigRcd / |  |  |  |  |  | 
 |L1GtTriggerMaskVetoAlgoTrigRcd / |  |  |  |  |  | 
 |L1GtTriggerMaskVetoTechTrigRcd / |  |  |  |  |  | 
-|L1GtTriggerMenuRcd / |  |  |  | %GREEN% Yes %ENDCOLOR% |  | 
+|L1GtTriggerMenuRcd / |  |  |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
 |L1HfRingEtScaleRcd / |  |  |  |  |  | 
 |L1HtMissScaleRcd / |  |  |  |  |  | 
 |L1JetEtScaleRcd / |  |  |  |  |  | 
@@ -394,7 +394,7 @@
 |L1RPCHsbConfigRcd / |  |  |  |  |  | 
 |L1RPCHwConfigRcd / |  |  |  |  |  | 
 |L1TCaloParamsRcd / | %GREEN% Yes %ENDCOLOR% |  |  |  |  | 
-|L1TUtmTriggerMenuRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% |  | 
+|L1TUtmTriggerMenuRcd / | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% |  | %GREEN% Yes %ENDCOLOR% | %GREEN% Yes %ENDCOLOR% | 
 |L1TriggerKeyListRcd / |  |  |  |  |  | 
 |L1TriggerKeyRcd / |  |  |  |  |  | 
 |LumiSectionDataRcd / |  |  |  |  |  | 
