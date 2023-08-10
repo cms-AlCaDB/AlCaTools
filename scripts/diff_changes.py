@@ -34,6 +34,7 @@ descriptions = {
     'dataRun2_HLT_relval' : '**Run 2 HLT RelVals**',
     'dataRun2_HLT_relval_HI' : '**Run 2 HI HLT RelVals**',
     'dataRun2_HLTHI_frozen' : '**Run 2 HLT for HI (not 2018 HI)**',
+    'dataRun3_HLT' : '**Run 3 data HLT',
     'dataRun3_Express' : '**Run 3 data (express)**',
     'dataRun3_Prompt' : '**Run 3 data (prompt)**',
     'mc2017_design' : '**2017 design**',
