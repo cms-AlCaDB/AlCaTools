@@ -4,6 +4,7 @@
 # https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideCalAliTrigger2022
 ############################################
 import os
+import re
 import sys
 import optparse
 
@@ -36,6 +37,17 @@ def getOneRow(tag, logFiles):
     return rowName + " | \n"
 
 def printAllRow(tagFile, logFiles, outForTwiki, tableTitle):
+    for file_ in logFiles:
+        outfile = open(tagFile, "w")
+        with open(file_) as f:
+            lines = f.readlines()
+            for l in lines:
+                newl = l.split(': frontier:')[0]
+                if re.search(r' / ', newl):
+                    #print(newl)
+                    outfile.write(newl+'\n')
+    outfile.close()
+
     outForTwiki.write(tableTitle)
     for tag in open(tagFile):
         getOneRow_ = getOneRow(tag, logFiles)
@@ -67,6 +79,7 @@ def main():
         logFiles.append("output_step4_MINIAOD.log")
         logFiles.append("output_step5_NANOAOD.log")
     else:
+        logFiles.append("output_step1_GEN.log")
         logFiles.append("output_step2_SIM.log")
         logFiles.append("output_step3_DIGI.log")
         logFiles.append("output_step4_L1.log")
@@ -81,7 +94,7 @@ def main():
         output_table = "DATA"
         tableTitle = "|Tags|L1|HLT|AOD|MINIAOD|NANOAOD|\n"
     else:
-        tableTitle = "|Tags|GEN-SIM|DIGI|L1|DIGI2RAW|HLT|AOD|MINIAOD|NANOAOD|\n"
+        tableTitle = "|Tags|GEN|SIM|DIGI|L1|DIGI2RAW|HLT|AOD|MINIAOD|NANOAOD|\n"
 
     outputForTwiki = open(f"outputForTwiki_{output_table}.txt", 'w')
 
