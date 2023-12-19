@@ -5,15 +5,17 @@
 
 import json
 import argparse
+from contextlib import ExitStack
 
 def checkTagInJson(tag, data):
-    #processing string with "/" separator from tagFile
+    # processing string with "/" separator from tagFile
     stripped_tag = tag.split('/')[0].strip()
     requested_label = tag.split('/')[1].strip()
     for record in data.get(stripped_tag, []):
         if requested_label in record.get('label', '') and record.get('timeLookupPayloadIds', []):
             return "%GREEN% Yes %ENDCOLOR%"
     return ""
+
 
 def getOneRow(tag, jsonFiles):
     rowName = "|" + tag.strip()
@@ -24,64 +26,73 @@ def getOneRow(tag, jsonFiles):
             rowName = rowName + " | " + checkTagInFile_
     return rowName + " | \n"
 
+
 def printAllRow(tagFile, jsonFiles, output_table, tableTitle):
-    with open(f"outputForTwiki_{output_table}.txt", 'w') as outForTwiki, open(tagFile, 'r') as tag_file: 
+    with open(f"outputForTwiki_{output_table}.txt", 'w') as outForTwiki, open(tagFile, 'r') as tag_file:
         outForTwiki.write(tableTitle)
         for tag in tag_file:
             getOneRow_ = getOneRow(tag, jsonFiles)
             outForTwiki.write(getOneRow_)
 
 def updateTagFile(tagFile, json_files):
-    added_rows = set() 
-    with open(tagFile, 'w') as new_tagFile:
-        for file_ in json_files:
-            with open(file_, 'r') as file_content:
-                data = json.load(file_content)
-                for record, label_info_list in data.items():
-                    for label_info in label_info_list:
-                        label = label_info.get('label', '')
-                        row = f"{record} / {label}"
-                        if row not in added_rows: 
-                            new_tagFile.write(f"{row}\n")
-                            added_rows.add(row) 
+    unique_rows = set()
 
+# Open files in advance using context managers
+    with ExitStack() as stack:
+        files = [stack.enter_context(open(file_, 'r')) for file_ in json_files]
+        data_list = [json.load(file_content) for file_content in files]
+
+# Process data
+    for data in data_list:
+        for record, label_info_list in data.items():
+            for label_info in label_info_list:
+                label = label_info.get('label', '')
+                row = f"{record} / {label}"
+                unique_rows.add(row)
+
+# Sort and write the sorted lines to a file
+    with open(tagFile, 'w') as new_tagFile:
+        new_tagFile.write('\n'.join(sorted(unique_rows, reverse=False)))
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Usage: python3 getAlCaCondInGT.py [options] \n')
-    parser.add_argument('-d', '--data', dest='isData', action='store_true', default=False, help='Enter --data -d for data, False for MC. Default: False')
+    parser = argparse.ArgumentParser(
+        description='Usage: python3 getAlCaCondInGT.py [options] \n')
+    parser.add_argument('-d', '--data', dest='isData', action='store_true',
+                        default=False, help='Enter --data -d for data, False for MC. Default: False')
     args = parser.parse_args()
-
 
     tagFile = "allAlCaTags.txt"
     if args.isData:
         jsonFiles = [
-        "step1_output.json", #step1_L1
-        "step2_output.json", #step2_HLT
-        "step3_output.json", #step3_AOD
-        "step4_output.json", #step4_MINIAOD
-        "step5_output.json", #step5_NANOAOD
+            "output_step1_L1.json",  # step1_L1
+            "output_step2_HLT.json",  # step2_HLT
+            "output_step3_AOD.json",  # step3_AOD
+            "output_step4_MINIAOD.json",  # step4_MINIAOD
+            "output_step5_NANOAOD.json",  # step5_NANOAOD
         ]
     else:
         jsonFiles = [
-        "step1_output.json", #step1_GEN   
-        "step2_output.json", #step2_SIM
-        "step3_output.json", #step3_DIGI
-        "step4_output.json", #step4_L1
-        "step5_output.json", #step5_DIGI2RAW
-        "step6_output.json", #step6_HLT
-        "step7_output.json", #step7_AODSIM
-        "step8_output.json", #step8_MINIAODSIM
-        "step9_output.json", #step9_NANOAODSIM
-        #Add remaining JSON filenames if available
+            "output_step1_GEN.json",  # step1_GEN
+            "output_step2_SIM.json",  # step2_SIM
+            "output_step3_DIGI.json",  # step3_DIGI
+            "output_step4_L1.json",  # step4_L1
+            "output_step5_DIGI2RAW.json",  # step5_DIGI2RAW
+            "output_step6_HLT.json",  # step6_HLT
+            "output_step7_AODSIM.json",  # step7_AODSIM
+            "output_step8_MINIAODSIM.json",  # step8_MINIAODSIM
+            "output_step9_NANOAODSIM.json",  # step9_NANOAODSIM
+
+            # Add remaining JSON filenames if available
         ]
 
     output_table = "DATA" if args.isData else "MC"
     tableTitle = "|Tags|L1|HLT|AOD|MINIAOD|NANOAOD|\n" if args.isData else "|Tags|GEN|SIM|DIGI|L1|DIGI2RAW|HLT|AOD|MINIAOD|NANOAOD|\n"
-    
+
     updateTagFile(tagFile, jsonFiles)
 
     printAllRow(tagFile, jsonFiles, output_table, tableTitle)
+
 
 if __name__ == '__main__':
     main()
