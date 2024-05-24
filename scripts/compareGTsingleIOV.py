@@ -15,7 +15,6 @@ import datetime,time
 import os,sys
 import string, re
 import subprocess
-import ConfigParser
 from optparse import OptionParser,OptionGroup
 
 #####################################################################

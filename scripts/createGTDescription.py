@@ -17,7 +17,7 @@ import os,sys
 import copy
 import string, re
 import subprocess
-import ConfigParser, json
+import configparser, json
 import os.path
 from optparse import OptionParser
 
@@ -26,7 +26,7 @@ import collections
 
 ####################--- Classes ---############################
 
-class BetterConfigParser(ConfigParser.ConfigParser):
+class BetterConfigParser(configparser.ConfigParser):
 
     ##############################################
     def optionxform(self, optionstr):

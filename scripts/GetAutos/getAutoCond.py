@@ -13,7 +13,7 @@ import pprint
 #####################################################################
 def getCMSSWRelease( ):
     CMSSW_VERSION='CMSSW_VERSION'
-    if not os.environ.has_key(CMSSW_VERSION):
+    if not CMSSW_VERSION in os.environ:
         print("\n CMSSW not properly set. Exiting")
         sys.exit(1)
     release = os.getenv(CMSSW_VERSION)

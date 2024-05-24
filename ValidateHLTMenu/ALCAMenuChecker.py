@@ -21,8 +21,8 @@ HLTMenuName="hlt.py"
 L1MenuName="l1menu.xml"
 
 # Parse the HLT menu
-### Usually, blindly executing an external file is a security hazard... 
-execfile(HLTMenuName)
+### Usually, blindly executing an external file is a security hazard...
+exec(open(HLTMenuName).read())  # Using exec() - Python 3 compatible
 
 # Parse the L1 menu. Notice that here we are parsing the version that is
 # usually available from the Twiki:

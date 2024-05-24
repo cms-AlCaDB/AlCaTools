@@ -9,7 +9,6 @@ import math
 import bisect
 import random
 import signal
-import cPickle
 import difflib
 import argparse
 import functools
@@ -42,7 +41,7 @@ def das_client(query, check_key = None):
     """
 
     error = True
-    for i in xrange(5):         # maximum of 5 tries
+    for i in range(5):         # maximum of 5 tries
         das_data = cmssw_das_client.get_data(query, limit = 0)
 
         if das_data["status"] == "ok":
@@ -161,7 +160,7 @@ def main():
         print_msg("\t"+d)
     print_msg("This may take a while...")
 
-    result = pool.map_async(get_size_per_dataset,datasets).get(sys.maxint)    
+    result = pool.map_async(get_size_per_dataset,datasets).get(sys.maxsize)
     for count, elem in enumerate(result):
         print("==>",datasets[count],float(elem)/(1000*1000*1000),"GB")
 

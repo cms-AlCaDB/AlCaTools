@@ -102,7 +102,7 @@ print('\n')
 # Parse the HLT menu
 ### Usually, blindly executing an external file is a security hazard... 
 print("Parsing HLT menu...")
-execfile(HLTMenuName)
+exec(open(HLTMenuName).read())  # Using exec() - Python 3 compatible
 
 print("List of datasets:")
 print(sorted(process.datasets._Parameterizable__parameterNames))
