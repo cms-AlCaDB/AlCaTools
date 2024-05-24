@@ -9,7 +9,7 @@ runRanges = ['105505_108413','108838_109534','109536_110263','111200_112195','11
 runRanges.sort()
 
 for iIOV in range(len(runRanges)):
-    print iIOV, runRanges[iIOV]
+    print(iIOV, runRanges[iIOV])
     Popen('cp SiStripNoise_GR10_v3_offline_1_100357.txt SiStripNoise_GR10_v3_offline_'+str(runRanges[iIOV])+'.txt',shell=True).wait()
     Popen('~/bin/upload.py SiStripNoise_GR10_v3_offline_'+str(runRanges[iIOV])+'.db',shell=True).wait()
               

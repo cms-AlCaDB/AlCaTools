@@ -23,9 +23,9 @@ options.register( "inputTag",
 
 options.parseArguments()
 
-print "###################################################################"
-print "# dumping: "+options.inputTag
-print "###################################################################"
+print("###################################################################")
+print("# dumping: "+options.inputTag)
+print("###################################################################")
 
 process.CondDB.connect = cms.string(options.inputDB)
 

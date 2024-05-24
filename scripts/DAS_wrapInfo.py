@@ -28,7 +28,7 @@ def find_key(collection, key):
     for item in collection:
         if key in item:
             return item[key]
-    print collection
+    print(collection)
     raise KeyError(key)
 
 ################################################################################
@@ -62,9 +62,8 @@ def das_client(query, check_key = None):
                 break
 
     if das_data["status"] == "error":
-        print_msg("DAS query '{}' failed 5 times. "
-                  "The last time for the the following reason:".format(query))
-        print das_data["reason"]
+        print_msg("DAS query '{}' failed 5 times. \nThe last time for the the following reason:".format(query))
+        print(das_data["reason"])
         sys.exit(1)
     return das_data["data"]
 
@@ -139,10 +138,9 @@ def print_msg(text, line_break = True, log_file = None):
 
     msg = "  >>> " + str(text)
     if line_break:
-        print msg
+        print(msg)
     else:
-        print msg,
-        sys.stdout.flush()
+        print(msg,sys.stdout.flush())
     if log_file:
         with open(log_file, "a") as f: f.write(msg+"\n")
     return msg
@@ -165,9 +163,9 @@ def main():
 
     result = pool.map_async(get_size_per_dataset,datasets).get(sys.maxint)    
     for count, elem in enumerate(result):
-        print "==>",datasets[count],float(elem)/(1000*1000*1000),"GB"
+        print("==>",datasets[count],float(elem)/(1000*1000*1000),"GB")
 
-    print "total=",float(sum(result))/(1000*1000*1000),"GB"
+    print("total=",float(sum(result))/(1000*1000*1000),"GB")
 
 
 ################################################################################

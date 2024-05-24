@@ -34,7 +34,7 @@ listOfAvailableSeeds = []
 for algo in root.findall('algorithm'):
     listOfAvailableSeeds.append(algo[0].text)
 
-print process.process
+print(process.process)
 pathnames = process.paths.viewkeys()
 
 pathsVsSeeds = dict()
@@ -51,7 +51,7 @@ def splitL1seeds(fullSeed):
 # 0) Get the number of HLT columns
 numberOfHLTColumns = len(process.PrescaleService.lvl1Labels)
 HLTColumnIndexes = range(0,numberOfHLTColumns)
-print "HLT menu has",numberOfHLTColumns,"columns"
+print("HLT menu has",numberOfHLTColumns,"columns")
 
 # 1) Make the map of path vs list of seeds
 for path in process.paths:
@@ -66,7 +66,7 @@ for path in process.paths:
             pathsVsSeeds[thePath.label()] = list()
 
 # 2) Make the map of path vs prescales
-print "-"*64
+print("-"*64)
 for i in process.PrescaleService.prescaleTable:
 	# We don't want the Output paths that may be here
 	if "Output" in i.pathName.value(): 
@@ -78,14 +78,14 @@ for pathName in pathsVsSeeds.keys():
 	if pathName not in pathPrescales.keys():
 		pathPrescales[pathName] = [1]*numberOfHLTColumns
 		if not("Calibration" in pathName or "HLTriggerFirstPath" in pathName or "HLTriggerFinalPath" in pathName):
-			print RED+'WARNING:'+RESET,pathName,"has no defined HLT prescales"
+			print(RED+'WARNING:'+RESET,pathName,"has no defined HLT prescales")
 	if len(pathsVsSeeds[pathName]) == 0:
 		L1pathPrescales[pathName] = [1]*numberOfHLTColumns
 		
 # NOW come the AlCa checks proper
 
 # 1) Do I have all the AlCa datasets?
-print "-"*64
+print("-"*64)
 datasetNames = process.datasets._Parameterizable__parameterNames
 mandatoryDatasetsAndPaths = {"ExpressPhysics":["HLT_IsoMu20_v*",
                                                "HLT_IsoMu24_v*",
@@ -122,20 +122,20 @@ row_format2 = '{0: <48}'
 
 for mds in mandatoryDatasets:	
     if mds in datasetNames:
-        print row_format.format(mds),GREEN+"PRESENT"+RESET		
+        print(row_format.format(mds),GREEN+"PRESENT"+RESET)		
         presentMandatoryDatasets.append(mds)
     else:
-        print row_format.format(mds),RED+"ABSENT"+RESET
+        print(row_format.format(mds),RED+"ABSENT"+RESET)
         presentMandatoryDatasets.sort()
         
 # 2) Do the datasets have all paths they should have?
-print "-"*64
+print("-"*64)
 for mds in presentMandatoryDatasets:
     theDataset = getattr(process.datasets,mds)
     for requestedPath in mandatoryDatasetsAndPaths[mds]:
         pathIsPresent = False
         if len(fnmatch.filter(theDataset,requestedPath)) == 0:
-            print row_format.format(mds),row_format2.format(requestedPath),RED+"ABSENT"+RESET
+            print(row_format.format(mds),row_format2.format(requestedPath),RED+"ABSENT"+RESET)
         # Do the paths have at least one L1 seed available in the menu?    
         for matchingPath in fnmatch.filter(theDataset,requestedPath):
             hasL1Seed = False
@@ -146,17 +146,17 @@ for mds in presentMandatoryDatasets:
                 if seed in listOfAvailableSeeds:
                     hasL1Seed = True
             if not hasL1Seed:
-                print row_format.format(mds),row_format2.format(matchingPath),GREEN+"PRESENT"+RESET,"but ",RED+"NO L1 SEED"+RESET
+                print(row_format.format(mds),row_format2.format(matchingPath),GREEN+"PRESENT"+RESET,"but ",RED+"NO L1 SEED"+RESET)
             elif hasL1Seed:
-                print row_format.format(mds),row_format2.format(matchingPath),GREEN+"PRESENT"+RESET,"and ",GREEN+"HAS L1 SEED"+RESET
+                print(row_format.format(mds),row_format2.format(matchingPath),GREEN+"PRESENT"+RESET,"and ",GREEN+"HAS L1 SEED"+RESET)
 
 
 # 3) Check the smart prescales of the Express Datasets:
-print "-"*64
+print("-"*64)
 for mds in presentMandatoryDatasets:
 	if "Express" in mds:
 		normalizedDSName = mds.replace("Physics","")
-		print BOLD+normalizedDSName+RESET
+		print(BOLD+normalizedDSName+RESET)
 		smartPrescales = getattr(process,"hltPre"+normalizedDSName+"OutputSmart")
-		print smartPrescales.triggerConditions
-		print "\n"
+		print(smartPrescales.triggerConditions)
+		print("\n")
