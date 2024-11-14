@@ -194,6 +194,12 @@ if __name__ == "__main__":
                       default=False,
                       action="store_true",
                       help='Set express to True (use for express mode)')
+
+    parser.add_option('-m','--match',
+                      dest='stringToMatch',
+                      default='',
+                      action='store',
+                      help='print only keys matching')
     
     (options, arguments) = parser.parse_args()
     print("value of isExpress =", options.express)
@@ -212,10 +218,10 @@ if __name__ == "__main__":
 
     if options.express:
         expressGT = getExpressGT('', certs=certs)
-        print(f"Express Global Tag: {RED}{expressGT}{RESET}")
+        print(f"\nExpress Global Tag: {RED}{expressGT}{RESET}")
     else:
         promptGT = getPromptGT('', certs=certs)
-        print(f"Prompt Global Tag: {RED}{promptGT}{RESET}")
+        print(f"\nPrompt Global Tag: {RED}{promptGT}{RESET}")
         
     #print("Current FCSR:",FCSR,"| Express Global Tag",expressGT,"| Prompt Global Tag",promptGT,"\n")
     
@@ -271,7 +277,19 @@ if __name__ == "__main__":
     expressDict = parseXML(theXML)
 
     print("\n")
+
+    if options.stringToMatch:
+        print(f"Will match: {RED}{options.stringToMatch}{RESET}\n")
+    
     for key, value in expressDict.items():
-        if "SiPixel" in key or "SiStrip" in key or "TkAl" in key or "PromptCalib" in key:
+        #if "SiPixel" in key or "SiStrip" in key or "TkAl" in key or "PromptCalib" in key:
+
+        isMatched=False
+        tokens=options.stringToMatch.split(",")
+        decisions = [bool(key.find(x)!=-1) for x in tokens]
+        for decision in decisions:
+            isMatched = (isMatched or decision)
+
+        if (options.stringToMatch=="" or isMatched): 
             print(f"{RED}{key}{RESET} : [{GREEN}{value}{RESET}]")
             
