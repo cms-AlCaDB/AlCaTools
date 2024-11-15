@@ -114,7 +114,7 @@ def find_hlt_path(PrimaryDataset, HLTpath, HLTMenu, output_file):
         return True, matching_triggers
 
 
-def find_pd(primary_dataset):
+def find_pd(primary_dataset, HLTMenu):
     """
     """
     pd_match = ""
@@ -204,7 +204,7 @@ def analyze(AlCaRecoMatrix, AlCaRecoTriggerBits, configuration, HLTMenu, hlt_men
                             "MatchingTriggers": matching_triggers
                         })            
             else:
-                pd_match, pd_unmatch = find_pd(primary_dataset)
+                pd_match, pd_unmatch = find_pd(primary_dataset, HLTMenu)
                 output[TriggerBitKey]["PDMatch"] = pd_match
                 output[TriggerBitKey]["PDUnMatch"] = pd_unmatch
                 if pd_match == "":

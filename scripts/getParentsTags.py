@@ -27,7 +27,6 @@ import pprint
 import subprocess
 import CondCore.Utilities.conddblib as conddb
 
-
 #####################################################################
 # we need this check to handle different versions of the CondDBFW 
 #####################################################################
@@ -44,8 +43,8 @@ def isCMSSWBefore81X( theRelease ):
 #####################################################################
 def getCMSSWRelease( ):
     CMSSW_VERSION='CMSSW_VERSION'
-    if not os.environ.has_key(CMSSW_VERSION):
-        print "\n CMSSW not properly set. Exiting"
+    if not CMSSW_VERSION in os.environ:
+        print("\n CMSSW not properly set. Exiting")
         sys.exit(1)
     release = os.getenv(CMSSW_VERSION)
     return release
@@ -89,7 +88,7 @@ def get_parent_tags(db, theHash):
         #mapOfOccur[tag]['sinces'] = listOfIOVs
         #mapOfOccur[tag]['times']  = listOfTimes
 
-        #print tag,synchronization,listOfIOVs,listOfTimes
+        #print(tag,synchronization,listOfIOVs,listOfTimes)
 
     return listOfOccur
 
@@ -109,7 +108,7 @@ if __name__ == '__main__':
     (options, arguments) = parser.parse_args()
     
     theRelease = getCMSSWRelease()
-    print "- Getting conddblib from release",theRelease
+    print("- Getting conddblib from release",theRelease)
     connectionString="frontier://FrontierProd/CMS_CONDITIONS"
 
     tags = get_parent_tags(connectionString,options.hash)
@@ -117,15 +116,15 @@ if __name__ == '__main__':
     #pp = pprint.PrettyPrinter(indent=4)
     #pp.pprint(tags)
 
-    #print tags
+    #print(tags)
     #for tag in tags:
-    #    print tag
+    #    print(tag)
 
-    #print head
+    #print(head)
     t = PrettyTable(['hash', 'since','tag','synch','insertion time'])
     for element in tags:
         t.add_row([options.hash,element['since'],element['tag'],element['synchronization'],element['insertion_time']])
 
-    print t
+    print(t)
 
 #eof

@@ -15,8 +15,8 @@ IOVs=[]
 for line in subprocess.Popen("conddb --noLimit --db dump_one_shot_v1.5_447_232134_256483.db list EcalLaserAPDPNRatios_20151007_232134_256483",shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT).stdout.readlines():
     if "EcalLaserAPDPNRatios" in line:
         IOVs.append((line.split()[2].strip(')')).strip('('))
-print IOVs
-print "There are %s IOVs!"%len(IOVs)
+print(IOVs)
+print("There are %s IOVs!"%len(IOVs))
 #Prepare the conddb_import commands template:                                                                                                                                                               
 #CommandTemplate="conddb_import -f sqlite:SiStripNoise_GR10_v3_offline.db -c sqlite:SiStripNoise_GR10_v3_offline_%s_%s.db -i SiStripNoise_GR10_v4_offline -t SiStripNoise_GR10_v4_offline -b %s -e %s"      
 
@@ -27,20 +27,20 @@ RelevantIOVs=[(IOV,IOVs[IOVs.index(IOV)+199],IOVs[IOVs.index(IOV)+200]) for IOV 
 
 RelevantIOVs.append((RelevantIOVs[-1][2],IOVs[-1],IOVs[-1]))
 
-print RelevantIOVs
+print(RelevantIOVs)
 for i,splitIOVs in enumerate(RelevantIOVs):
     begin=splitIOVs[0]
     end=splitIOVs[1]
     upperLimit=splitIOVs[1]
-    print i,begin,end,upperLimit
+    print(i,begin,end,upperLimit)
     command="conddb_import -f sqlite:dump_one_shot_v1.5_447_232134_256483.db -c sqlite:EcalLaserAPDPNRatios_"+begin+"_"+end+".db -i EcalLaserAPDPNRatios_20151007_232134_256483 -t EcalLaserAPDPNRatios -b "+begin\
 +" -e "+end
 #+" -e "+upperLimit
-    print command
+    print(command)
     
     #Now if we want to execute it inside Python uncomment the following two lines:                                                                                      
     STDOUT=subprocess.Popen(command,shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT).stdout.read()                                                             
-    print STDOUT                                                                                                                                                           
+    print(STDOUT)
 
 #for counter in range(0,len(IOVs),5):                                                                                                                                  
 #    if counter+1<len(IOVs):                                                                                                                                               

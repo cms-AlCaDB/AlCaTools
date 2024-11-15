@@ -5,14 +5,14 @@ import os,sys
 import copy
 import string, re
 import subprocess
-import ConfigParser, json
+import configparser, json
 from optparse import OptionParser
 
 from autoCond_TEMPL import autoCondTemplate as myAutoCond
 
 ####################--- Classes ---############################
 
-class BetterConfigParser(ConfigParser.ConfigParser):
+class BetterConfigParser(configparser.ConfigParser):
 
     ##############################################
     def optionxform(self, optionstr):
@@ -38,7 +38,7 @@ class BetterConfigParser(ConfigParser.ConfigParser):
             if "local"+section.title() in self.sections():
                 for option in self.options( "local"+section.title() ):
                     result[option] = self.get( "local"+section.title(),option )
-        except ConfigParser.NoSectionError, section:
+        except (ConfigParser.NoSectionError, section):
             msg = ("%s in configuration files. This section is mandatory."
                    %(str(section).replace(":", "", 1)))
             #raise AllInOneError(msg)
@@ -50,7 +50,7 @@ class BetterConfigParser(ConfigParser.ConfigParser):
         for option in demandPars:
             try:
                 result[option] = self.get( section, option )
-            except ConfigParser.NoOptionError, globalSectionError:
+            except (ConfigParser.NoOptionError, globalSectionError):
                 globalSection = str( globalSectionError ).split( "'" )[-2]
                 splittedSectionName = section.split( ":" )
                 if len( splittedSectionName ) > 1:
@@ -61,7 +61,7 @@ class BetterConfigParser(ConfigParser.ConfigParser):
                 if self.has_section( localSection ):
                     try:
                         result[option] = self.get( localSection, option )
-                    except ConfigParser.NoOptionError, option:
+                    except (ConfigParser.NoOptionError, option):
                         msg = ("%s. This option is mandatory."
                                %(str(option).replace(":", "", 1).replace(
                                    "section",
@@ -72,7 +72,7 @@ class BetterConfigParser(ConfigParser.ConfigParser):
                            %(str(globalSectionError).replace(":", "", 1)))
                     #raise AllInOneError(msg)
         result = self.__updateDict( result, section )
-        #print result
+        #print(result)
         return result
 
 ##### method to parse the input file ################################
@@ -94,7 +94,7 @@ def ConfigSectionMap(config, section):
 def replaceByMap(target, map):
     result = target
     for id in map:
-        #print "  "+id+": "+map[id]
+        #print("  "+id+": "+map[id])
         lifeSaver = 10e3
         iteration = 0
         while ".oO[" in result and "]Oo." in result:
@@ -103,11 +103,11 @@ def replaceByMap(target, map):
                 iteration += 1
             if iteration > lifeSaver:
                 problematicLines = ""
-                print map.keys()
+                print(map.keys())
                 for line in result.splitlines():
                     if  ".oO[" in result and "]Oo." in line:
                         problematicLines += "%s\n"%line
-                raise StandardError, "Oh Dear, there seems to be an endless loop in replaceByMap!!\n%s\nrepMap"%problematicLines
+                raise (StandardError, "Oh Dear, there seems to be an endless loop in replaceByMap!!\n%s\nrepMap"%problematicLines)
     return result
 
 ##############################################
@@ -115,11 +115,11 @@ def execme(command,dryrun=False):
     '''Wrapper for executing commands.
     '''
     if dryrun:
-        print command
+        print(command)
     else:
-        print " * Executing: %s..."%command
+        print(" * Executing: %s..."%command)
         os.system(command)
-        print " * Executed!"
+        print(" * Executed!")
 
 #####################################################################
 def getCommandOutput(command):
@@ -131,7 +131,7 @@ def getCommandOutput(command):
     data = child.read()
     err = child.close()
     if err:
-        print '%s failed w/ exit code %d' % (command, err)
+        print('%s failed w/ exit code %d' % (command, err))
     return data
 
 ##############################################
@@ -149,9 +149,9 @@ def main():
     repMap = {}
 
     if ConfigFile is not None:
-        print "********************************************************"
-        print "* Parsing from input file:", ConfigFile," "
-        print "********************************************************"
+        print("********************************************************")
+        print("* Parsing from input file:", ConfigFile," ")
+        print("********************************************************")
         
         config = BetterConfigParser()
         config.read(ConfigFile)
@@ -209,7 +209,7 @@ def main():
         
         for section in sections:
 
-            print "Preparing:",section
+            print("Preparing:",section)
             conditions = config.getResultingSection(section)
             if(conditions):
                 fout1.write("## "+section.replace("_"," ")+"\n \n")
@@ -223,15 +223,15 @@ def main():
                         fout2.write("   * =\'"+dict[key][0]+"\'= ("+dict[key][1]+") : [[https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/"+params[0]+"]["+params[0]+"]],[[https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/"+params[0]+"/"+params[1]+"][diff with previous]]: \n")
                         fout2.write("      *\n \n")
 
-                        print "=====>",str(dict[key][0]).ljust(20),":",str(params[0]).ljust(20)
-                        #print '{:10s} {:10s}'.format(str(dict[key][0]),str(params[0]))
+                        print("=====>",str(dict[key][0]).ljust(20),":",str(params[0]).ljust(20))
+                        #print('{:10s} {:10s}'.format(str(dict[key][0]),str(params[0])))
                         repMap.update({dict[key][0].upper():params[0]})
 
         ## replace the map of inputs
                         
         theReplacedMap = replaceByMap(myAutoCond,repMap)
-        #print repMap
-        #print theReplacedMap
+        #print(repMap)
+        #print(theReplacedMap)
         
         filePath = os.path.join(".","autoCond.py")
         theFile = open( filePath, "w" )
@@ -239,9 +239,9 @@ def main():
         theFile.close()
 
         theReleaseList = getCommandOutput("echo `scramv1 l -a | awk '$1==\"CMSSW\" && /CMSSW_"+opts.inputrelease+"/ { print $2  }' | sort`")
-        #print theReleaseList
+        #print(theReleaseList)
         theRelease = theReleaseList.split()[-1]
-        #print theRelease
+        #print(theRelease)
 
         commands = []
         commands.append("#!/bin/tcsh")
@@ -256,11 +256,11 @@ def main():
         
         theExecutableFile = open("testing.csh", "w" )
 
-        print "-------------------------------------------------------"
-        print "Will run the following commands"
-        print "-------------------------------------------------------"     
+        print("-------------------------------------------------------")
+        print("Will run the following commands")
+        print("-------------------------------------------------------")     
         for command in commands:
-            print command
+            print(command)
             theExecutableFile.write(command+"\n")
             
         theExecutableFile.close()
