@@ -1,17 +1,21 @@
 AlCaRecoTriggerBitsRcd / 
 AlCaRecoTriggerBitsRcd / JetMETDQMTrigger
 AlCaRecoTriggerBitsRcd / MuonDQMTrigger
+AlCaRecoTriggerBitsRcd / SecondaryDatasetTrigger
 AlCaRecoTriggerBitsRcd / SiStripDQMTrigger
+AlignPCLThresholdsHGRcd / 
+AlignPCLThresholdsRcd / 
 BTagTrackProbability2DRcd / 
 BTagTrackProbability3DRcd / 
-BTauGenericMVAJetTagComputerRcd / 
-BTauGenericMVAJetTagComputerRcd / HLT
 BeamSpotObjectsRcd / 
+BeamSpotOnlineHLTObjectsRcd / 
+BeamSpotOnlineLegacyObjectsRcd / 
 CSCAlignmentErrorExtendedRcd / 
 CSCAlignmentRcd / 
 CSCBadChambersRcd / 
 CSCBadStripsRcd / 
 CSCBadWiresRcd / 
+CSCChamberIndexRcd / 
 CSCChamberMapRcd / 
 CSCChamberTimeCorrectionsRcd / 
 CSCCrateMapRcd / 
@@ -23,37 +27,34 @@ CSCDBL1TPParametersRcd /
 CSCDBNoiseMatrixRcd / 
 CSCDBPedestalsRcd / 
 CSCDDUMapRcd / 
+CSCL1TPParametersRcd / 
 CSCRecoDigiParametersRcd / 
 CSCRecoGeometryRcd / 
-CastorChannelQualityRcd / 
-CastorElectronicsMapRcd / 
-CastorGainWidthsRcd / 
-CastorGainsRcd / 
-CastorPedestalWidthsRcd / 
-CastorPedestalsRcd / 
-CastorQIEDataRcd / 
-CastorRecoParamsRcd / 
-CastorSaturationCorrsRcd / 
-DQMReferenceHistogramRootFileRcd / 
+CTPPSOpticsRcd / 
+CTPPSPixelAnalysisMaskRcd / 
+CTPPSPixelDAQMappingRcd / 
+CTPPSPixelGainCalibrationsRcd / 
 DQMXMLFileRcd / SiPixelDQMQTests
 DQMXMLFileRcd / SiStripDQMQTests
 DTAlignmentErrorExtendedRcd / 
 DTAlignmentRcd / 
 DTCCBConfigRcd / 
 DTDeadFlagRcd / 
+DTHVStatusRcd / 
 DTKeyedConfigContainerRcd / 
 DTKeyedConfigListRcd / 
 DTMtimeRcd / 
 DTReadOutMappingRcd / 
 DTRecoConditionsUncertRcd / 
 DTRecoGeometryRcd / 
-DTRecoUncertaintiesRcd / 
 DTStatusFlagRcd / 
 DTT0Rcd / 
 DTTPGParametersRcd / 
 DTTtrigRcd / 
 DTTtrigRcd / cosmics
 DYTThrObjectRcd / 
+DeDxCalibrationRcd / 
+DropBoxMetadataRcd / 
 EBAlignmentRcd / 
 EEAlignmentRcd / 
 ESAlignmentRcd / 
@@ -77,8 +78,9 @@ EcalClusterEnergyUncertaintyParametersRcd /
 EcalClusterLocalContCorrParametersRcd / 
 EcalDAQTowerStatusRcd / 
 EcalDCSTowerStatusRcd / 
+EcalDQMChannelStatusRcd / 
+EcalDQMTowerStatusRcd / 
 EcalGainRatiosRcd / 
-EcalIntercalibConstantsMCRcd / 
 EcalIntercalibConstantsRcd / 
 EcalIntercalibErrorsRcd / 
 EcalLaserAPDPNRatiosRcd / 
@@ -86,13 +88,16 @@ EcalLaserAPDPNRatiosRefRcd /
 EcalLaserAlphasRcd / 
 EcalLinearCorrectionsRcd / 
 EcalMappingElectronicsRcd / 
+EcalMustacheSCParametersRcd / 
+EcalPFRecHitThresholdsRcd / 
 EcalPedestalsRcd / 
 EcalPulseCovariancesRcd / 
 EcalPulseShapesRcd / 
+EcalSCDynamicDPhiParametersRcd / 
 EcalSRSettingsRcd / 
-EcalSRSettingsRcd / fullReadout
 EcalSampleMaskRcd / 
 EcalSamplesCorrelationRcd / 
+EcalSimPulseShapeRcd / 
 EcalTBWeightsRcd / 
 EcalTPGCrystalStatusRcd / 
 EcalTPGFineGrainEBGroupRcd / 
@@ -102,18 +107,39 @@ EcalTPGFineGrainTowerEERcd /
 EcalTPGLinearizationConstRcd / 
 EcalTPGLutGroupRcd / 
 EcalTPGLutIdMapRcd / 
+EcalTPGOddWeightGroupRcd / 
+EcalTPGOddWeightIdMapRcd / 
 EcalTPGPedestalsRcd / 
 EcalTPGPhysicsConstRcd / 
 EcalTPGSlidingWindowRcd / 
 EcalTPGSpikeRcd / 
 EcalTPGStripStatusRcd / 
+EcalTPGTPModeRcd / 
 EcalTPGTowerStatusRcd / 
 EcalTPGWeightGroupRcd / 
 EcalTPGWeightIdMapRcd / 
 EcalTimeBiasCorrectionsRcd / 
 EcalTimeCalibConstantsRcd / 
+EcalTimeCalibConstantsRcd / CC
 EcalTimeOffsetConstantRcd / 
+EcalTimeOffsetConstantRcd / CC
 EcalWeightXtalGroupsRcd / 
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin1_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin1_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin2_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin2_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin3_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin3_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_ZS_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_ZS_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin1_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin1_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin2_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin2_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin3_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin3_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_ZS_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_ZS_sigma_25ns
 GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_mean_25ns
 GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_mean_50ns
 GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_sigma_25ns
@@ -155,13 +181,37 @@ GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_mean_50ns
 GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_sigma_25ns
 GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_sigma_50ns
 GBRDWrapperRcd / electron_eb_ECALTRK
+GBRDWrapperRcd / electron_eb_ECALTRK_lowpt
+GBRDWrapperRcd / electron_eb_ECALTRK_lowpt_var
 GBRDWrapperRcd / electron_eb_ECALTRK_var
 GBRDWrapperRcd / electron_eb_ECALonly
+GBRDWrapperRcd / electron_eb_ECALonly_lowpt
+GBRDWrapperRcd / electron_eb_ECALonly_lowpt_var
 GBRDWrapperRcd / electron_eb_ECALonly_var
+GBRDWrapperRcd / electron_eb_ecalOnly_1To20_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_eb_ecalOnly_1To20_0p2To2_mean
+GBRDWrapperRcd / electron_eb_ecalOnly_1To300_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_eb_ecalOnly_1To300_0p2To2_mean
+GBRDWrapperRcd / electron_eb_ecalTrk_1To20_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_eb_ecalTrk_1To20_0p2To2_mean
+GBRDWrapperRcd / electron_eb_ecalTrk_1To300_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_eb_ecalTrk_1To300_0p2To2_mean
 GBRDWrapperRcd / electron_ee_ECALTRK
+GBRDWrapperRcd / electron_ee_ECALTRK_lowpt
+GBRDWrapperRcd / electron_ee_ECALTRK_lowpt_var
 GBRDWrapperRcd / electron_ee_ECALTRK_var
 GBRDWrapperRcd / electron_ee_ECALonly
+GBRDWrapperRcd / electron_ee_ECALonly_lowpt
+GBRDWrapperRcd / electron_ee_ECALonly_lowpt_var
 GBRDWrapperRcd / electron_ee_ECALonly_var
+GBRDWrapperRcd / electron_ee_ecalOnly_1To20_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_ee_ecalOnly_1To20_0p2To2_mean
+GBRDWrapperRcd / electron_ee_ecalOnly_1To300_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_ee_ecalOnly_1To300_0p2To2_mean
+GBRDWrapperRcd / electron_ee_ecalTrk_1To20_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_ee_ecalTrk_1To20_0p2To2_mean
+GBRDWrapperRcd / electron_ee_ecalTrk_1To300_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_ee_ecalTrk_1To300_0p2To2_mean
 GBRDWrapperRcd / gedelectron_EBCorrection_25ns
 GBRDWrapperRcd / gedelectron_EBCorrection_50ns
 GBRDWrapperRcd / gedelectron_EBUncertainty_25ns
@@ -178,6 +228,14 @@ GBRDWrapperRcd / gedphoton_EECorrection_25ns
 GBRDWrapperRcd / gedphoton_EECorrection_50ns
 GBRDWrapperRcd / gedphoton_EEUncertainty_25ns
 GBRDWrapperRcd / gedphoton_EEUncertainty_50ns
+GBRDWrapperRcd / lowPtElectron_eb_ecalOnly_05To50_mean
+GBRDWrapperRcd / lowPtElectron_eb_ecalOnly_05To50_sigma
+GBRDWrapperRcd / lowPtElectron_eb_ecalTrk_05To50_mean
+GBRDWrapperRcd / lowPtElectron_eb_ecalTrk_05To50_sigma
+GBRDWrapperRcd / lowPtElectron_ee_ecalOnly_05To50_mean
+GBRDWrapperRcd / lowPtElectron_ee_ecalOnly_05To50_sigma
+GBRDWrapperRcd / lowPtElectron_ee_ecalTrk_05To50_mean
+GBRDWrapperRcd / lowPtElectron_ee_ecalTrk_05To50_sigma
 GBRDWrapperRcd / pfscecal_EBCorrection_offline_v2
 GBRDWrapperRcd / pfscecal_EBCorrection_online
 GBRDWrapperRcd / pfscecal_EBUncertainty_offline_v2
@@ -186,25 +244,42 @@ GBRDWrapperRcd / pfscecal_EECorrection_offline_v2
 GBRDWrapperRcd / pfscecal_EECorrection_online
 GBRDWrapperRcd / pfscecal_EEUncertainty_offline_v2
 GBRDWrapperRcd / pfscecal_EEUncertainty_online
+GBRDWrapperRcd / pfscecal_ebCorrection_offline_v2
+GBRDWrapperRcd / pfscecal_ebUncertainty_offline_v2
+GBRDWrapperRcd / pfscecal_eeCorrection_offline_v2
+GBRDWrapperRcd / pfscecal_eeUncertainty_offline_v2
 GBRDWrapperRcd / photon_eb_ECALonly
+GBRDWrapperRcd / photon_eb_ECALonly_lowpt
+GBRDWrapperRcd / photon_eb_ECALonly_lowpt_var
 GBRDWrapperRcd / photon_eb_ECALonly_var
+GBRDWrapperRcd / photon_eb_ecalOnly_1To20_0p0002To0p5_sigma
+GBRDWrapperRcd / photon_eb_ecalOnly_1To20_0p2To2_mean
+GBRDWrapperRcd / photon_eb_ecalOnly_5To300_0p0002To0p5_sigma
+GBRDWrapperRcd / photon_eb_ecalOnly_5To300_0p2To2_mean
 GBRDWrapperRcd / photon_ee_ECALonly
+GBRDWrapperRcd / photon_ee_ECALonly_lowpt
+GBRDWrapperRcd / photon_ee_ECALonly_lowpt_var
 GBRDWrapperRcd / photon_ee_ECALonly_var
+GBRDWrapperRcd / photon_ee_ecalOnly_1To20_0p0002To0p5_sigma
+GBRDWrapperRcd / photon_ee_ecalOnly_1To20_0p2To2_mean
+GBRDWrapperRcd / photon_ee_ecalOnly_5To300_0p0002To0p5_sigma
+GBRDWrapperRcd / photon_ee_ecalOnly_5To300_0p2To2_mean
+GBRWrapperRcd / HIMVASelectorDetachedQuadStep_Phase1
+GBRWrapperRcd / HIMVASelectorDetachedTripletStep_Phase1
+GBRWrapperRcd / HIMVASelectorHighPtTripletStep_Phase1
+GBRWrapperRcd / HIMVASelectorInitialStep_Phase1
+GBRWrapperRcd / HIMVASelectorIter4
+GBRWrapperRcd / HIMVASelectorIter5
+GBRWrapperRcd / HIMVASelectorIter6
+GBRWrapperRcd / HIMVASelectorIter7
+GBRWrapperRcd / HIMVASelectorLowPtQuadStep_Phase1
+GBRWrapperRcd / HIMVASelectorLowPtTripletStep_Phase1
 GBRWrapperRcd / MVADuplicate
-GBRWrapperRcd / MVASelectorIter0
-GBRWrapperRcd / MVASelectorIter0_13TeV
-GBRWrapperRcd / MVASelectorIter1
-GBRWrapperRcd / MVASelectorIter1_13TeV
-GBRWrapperRcd / MVASelectorIter2
-GBRWrapperRcd / MVASelectorIter2_13TeV
-GBRWrapperRcd / MVASelectorIter3
-GBRWrapperRcd / MVASelectorIter3_13TeV
-GBRWrapperRcd / MVASelectorIter4
-GBRWrapperRcd / MVASelectorIter4_13TeV
-GBRWrapperRcd / MVASelectorIter5
-GBRWrapperRcd / MVASelectorIter5_13TeV
-GBRWrapperRcd / MVASelectorIter6
-GBRWrapperRcd / MVASelectorIter6_13TeV
+GBRWrapperRcd / MVASelectorJetCoreRegionalStep_Phase1
+GBRWrapperRcd / MVASelectorMixedTripletStep_Phase1
+GBRWrapperRcd / MVASelectorPixelLessStep_Phase1
+GBRWrapperRcd / MVASelectorPixelPairStep_Phase1
+GBRWrapperRcd / MVASelectorTobTecStep_Phase1
 GBRWrapperRcd / PFEcalResolution
 GBRWrapperRcd / PFGCorrectionBar
 GBRWrapperRcd / PFGCorrectionEndHighR9
@@ -214,9 +289,17 @@ GBRWrapperRcd / PFLCCorrection
 GBRWrapperRcd / PFLCorrectionBar
 GBRWrapperRcd / PFLCorrectionEnd
 GBRWrapperRcd / PFResolution
-GBRWrapperRcd / btag_CombinedMVAv2_BDT
-GBRWrapperRcd / btag_SoftPFElectron_BDT
-GBRWrapperRcd / btag_SoftPFMuon_BDT
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC
+GBRWrapperRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT
+GBRWrapperRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT
+GBRWrapperRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT
 GBRWrapperRcd / gedelectron_EBCorrection_offline_v1
 GBRWrapperRcd / gedelectron_EBUncertainty_offline_v1
 GBRWrapperRcd / gedelectron_EECorrection_offline_v1
@@ -234,15 +317,11 @@ GBRWrapperRcd / wgbrph_EBCorrection
 GBRWrapperRcd / wgbrph_EBUncertainty
 GBRWrapperRcd / wgbrph_EECorrection
 GBRWrapperRcd / wgbrph_EEUncertainty
+GEMAlignmentErrorExtendedRcd / 
+GEMAlignmentRcd / 
+GEMChMapRcd / 
 GEMRecoGeometryRcd / 
-GeometryFileRcd / Extended
-GeometryFileRcd / Extended2015CastorMeasured
-GeometryFileRcd / Extended2015CastorSystMinus
-GeometryFileRcd / Extended2015CastorSystPlus
-GeometryFileRcd / Extended2015ZeroMaterial
-GeometryFileRcd / Extended2015dev
-GeometryFileRcd / Ideal
-GeometryFileRcd / Ideal2015dev
+GEMeMapRcd / 
 GlobalPositionRcd / 
 HBAlignmentRcd / 
 HBHENegativeEFilterRcd / 
@@ -263,9 +342,12 @@ HcalMCParamsRcd /
 HcalOOTPileupCompatibilityRcd / 
 HcalOOTPileupCorrectionMapCollRcd / 
 HcalPFCorrsRcd / 
+HcalPFCutsRcd / 
 HcalParametersRcd / 
 HcalPedestalWidthsRcd / 
+HcalPedestalWidthsRcd / effective
 HcalPedestalsRcd / 
+HcalPedestalsRcd / effective
 HcalQIEDataRcd / 
 HcalQIETypesRcd / 
 HcalRecoParamsRcd / 
@@ -276,18 +358,12 @@ HcalTPChannelParametersRcd /
 HcalTPParametersRcd / 
 HcalTimeCorrsRcd / 
 HcalZSThresholdsRcd / 
-HeavyIonRcd / HFhitsAMPT_2760GeV
-HeavyIonRcd / HFhitsHydjet_Bass
-HeavyIonRcd / HFhitsHydjet_Drum
-HeavyIonRcd / HFtowersHydjet_Bass
-HeavyIonRcd / HFtowersHydjet_Drum
-HeavyIonRcd / PixelHitsAMPT_2760GeV
-HeavyIonRcd / PixelHitsHydjet_Bass
-HeavyIonRcd / PixelHitsHydjet_Drum
-HeavyIonRcd / PixelTracksHydjet_Bass
-HeavyIonRcd / PixelTracksHydjet_Drum
-HeavyIonRcd / TracksHydjet_Bass
-HeavyIonRcd / TracksHydjet_Drum
+HeavyIonRPRcd / 
+HeavyIonRcd / HFhits
+HeavyIonRcd / HFtowers
+HeavyIonRcd / PixelHits
+HeavyIonRcd / PixelTracks
+HeavyIonRcd / Tracks
 IdealGeometryRecord / 
 JetCorrectionsRecord / AK10PF
 JetCorrectionsRecord / AK10PFchs
@@ -296,41 +372,44 @@ JetCorrectionsRecord / AK1PFchs
 JetCorrectionsRecord / AK2PF
 JetCorrectionsRecord / AK2PFchs
 JetCorrectionsRecord / AK3PF
+JetCorrectionsRecord / AK3PFTowers_hiGoodTightTracks
 JetCorrectionsRecord / AK3PFchs
 JetCorrectionsRecord / AK4Calo
 JetCorrectionsRecord / AK4CaloHLT
 JetCorrectionsRecord / AK4JPT
 JetCorrectionsRecord / AK4PF
+JetCorrectionsRecord / AK4PFClusterHLT
 JetCorrectionsRecord / AK4PFHLT
 JetCorrectionsRecord / AK4PFPuppi
+JetCorrectionsRecord / AK4PFPuppiHLT
+JetCorrectionsRecord / AK4PFTowers_hiGoodTightTracks
 JetCorrectionsRecord / AK4PFchs
+JetCorrectionsRecord / AK4PFchsHLT
 JetCorrectionsRecord / AK5Calo
 JetCorrectionsRecord / AK5CaloHLT
-JetCorrectionsRecord / AK5JPT
 JetCorrectionsRecord / AK5PF
 JetCorrectionsRecord / AK5PFHLT
+JetCorrectionsRecord / AK5PFTowers_hiGoodTightTracks
 JetCorrectionsRecord / AK5PFchs
 JetCorrectionsRecord / AK5PFchsHLT
-JetCorrectionsRecord / AK5TRK
 JetCorrectionsRecord / AK6PF
 JetCorrectionsRecord / AK6PFchs
 JetCorrectionsRecord / AK7Calo
-JetCorrectionsRecord / AK7JPT
 JetCorrectionsRecord / AK7PF
 JetCorrectionsRecord / AK7PFchs
 JetCorrectionsRecord / AK8CaloHLT
 JetCorrectionsRecord / AK8PF
+JetCorrectionsRecord / AK8PFClusterHLT
 JetCorrectionsRecord / AK8PFHLT
 JetCorrectionsRecord / AK8PFPuppi
+JetCorrectionsRecord / AK8PFPuppiHLT
 JetCorrectionsRecord / AK8PFchs
+JetCorrectionsRecord / AK8PFchsHLT
 JetCorrectionsRecord / AK9PF
 JetCorrectionsRecord / AK9PFchs
-JetCorrectionsRecord / IC5Calo
-JetCorrectionsRecord / IC5PF
-JetCorrectionsRecord / KT4Calo
-JetCorrectionsRecord / KT4PF
-JetCorrectionsRecord / KT6Calo
-JetCorrectionsRecord / KT6PF
+JetCorrectionsRecord / IC5Calo_2760GeV
+JetCorrectionsRecord / UETable_Calo
+JetCorrectionsRecord / UETable_PF
 JetResolutionRcd / AK4PFPuppi_phi
 JetResolutionRcd / AK4PFPuppi_pt
 JetResolutionRcd / AK4PF_phi
@@ -392,13 +471,23 @@ L1RPCConeDefinitionRcd /
 L1RPCConfigRcd / 
 L1RPCHsbConfigRcd / 
 L1RPCHwConfigRcd / 
+L1TCaloParamsO2ORcd / 
 L1TCaloParamsRcd / 
+L1TGlobalPrescalesVetosFractRcd / 
+L1TGlobalPrescalesVetosRcd / 
+L1TMuonBarrelParamsRcd / 
+L1TMuonEndCapForestRcd / 
+L1TMuonEndCapParamsRcd / 
+L1TMuonGlobalParamsRcd / 
+L1TMuonOverlapParamsRcd / 
 L1TUtmTriggerMenuRcd / 
 L1TriggerKeyListRcd / 
 L1TriggerKeyRcd / 
-LumiSectionDataRcd / 
-MFGeometryFileRcd / 120812
-MFGeometryFileRcd / 130503
+LHCInfoPerFillRcd / 
+LHCInfoPerLSRcd / 
+LHCInfoRcd / 
+LumiCorrectionsRcd / 
+MFGeometryFileRcd / 160812
 MFGeometryFileRcd / 90322
 MagFieldConfigRcd / 0T
 MagFieldConfigRcd / 2T
@@ -407,64 +496,114 @@ MagFieldConfigRcd / 3.8T
 MagFieldConfigRcd / 3T
 MagFieldConfigRcd / 4T
 PCaloTowerRcd / 
-PCastorRcd / 
 PEcalBarrelRcd / 
 PEcalEndcapRcd / 
 PEcalPreshowerRcd / 
 PFCalibrationRcd / 
 PFCalibrationRcd / HLT
-PGeometricDetExtraRcd / 
 PHcalRcd / 
+PPSAlignmentConfigurationRcd / 
+PPSAlignmentConfigurationRcd / reference
+PPSAssociationCutsRcd / 
+PPSTimingCalibrationLUTRcd / 
+PPSTimingCalibrationRcd / PPSDiamondSampicCalibration
+PPSTimingCalibrationRcd / PPSDiamondTimingCalibration
+PPSTimingCalibrationRcd / TotemTimingCalibration
 PTrackerParametersRcd / 
 PZdcRcd / 
-PerformancePayloadRecord / BTagTTBARMCBTAGCSVtable_v8_offline
-PerformancePayloadRecord / BTagTTBARMCBTAGJBPtable_v8_offline
-PerformancePayloadRecord / BTagTTBARMCBTAGJPtable_v8_offline
-PerformancePayloadRecord / BTagTTBARMCBTAGSSVHEtable_v8_offline
-PerformancePayloadRecord / BTagTTBARMCBTAGSSVHPtable_v8_offline
-PerformancePayloadRecord / BTagTTBARMCBTAGTCHEtable_v8_offline
-PerformancePayloadRecord / BTagTTBARMCBTAGTCHPtable_v8_offline
-PerformanceWPRecord / BTagTTBARMCBTAGCSVwp_v8_offline
-PerformanceWPRecord / BTagTTBARMCBTAGJBPwp_v8_offline
-PerformanceWPRecord / BTagTTBARMCBTAGJPwp_v8_offline
-PerformanceWPRecord / BTagTTBARMCBTAGSSVHEwp_v8_offline
-PerformanceWPRecord / BTagTTBARMCBTAGSSVHPwp_v8_offline
-PerformanceWPRecord / BTagTTBARMCBTAGTCHEwp_v8_offline
-PerformanceWPRecord / BTagTTBARMCBTAGTCHPwp_v8_offline
 PhotonConversionMVAComputerRcd / 
+PhysicsTFormulaPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_mvaOutput_normalization
+PhysicsTFormulaPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_mvaOutput_normalization
+PhysicsTFormulaPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_mvaOutput_normalization
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_VVLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_VVTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_VVLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_VVTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_VVLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_VVTight
 QGLikelihoodRcd / QGL_AK4PF
 QGLikelihoodRcd / QGL_AK4PF_antib
 QGLikelihoodRcd / QGL_AK4PFchs
 QGLikelihoodRcd / QGL_AK4PFchs_antib
-RPCClusterSizeRcd / 
+RPCCPPFLinkMapRcd / 
+RPCDCCLinkMapRcd / 
 RPCEMapRcd / 
+RPCLBLinkMapRcd / 
+RPCOMTFLinkMapRcd / 
 RPCRecoGeometryRcd / 
-RPCStripNoisesRcd / 
+RPCTwinMuxLinkMapRcd / 
+RPRealAlignmentRecord / 
 RunInfoRcd / 
-SiPixelCPEGenericErrorParmRcd / 
+SiPixel2DTemplateDBObjectRcd / numerator
 SiPixelDetVOffRcd / 
-SiPixelDynamicInefficiencyRcd / 
-SiPixelDynamicInefficiencyRcd / 50ns
 SiPixelFedCablingMapRcd / 
 SiPixelGainCalibrationForHLTRcd / 
-SiPixelGainCalibrationForHLTSimRcd / 
 SiPixelGainCalibrationOfflineRcd / 
-SiPixelGainCalibrationOfflineSimRcd / 
 SiPixelGenErrorDBObjectRcd / 
 SiPixelLorentzAngleRcd / 
 SiPixelLorentzAngleRcd / forWidth
 SiPixelLorentzAngleRcd / fromAlignment
-SiPixelLorentzAngleSimRcd / 
 SiPixelQualityFromDbRcd / 
+SiPixelQualityFromDbRcd / forRawToDigi
 SiPixelTemplateDBObjectRcd / 
 SiPixelTemplateDBObjectRcd / 0T
-SiPixelTemplateDBObjectRcd / 2T
-SiPixelTemplateDBObjectRcd / 35T
-SiPixelTemplateDBObjectRcd / 3T
-SiPixelTemplateDBObjectRcd / 4T
 SiStripApvGain2Rcd / 
 SiStripApvGainRcd / 
-SiStripApvGainSimRcd / 
 SiStripBackPlaneCorrectionRcd / deconvolution
 SiStripBackPlaneCorrectionRcd / peak
 SiStripBadChannelRcd / 
@@ -483,12 +622,18 @@ SiStripDetVOffRcd /
 SiStripFedCablingRcd / 
 SiStripLatencyRcd / 
 SiStripLorentzAngleRcd / deconvolution
-SiStripLorentzAngleSimRcd / 
+SiStripLorentzAngleRcd / peak
 SiStripNoisesRcd / 
 SiStripPedestalsRcd / 
 SiStripThresholdRcd / 
 TauTagMVAComputerRcd / 
 TauTagMVAComputerRcd / hpstanc
+TotemAnalysisMaskRcd / 
+TotemReadoutRcd / TimingDiamond
+TotemReadoutRcd / TotemT2
+TotemReadoutRcd / TotemTiming
+TotemReadoutRcd / TrackingStrip
 TrackerAlignmentErrorExtendedRcd / 
 TrackerAlignmentRcd / 
 TrackerSurfaceDeformationRcd / 
+VeryForwardIdealGeometryRecord / 

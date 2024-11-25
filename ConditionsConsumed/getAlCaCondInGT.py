@@ -42,27 +42,34 @@ def getOneRow(tag, logFiles):
     return rowName + " | \n"
 
 def printAllRow(tagFile, logFiles, outForTwiki, tableTitle):
+    outfile = open(tagFile, "w")
+    unique_tags = []
     for file_ in logFiles:
-        outfile = open(tagFile, "w")
         with open(file_) as f:
             lines = f.readlines()
             for l in lines:
                 newl = l.split(': frontier:')[0]
                 if re.search(r' / ', newl):
-                    #print(newl)
-                    outfile.write(newl+'\n')
-    outfile.close()
+                    if newl not in unique_tags:
+                      #print(newl)
+                      unique_tags.append(newl)
 
+    unique_tags = sorted(unique_tags)
+    for tag in unique_tags:
+        outfile.write(tag+'\n')
+    outfile.close()
     outForTwiki.write(tableTitle)
     for tag in open(tagFile):
         getOneRow_ = getOneRow(tag, logFiles)
         #print (getOneRow_)
         outForTwiki.write(getOneRow_)
 
+    outForTwiki.close()
+
 def main():
     
     #Default input
-    defaultData = False
+    defaultData = True
     
     parser = optparse.OptionParser(usage = 'Usage: python3 getAlCaCondInGT.py [options] \n')
 
@@ -104,6 +111,9 @@ def main():
     outputForTwiki = open(f"outputForTwiki_{output_table}.txt", 'w')
 
     printAllRow(tagFile, logFiles, outputForTwiki, tableTitle)
+    if(options.isData):
+      os.system(f'python3 update_gdoc_forNGT.py -i outputForTwiki_{output_table}.txt')
+
 
 if __name__ == '__main__':
     main()
