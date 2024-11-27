@@ -37,7 +37,7 @@ parser.add_option('-t', '--tag',
 
 (options, arguments) = parser.parse_args()
 
-#print len(options)
+#print(len(options))
 #if len(options) < 2:
 #    parser.print_help()
 #    sys.exit("=======> Exiting: Not enough parameters")
@@ -55,5 +55,5 @@ sqlite_con = querying.connect({"host" : "sqlite", "db_alias" : sqlite_db_url})
 my_dict = sqlite_con.tag(name=options.tag).iovs().as_dicts()
 for element in my_dict:
     run, lumi = unpackLumiId(element['since'])
-    print "packed",element['since']," ===> run:",run," ls:",lumi
+    print("packed",element['since']," ===> run:",run," ls:",lumi)
 

@@ -13,8 +13,8 @@ import pprint
 #####################################################################
 def getCMSSWRelease( ):
     CMSSW_VERSION='CMSSW_VERSION'
-    if not os.environ.has_key(CMSSW_VERSION):
-        print "\n CMSSW not properly set. Exiting"
+    if not CMSSW_VERSION in os.environ:
+        print("\n CMSSW not properly set. Exiting")
         sys.exit(1)
     release = os.getenv(CMSSW_VERSION)
     return release
@@ -35,7 +35,7 @@ if __name__ == '__main__':
     (options, arguments) = parser.parse_args()
 
     theRelease = getCMSSWRelease()
-    print "theRelease:",theRelease
+    print("theRelease:",theRelease)
     
     if(theRelease):
         from Configuration.AlCa.autoCond import autoCond
@@ -46,9 +46,9 @@ if __name__ == '__main__':
             listOfKeys.append(key)
             
         if(options.key!="def"):
-            print options.key,":",autoCond[options.key]
+            print(options.key,":",autoCond[options.key])
         else:
-            #print listOfKeys
+            #print(listOfKeys)
             pp = pprint.PrettyPrinter(depth=6)
             pp.pprint(autoCond)
         

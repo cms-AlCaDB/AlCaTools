@@ -17,7 +17,7 @@ import os,sys
 import copy
 import string, re
 import subprocess
-import ConfigParser, json
+import configparser, json
 import os.path
 from optparse import OptionParser
 
@@ -26,7 +26,7 @@ import collections
 
 ####################--- Classes ---############################
 
-class BetterConfigParser(ConfigParser.ConfigParser):
+class BetterConfigParser(configparser.ConfigParser):
 
     ##############################################
     def optionxform(self, optionstr):
@@ -52,7 +52,7 @@ class BetterConfigParser(ConfigParser.ConfigParser):
             if "local"+section.title() in self.sections():
                 for option in self.options( "local"+section.title() ):
                     result[option] = self.get( "local"+section.title(),option )
-        except ConfigParser.NoSectionError, section:
+        except(ConfigParser.NoSectionError, section):
             msg = ("%s in configuration files. This section is mandatory."
                    %(str(section).replace(":", "", 1)))
             #raise AllInOneError(msg)
@@ -64,7 +64,7 @@ class BetterConfigParser(ConfigParser.ConfigParser):
         for option in demandPars:
             try:
                 result[option] = self.get( section, option )
-            except ConfigParser.NoOptionError, globalSectionError:
+            except(ConfigParser.NoOptionError, globalSectionError):
                 globalSection = str( globalSectionError ).split( "'" )[-2]
                 splittedSectionName = section.split( ":" )
                 if len( splittedSectionName ) > 1:
@@ -75,7 +75,7 @@ class BetterConfigParser(ConfigParser.ConfigParser):
                 if self.has_section( localSection ):
                     try:
                         result[option] = self.get( localSection, option )
-                    except ConfigParser.NoOptionError, option:
+                    except(ConfigParser.NoOptionError, option):
                         msg = ("%s. This option is mandatory."
                                %(str(option).replace(":", "", 1).replace(
                                    "section",
@@ -90,10 +90,10 @@ class BetterConfigParser(ConfigParser.ConfigParser):
         keylist = result.keys()
         resultSorted = collections.OrderedDict()
         #print keylist
-        print sorted(keylist)
+        print(sorted(keylist))
         for key in sorted(keylist):
             resultSorted[key]=result[key]
-        #print resultSorted
+        #print(resultSorted)
         return resultSorted
 
 ##### method to parse the input file ################################
@@ -124,7 +124,7 @@ def getInput(default, prompt = ''):
             break
         text += "%s\n" % answer
     for line in text.splitlines():
-        print "-",line
+        print("-",line)
     return text.strip()
     
     #answer = raw_input(prompt)
@@ -145,14 +145,14 @@ def main():
     ConfigFile = opts.inputconfig
     
     if (ConfigFile is not None and os.path.exists("./"+ConfigFile)) :
-        print "********************************************************"
-        print "* Parsing from input file:", ConfigFile," "
-        print "********************************************************"
+        print("********************************************************")
+        print("* Parsing from input file:", ConfigFile," ")
+        print("********************************************************")
         
         config = BetterConfigParser()
         config.read(ConfigFile)
 
-        #print config.sections()
+        #print(config.sections())
         #config.getResultingSection(config.sections()[0])
 
         dict = {'RunI_Ideal_scenario' : ('run1_design',"Run1 Ideal Simulation"),
@@ -344,18 +344,18 @@ def main():
         #########################
         # Print output
         #########################
-        print "Output will be found at:"
-        print "  - GitHub_"+theRelease+"_"+thePR+".txt"
-        print "  - Twiki_"+theRelease+"_"+thePR+".txt"
+        print("Output will be found at:")
+        print("  - GitHub_"+theRelease+"_"+thePR+".txt")
+        print("  - Twiki_"+theRelease+"_"+thePR+".txt")
 
     else:
-        print "\n"
-        print "ERROR in calling createDescription.py "
-        print "  An input file has not been specified"
-        print "  Please enter the command in the format: "
-        print "  python createGTDescription.py -i GT_changes.ini"
-        print " =====> exiting..."
-        print "\n"
+        print("\n")
+        print("ERROR in calling createDescription.py ")
+        print("  An input file has not been specified")
+        print("  Please enter the command in the format: ")
+        print("  python createGTDescription.py -i GT_changes.ini")
+        print(" =====> exiting...")
+        print("\n")
         exit(1)
 
 if __name__ == "__main__":        
