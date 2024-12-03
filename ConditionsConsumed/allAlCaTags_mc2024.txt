@@ -1,0 +1,621 @@
+AlCaRecoTriggerBitsRcd / 
+AlCaRecoTriggerBitsRcd / JetMETDQMTrigger
+AlCaRecoTriggerBitsRcd / MuonDQMTrigger
+AlCaRecoTriggerBitsRcd / SiStripDQMTrigger
+BTagTrackProbability2DRcd / 
+BTagTrackProbability3DRcd / 
+BeamSpotObjectsRcd / 
+BeamSpotOnlineHLTObjectsRcd / 
+BeamSpotOnlineLegacyObjectsRcd / 
+CSCAlignmentErrorExtendedRcd / 
+CSCAlignmentRcd / 
+CSCBadChambersRcd / 
+CSCBadStripsRcd / 
+CSCBadWiresRcd / 
+CSCChamberMapRcd / 
+CSCChamberTimeCorrectionsRcd / 
+CSCCrateMapRcd / 
+CSCDBChipSpeedCorrectionRcd / 
+CSCDBCrosstalkRcd / 
+CSCDBGainsRcd / 
+CSCDBGasGainCorrectionRcd / 
+CSCDBL1TPParametersRcd / 
+CSCDBNoiseMatrixRcd / 
+CSCDBPedestalsRcd / 
+CSCDDUMapRcd / 
+CSCRecoDigiParametersRcd / 
+CSCRecoGeometryRcd / 
+CTPPSOpticsRcd / 
+CTPPSPixelAnalysisMaskRcd / 
+CTPPSPixelDAQMappingRcd / 
+CTPPSPixelGainCalibrationsRcd / 
+DQMXMLFileRcd / SiPixelDQMQTests
+DQMXMLFileRcd / SiStripDQMQTests
+DTAlignmentErrorExtendedRcd / 
+DTAlignmentRcd / 
+DTCCBConfigRcd / 
+DTDeadFlagRcd / 
+DTKeyedConfigContainerRcd / 
+DTKeyedConfigListRcd / 
+DTMtimeRcd / 
+DTReadOutMappingRcd / 
+DTRecoConditionsUncertRcd / 
+DTRecoGeometryRcd / 
+DTStatusFlagRcd / 
+DTT0Rcd / 
+DTTPGParametersRcd / 
+DTTtrigRcd / 
+DTTtrigRcd / cosmics
+DYTThrObjectRcd / 
+EBAlignmentRcd / 
+EEAlignmentRcd / 
+ESAlignmentRcd / 
+ESAngleCorrectionFactorsRcd / 
+ESChannelStatusRcd / 
+ESEEIntercalibConstantsRcd / 
+ESGainRcd / 
+ESIntercalibConstantsRcd / 
+ESMIPToGeVConstantRcd / 
+ESMissingEnergyCalibrationRcd / 
+ESPedestalsRcd / 
+ESRecHitRatioCutsRcd / 
+ESThresholdsRcd / 
+ESTimeSampleWeightsRcd / 
+EcalADCToGeVConstantRcd / 
+EcalChannelStatusRcd / 
+EcalClusterCrackCorrParametersRcd / 
+EcalClusterEnergyCorrectionObjectSpecificParametersRcd / 
+EcalClusterEnergyCorrectionParametersRcd / 
+EcalClusterEnergyUncertaintyParametersRcd / 
+EcalClusterLocalContCorrParametersRcd / 
+EcalDAQTowerStatusRcd / 
+EcalDCSTowerStatusRcd / 
+EcalGainRatiosRcd / 
+EcalIntercalibConstantsMCRcd / 
+EcalIntercalibConstantsRcd / 
+EcalIntercalibErrorsRcd / 
+EcalLaserAPDPNRatiosRcd / 
+EcalLaserAPDPNRatiosRefRcd / 
+EcalLaserAlphasRcd / 
+EcalLinearCorrectionsRcd / 
+EcalMappingElectronicsRcd / 
+EcalMustacheSCParametersRcd / 
+EcalPFRecHitThresholdsRcd / 
+EcalPedestalsRcd / 
+EcalPulseCovariancesRcd / 
+EcalPulseShapesRcd / 
+EcalSCDynamicDPhiParametersRcd / 
+EcalSRSettingsRcd / 
+EcalSRSettingsRcd / fullReadout
+EcalSampleMaskRcd / 
+EcalSamplesCorrelationRcd / 
+EcalSimComponentShapeRcd / 
+EcalSimPulseShapeRcd / 
+EcalTBWeightsRcd / 
+EcalTPGCrystalStatusRcd / 
+EcalTPGFineGrainEBGroupRcd / 
+EcalTPGFineGrainEBIdMapRcd / 
+EcalTPGFineGrainStripEERcd / 
+EcalTPGFineGrainTowerEERcd / 
+EcalTPGLinearizationConstRcd / 
+EcalTPGLutGroupRcd / 
+EcalTPGLutIdMapRcd / 
+EcalTPGOddWeightGroupRcd / 
+EcalTPGOddWeightIdMapRcd / 
+EcalTPGPedestalsRcd / 
+EcalTPGPhysicsConstRcd / 
+EcalTPGSlidingWindowRcd / 
+EcalTPGSpikeRcd / 
+EcalTPGStripStatusRcd / 
+EcalTPGTPModeRcd / 
+EcalTPGTowerStatusRcd / 
+EcalTPGWeightGroupRcd / 
+EcalTPGWeightIdMapRcd / 
+EcalTimeBiasCorrectionsRcd / 
+EcalTimeCalibConstantsRcd / 
+EcalTimeCalibConstantsRcd / CC
+EcalTimeOffsetConstantRcd / 
+EcalTimeOffsetConstantRcd / CC
+EcalWeightXtalGroupsRcd / 
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin1_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin1_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin2_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin2_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin3_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_Full_ptbin3_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_ZS_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EB_ZS_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin1_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin1_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin2_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin2_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin3_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_Full_ptbin3_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_ZS_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCor2017V2_EE_ZS_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_mean_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize1_sigma_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_mean_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize2_sigma_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_mean_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin1_sigma_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_mean_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin2_sigma_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_mean_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EB_pfSize3_ptbin3_sigma_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_mean_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize1_sigma_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_mean_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize2_sigma_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_mean_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin1_sigma_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_mean_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin2_sigma_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_mean_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_mean_50ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_sigma_25ns
+GBRDWrapperRcd / ecalPFClusterCorV2_EE_pfSize3_ptbin3_sigma_50ns
+GBRDWrapperRcd / electron_eb_ECALTRK
+GBRDWrapperRcd / electron_eb_ECALTRK_lowpt
+GBRDWrapperRcd / electron_eb_ECALTRK_lowpt_var
+GBRDWrapperRcd / electron_eb_ECALTRK_var
+GBRDWrapperRcd / electron_eb_ECALonly
+GBRDWrapperRcd / electron_eb_ECALonly_lowpt
+GBRDWrapperRcd / electron_eb_ECALonly_lowpt_var
+GBRDWrapperRcd / electron_eb_ECALonly_var
+GBRDWrapperRcd / electron_eb_ecalOnly_1To300_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_eb_ecalOnly_1To300_0p2To2_mean
+GBRDWrapperRcd / electron_eb_ecalTrk_1To300_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_eb_ecalTrk_1To300_0p2To2_mean
+GBRDWrapperRcd / electron_ee_ECALTRK
+GBRDWrapperRcd / electron_ee_ECALTRK_lowpt
+GBRDWrapperRcd / electron_ee_ECALTRK_lowpt_var
+GBRDWrapperRcd / electron_ee_ECALTRK_var
+GBRDWrapperRcd / electron_ee_ECALonly
+GBRDWrapperRcd / electron_ee_ECALonly_lowpt
+GBRDWrapperRcd / electron_ee_ECALonly_lowpt_var
+GBRDWrapperRcd / electron_ee_ECALonly_var
+GBRDWrapperRcd / electron_ee_ecalOnly_1To300_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_ee_ecalOnly_1To300_0p2To2_mean
+GBRDWrapperRcd / electron_ee_ecalTrk_1To300_0p0002To0p5_sigma
+GBRDWrapperRcd / electron_ee_ecalTrk_1To300_0p2To2_mean
+GBRDWrapperRcd / gedelectron_EBCorrection_25ns
+GBRDWrapperRcd / gedelectron_EBCorrection_50ns
+GBRDWrapperRcd / gedelectron_EBUncertainty_25ns
+GBRDWrapperRcd / gedelectron_EBUncertainty_50ns
+GBRDWrapperRcd / gedelectron_EECorrection_25ns
+GBRDWrapperRcd / gedelectron_EECorrection_50ns
+GBRDWrapperRcd / gedelectron_EEUncertainty_25ns
+GBRDWrapperRcd / gedelectron_EEUncertainty_50ns
+GBRDWrapperRcd / gedphoton_EBCorrection_25ns
+GBRDWrapperRcd / gedphoton_EBCorrection_50ns
+GBRDWrapperRcd / gedphoton_EBUncertainty_25ns
+GBRDWrapperRcd / gedphoton_EBUncertainty_50ns
+GBRDWrapperRcd / gedphoton_EECorrection_25ns
+GBRDWrapperRcd / gedphoton_EECorrection_50ns
+GBRDWrapperRcd / gedphoton_EEUncertainty_25ns
+GBRDWrapperRcd / gedphoton_EEUncertainty_50ns
+GBRDWrapperRcd / lowPtElectron_eb_ecalOnly_05To50_mean
+GBRDWrapperRcd / lowPtElectron_eb_ecalOnly_05To50_sigma
+GBRDWrapperRcd / lowPtElectron_eb_ecalTrk_05To50_mean
+GBRDWrapperRcd / lowPtElectron_eb_ecalTrk_05To50_sigma
+GBRDWrapperRcd / lowPtElectron_ee_ecalOnly_05To50_mean
+GBRDWrapperRcd / lowPtElectron_ee_ecalOnly_05To50_sigma
+GBRDWrapperRcd / lowPtElectron_ee_ecalTrk_05To50_mean
+GBRDWrapperRcd / lowPtElectron_ee_ecalTrk_05To50_sigma
+GBRDWrapperRcd / pfscecal_EBCorrection_offline_v2
+GBRDWrapperRcd / pfscecal_EBCorrection_online
+GBRDWrapperRcd / pfscecal_EBUncertainty_offline_v2
+GBRDWrapperRcd / pfscecal_EBUncertainty_online
+GBRDWrapperRcd / pfscecal_EECorrection_offline_v2
+GBRDWrapperRcd / pfscecal_EECorrection_online
+GBRDWrapperRcd / pfscecal_EEUncertainty_offline_v2
+GBRDWrapperRcd / pfscecal_EEUncertainty_online
+GBRDWrapperRcd / photon_eb_ECALonly
+GBRDWrapperRcd / photon_eb_ECALonly_lowpt
+GBRDWrapperRcd / photon_eb_ECALonly_lowpt_var
+GBRDWrapperRcd / photon_eb_ECALonly_var
+GBRDWrapperRcd / photon_eb_ecalOnly_5To300_0p0002To0p5_sigma
+GBRDWrapperRcd / photon_eb_ecalOnly_5To300_0p2To2_mean
+GBRDWrapperRcd / photon_ee_ECALonly
+GBRDWrapperRcd / photon_ee_ECALonly_lowpt
+GBRDWrapperRcd / photon_ee_ECALonly_lowpt_var
+GBRDWrapperRcd / photon_ee_ECALonly_var
+GBRDWrapperRcd / photon_ee_ecalOnly_5To300_0p0002To0p5_sigma
+GBRDWrapperRcd / photon_ee_ecalOnly_5To300_0p2To2_mean
+GBRWrapperRcd / MVADuplicate
+GBRWrapperRcd / PFEcalResolution
+GBRWrapperRcd / PFGCorrectionBar
+GBRWrapperRcd / PFGCorrectionEndHighR9
+GBRWrapperRcd / PFGCorrectionEndLowR9
+GBRWrapperRcd / PFGlobalCorrection
+GBRWrapperRcd / PFLCCorrection
+GBRWrapperRcd / PFLCorrectionBar
+GBRWrapperRcd / PFLCorrectionEnd
+GBRWrapperRcd / PFResolution
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL
+GBRWrapperRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC
+GBRWrapperRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT
+GBRWrapperRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT
+GBRWrapperRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT
+GBRWrapperRcd / gedelectron_EBCorrection_offline_v1
+GBRWrapperRcd / gedelectron_EBUncertainty_offline_v1
+GBRWrapperRcd / gedelectron_EECorrection_offline_v1
+GBRWrapperRcd / gedelectron_EEUncertainty_offline_v1
+GBRWrapperRcd / gedelectron_p4combination_25ns
+GBRWrapperRcd / gedelectron_p4combination_50ns
+GBRWrapperRcd / gedelectron_p4combination_offline
+GBRWrapperRcd / gedphoton_EBCorrection_offline_v1
+GBRWrapperRcd / gedphoton_EBUncertainty_offline_v1
+GBRWrapperRcd / gedphoton_EECorrection_offline_v1
+GBRWrapperRcd / gedphoton_EEUncertainty_offline_v1
+GBRWrapperRcd / pfscecal_EBCorrection_offline_v1
+GBRWrapperRcd / pfscecal_EECorrection_offline_v1
+GBRWrapperRcd / wgbrph_EBCorrection
+GBRWrapperRcd / wgbrph_EBUncertainty
+GBRWrapperRcd / wgbrph_EECorrection
+GBRWrapperRcd / wgbrph_EEUncertainty
+GEMAlignmentErrorExtendedRcd / 
+GEMAlignmentRcd / 
+GEMChMapRcd / 
+GEMDeadStripsRcd / 
+GEMMaskedStripsRcd / 
+GEMRecoGeometryRcd / 
+GEMeMapRcd / 
+GeometryFileRcd / Extended
+GeometryFileRcd / FlatMinus05Percent
+GeometryFileRcd / FlatMinus10Percent
+GeometryFileRcd / FlatPlus05Percent
+GeometryFileRcd / FlatPlus10Percent
+GeometryFileRcd / ZeroMaterial
+GlobalPositionRcd / 
+HBAlignmentRcd / 
+HBHENegativeEFilterRcd / 
+HEAlignmentRcd / 
+HFAlignmentRcd / 
+HFPhase1PMTParamsRcd / 
+HOAlignmentRcd / 
+HcalChannelQualityRcd / 
+HcalElectronicsMapRcd / 
+HcalFlagHFDigiTimeParamsRcd / 
+HcalFrontEndMapRcd / 
+HcalGainsRcd / 
+HcalL1TriggerObjectsRcd / 
+HcalLUTCorrsRcd / 
+HcalLongRecoParamsRcd / 
+HcalLutMetadataRcd / 
+HcalMCParamsRcd / 
+HcalOOTPileupCompatibilityRcd / 
+HcalOOTPileupCorrectionMapCollRcd / 
+HcalPFCorrsRcd / 
+HcalPFCutsRcd / 
+HcalParametersRcd / 
+HcalPedestalWidthsRcd / 
+HcalPedestalWidthsRcd / effective
+HcalPedestalsRcd / 
+HcalPedestalsRcd / effective
+HcalQIEDataRcd / 
+HcalQIETypesRcd / 
+HcalRecoParamsRcd / 
+HcalRespCorrsRcd / 
+HcalSiPMCharacteristicsRcd / 
+HcalSiPMParametersRcd / 
+HcalTPChannelParametersRcd / 
+HcalTPParametersRcd / 
+HcalTimeCorrsRcd / 
+HcalZSThresholdsRcd / 
+HeavyIonRcd / HFhitsAMPT_2760GeV
+HeavyIonRcd / HFhitsHydjet_Bass
+HeavyIonRcd / HFhitsHydjet_Drum
+HeavyIonRcd / HFtowersHydjet_Bass
+HeavyIonRcd / HFtowersHydjet_Drum
+HeavyIonRcd / PixelHitsAMPT_2760GeV
+HeavyIonRcd / PixelHitsHydjet_Bass
+HeavyIonRcd / PixelHitsHydjet_Drum
+HeavyIonRcd / PixelTracksHydjet_Bass
+HeavyIonRcd / PixelTracksHydjet_Drum
+HeavyIonRcd / TracksHydjet_Bass
+HeavyIonRcd / TracksHydjet_Drum
+IdealGeometryRecord / 
+JetCorrectionsRecord / AK10PF
+JetCorrectionsRecord / AK10PFchs
+JetCorrectionsRecord / AK1PF
+JetCorrectionsRecord / AK1PFchs
+JetCorrectionsRecord / AK2PF
+JetCorrectionsRecord / AK2PFchs
+JetCorrectionsRecord / AK3PF
+JetCorrectionsRecord / AK3PFchs
+JetCorrectionsRecord / AK4Calo
+JetCorrectionsRecord / AK4CaloHLT
+JetCorrectionsRecord / AK4JPT
+JetCorrectionsRecord / AK4PF
+JetCorrectionsRecord / AK4PFClusterHLT
+JetCorrectionsRecord / AK4PFHLT
+JetCorrectionsRecord / AK4PFPuppi
+JetCorrectionsRecord / AK4PFPuppiHLT
+JetCorrectionsRecord / AK4PFchs
+JetCorrectionsRecord / AK4PFchsHLT
+JetCorrectionsRecord / AK5Calo
+JetCorrectionsRecord / AK5CaloHLT
+JetCorrectionsRecord / AK5JPT
+JetCorrectionsRecord / AK5PF
+JetCorrectionsRecord / AK5PFHLT
+JetCorrectionsRecord / AK5PFchs
+JetCorrectionsRecord / AK5PFchsHLT
+JetCorrectionsRecord / AK5TRK
+JetCorrectionsRecord / AK6PF
+JetCorrectionsRecord / AK6PFchs
+JetCorrectionsRecord / AK7Calo
+JetCorrectionsRecord / AK7JPT
+JetCorrectionsRecord / AK7PF
+JetCorrectionsRecord / AK7PFchs
+JetCorrectionsRecord / AK8CaloHLT
+JetCorrectionsRecord / AK8PF
+JetCorrectionsRecord / AK8PFClusterHLT
+JetCorrectionsRecord / AK8PFHLT
+JetCorrectionsRecord / AK8PFPuppi
+JetCorrectionsRecord / AK8PFPuppiHLT
+JetCorrectionsRecord / AK8PFchs
+JetCorrectionsRecord / AK8PFchsHLT
+JetCorrectionsRecord / AK9PF
+JetCorrectionsRecord / AK9PFchs
+JetCorrectionsRecord / IC5Calo
+JetCorrectionsRecord / IC5PF
+JetCorrectionsRecord / KT4Calo
+JetCorrectionsRecord / KT4PF
+JetCorrectionsRecord / KT6Calo
+JetCorrectionsRecord / KT6PF
+JetResolutionRcd / AK4PFPuppi_eta
+JetResolutionRcd / AK4PFPuppi_phi
+JetResolutionRcd / AK4PFPuppi_pt
+JetResolutionRcd / AK4PF_eta
+JetResolutionRcd / AK4PF_phi
+JetResolutionRcd / AK4PF_pt
+JetResolutionRcd / AK4PFchs_eta
+JetResolutionRcd / AK4PFchs_phi
+JetResolutionRcd / AK4PFchs_pt
+JetResolutionRcd / AK8PFPuppi_eta
+JetResolutionRcd / AK8PFPuppi_phi
+JetResolutionRcd / AK8PFPuppi_pt
+JetResolutionRcd / AK8PF_eta
+JetResolutionRcd / AK8PF_phi
+JetResolutionRcd / AK8PF_pt
+JetResolutionRcd / AK8PFchs_eta
+JetResolutionRcd / AK8PFchs_phi
+JetResolutionRcd / AK8PFchs_pt
+JetResolutionScaleFactorRcd / AK4PF
+JetResolutionScaleFactorRcd / AK4PFPuppi
+JetResolutionScaleFactorRcd / AK4PFchs
+JetResolutionScaleFactorRcd / AK8PF
+JetResolutionScaleFactorRcd / AK8PFPuppi
+JetResolutionScaleFactorRcd / AK8PFchs
+L1CaloEcalScaleRcd / 
+L1CaloGeometryRecord / 
+L1CaloHcalScaleRcd / 
+L1EmEtScaleRcd / 
+L1GctChannelMaskRcd / 
+L1GctJetFinderParamsRcd / 
+L1GtBoardMapsRcd / 
+L1GtParametersRcd / 
+L1GtPrescaleFactorsAlgoTrigRcd / 
+L1GtPrescaleFactorsTechTrigRcd / 
+L1GtPsbSetupRcd / 
+L1GtStableParametersRcd / 
+L1GtTriggerMaskAlgoTrigRcd / 
+L1GtTriggerMaskTechTrigRcd / 
+L1GtTriggerMaskVetoAlgoTrigRcd / 
+L1GtTriggerMaskVetoTechTrigRcd / 
+L1GtTriggerMenuRcd / 
+L1HfRingEtScaleRcd / 
+L1HtMissScaleRcd / 
+L1JetEtScaleRcd / 
+L1MuCSCPtLutRcd / 
+L1MuCSCTFAlignmentRcd / 
+L1MuCSCTFConfigurationRcd / 
+L1MuDTEtaPatternLutRcd / 
+L1MuDTExtLutRcd / 
+L1MuDTPhiLutRcd / 
+L1MuDTPtaLutRcd / 
+L1MuDTQualPatternLutRcd / 
+L1MuDTTFMasksRcd / 
+L1MuDTTFParametersRcd / 
+L1MuGMTChannelMaskRcd / 
+L1MuGMTParametersRcd / 
+L1MuGMTScalesRcd / 
+L1MuTriggerPtScaleRcd / 
+L1MuTriggerScalesRcd / 
+L1RCTChannelMaskRcd / 
+L1RCTNoisyChannelMaskRcd / 
+L1RCTParametersRcd / 
+L1RPCBxOrConfigRcd / 
+L1RPCConeDefinitionRcd / 
+L1RPCConfigRcd / 
+L1RPCHsbConfigRcd / 
+L1RPCHwConfigRcd / 
+L1TCaloParamsO2ORcd / 
+L1TCaloParamsRcd / 
+L1TGlobalPrescalesVetosFractRcd / 
+L1TGlobalPrescalesVetosRcd / 
+L1TMuonBarrelParamsRcd / 
+L1TMuonEndCapForestRcd / 
+L1TMuonEndCapParamsRcd / 
+L1TMuonGlobalParamsRcd / 
+L1TMuonOverlapParamsRcd / 
+L1TUtmTriggerMenuRcd / 
+L1TriggerKeyListRcd / 
+L1TriggerKeyRcd / 
+LHCInfoPerFillRcd / 
+LHCInfoPerLSRcd / 
+LHCInfoRcd / 
+LumiSectionDataRcd / 
+MFGeometryFileRcd / 160812
+MFGeometryFileRcd / 90322
+MagFieldConfigRcd / 0T
+MagFieldConfigRcd / 2T
+MagFieldConfigRcd / 3.5T
+MagFieldConfigRcd / 3.8T
+MagFieldConfigRcd / 3T
+MagFieldConfigRcd / 4T
+PCaloTowerRcd / 
+PEcalBarrelRcd / 
+PEcalEndcapRcd / 
+PEcalPreshowerRcd / 
+PFCalibrationRcd / 
+PFCalibrationRcd / HLT
+PHcalRcd / 
+PPSAssociationCutsRcd / 
+PTrackerParametersRcd / 
+PZdcRcd / 
+PhotonConversionMVAComputerRcd / 
+PhysicsTFormulaPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_mvaOutput_normalization
+PhysicsTFormulaPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_mvaOutput_normalization
+PhysicsTFormulaPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_mvaOutput_normalization
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_BL_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_wGwoGSF_EC_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_BL_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_NoEleMatch_woGwoGSF_EC_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_BL_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_wGwGSF_EC_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_BL_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_antiElectronMVA_woGwGSF_EC_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_VVLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBnewDMwLT_VVTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_VVLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMdR0p3wLT_VVTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_Loose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_Medium
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_Tight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_VLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_VTight
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_VVLoose
+PhysicsTGraphPayloadRcd / RecoTauTag_tauIdMVAIsoDBoldDMwLT_VVTight
+QGLikelihoodRcd / QGL_AK4PF
+QGLikelihoodRcd / QGL_AK4PF_antib
+QGLikelihoodRcd / QGL_AK4PFchs
+QGLikelihoodRcd / QGL_AK4PFchs_antib
+RPCCPPFLinkMapRcd / 
+RPCClusterSizeRcd / 
+RPCDCCLinkMapRcd / 
+RPCEMapRcd / 
+RPCLBLinkMapRcd / 
+RPCOMTFLinkMapRcd / 
+RPCRecoGeometryRcd / 
+RPCStripNoisesRcd / 
+RPCTwinMuxLinkMapRcd / 
+RunInfoRcd / 
+SiPixel2DTemplateDBObjectRcd / denominator
+SiPixel2DTemplateDBObjectRcd / numerator
+SiPixelDetVOffRcd / 
+SiPixelDynamicInefficiencyRcd / 
+SiPixelFedCablingMapRcd / 
+SiPixelGainCalibrationForHLTRcd / 
+SiPixelGainCalibrationOfflineRcd / 
+SiPixelGenErrorDBObjectRcd / 
+SiPixelLorentzAngleRcd / 
+SiPixelLorentzAngleRcd / forWidth
+SiPixelLorentzAngleRcd / fromAlignment
+SiPixelLorentzAngleSimRcd / 
+SiPixelQualityFromDbRcd / 
+SiPixelQualityFromDbRcd / forDigitizer
+SiPixelStatusScenarioProbabilityRcd / 
+SiPixelStatusScenariosRcd / 
+SiPixelTemplateDBObjectRcd / 
+SiPixelTemplateDBObjectRcd / 0T
+SiStripApvGain2Rcd / 
+SiStripApvGainRcd / 
+SiStripApvGainSimRcd / 
+SiStripBackPlaneCorrectionRcd / deconvolution
+SiStripBackPlaneCorrectionRcd / peak
+SiStripBadChannelRcd / 
+SiStripBadFiberRcd / 
+SiStripBadModuleRcd / 
+SiStripBadStripRcd / 
+SiStripClusterThresholdRcd / 
+SiStripConfObjectRcd / 
+SiStripConfObjectRcd / apvphaseoffsets
+SiStripDeDxElectron_3D_Rcd / 
+SiStripDeDxKaon_3D_Rcd / 
+SiStripDeDxMip_3D_Rcd / 
+SiStripDeDxPion_3D_Rcd / 
+SiStripDeDxProton_3D_Rcd / 
+SiStripDetVOffRcd / 
+SiStripFedCablingRcd / 
+SiStripLatencyRcd / 
+SiStripLorentzAngleRcd / deconvolution
+SiStripLorentzAngleSimRcd / 
+SiStripNoisesRcd / 
+SiStripPedestalsRcd / 
+SiStripThresholdRcd / 
+SimBeamSpotObjectsRcd / 
+TauTagMVAComputerRcd / 
+TauTagMVAComputerRcd / hpstanc
+TrackerAlignmentErrorExtendedRcd / 
+TrackerAlignmentRcd / 
+TrackerSurfaceDeformationRcd / 
+VeryForwardIdealGeometryRecord / 
