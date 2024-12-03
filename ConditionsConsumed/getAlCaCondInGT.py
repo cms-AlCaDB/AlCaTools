@@ -9,22 +9,22 @@ import sys
 import optparse
 
 def checkTagInFile(tag, logFile):
-    found = False
-    checkTagLine =0
+    checkTagLine = 0
     foundTag = False
     foundPayload = False
+    foundConsumed = False
+
     for i, line in enumerate(open(logFile)):
-        #print i, line
-        if tag.strip() in line.strip():
+        if line.startswith(tag.strip()):
             foundTag = True
             checkTagLine = i
             continue
         if foundTag and "payloadIds" in line and (i == checkTagLine + 2):
             foundPayload = True
         if  foundTag and foundPayload and len(line.split(" ")) > 5 and (i == checkTagLine+3):
-            found = True
-    if(found):
-        #return "Y"
+            foundConsumed = True
+
+    if(foundConsumed):
         return "%GREEN% Yes %ENDCOLOR%"
     else:
         return ""
@@ -39,45 +39,43 @@ def getOneRow(tag, logFiles):
     for file_ in logFiles:
         checkTagInFile_ = checkTagInFile(tag, file_)
         rowName = rowName + " | " + checkTagInFile_
-    return rowName + " | \n"
+    return rowName + " |\n"
 
 def printAllRow(tagFile, logFiles, outForTwiki, tableTitle):
     for file_ in logFiles:
         outfile = open(tagFile, "w")
         with open(file_) as f:
             lines = f.readlines()
-            for l in lines:
-                newl = l.split(': frontier:')[0]
-                if re.search(r' / ', newl):
-                    #print(newl)
-                    outfile.write(newl+'\n')
+            for line in lines:
+                if re.search(r'frontier', line):
+                    newline = line.split(': frontier:')[0]
+                    outfile.write(newline+'\n')
     outfile.close()
 
     outForTwiki.write(tableTitle)
     for tag in open(tagFile):
         getOneRow_ = getOneRow(tag, logFiles)
-        #print (getOneRow_)
         outForTwiki.write(getOneRow_)
 
 def main():
-    
-    #Default input
-    defaultData = False
-    
+
+    # Command line options
     parser = optparse.OptionParser(usage = 'Usage: python3 getAlCaCondInGT.py [options] \n')
-
-    parser.add_option('-d', '--data',
+    parser.add_option('-d', '--isData',
                       dest = 'isData',
-                      default = defaultData,
-                      help = 'enter True for data, False for MC. Default: False')
-
+                      default = 0,
+                      type = int,
+                      help = 'enter 1 for data, 0 for MC. Default: 0')
+    parser.add_option('-y', '--year',
+                      dest = 'year',
+                      default = '2024',
+                      type = int,
+                      help = 'year. Default: 2024')
     (options, arguments) = parser.parse_args()
 
-    #isData = False
-    output_table = "MC" 
-    tagFile = "allAlCaTags.txt"
+    # cmsDriver log files to be parsed
     logFiles = []
-    if(options.isData):
+    if (options.isData):
         logFiles.append("output_step1_L1.log")
         logFiles.append("output_step2_HLT.log")
         logFiles.append("output_step3_AOD.log")
@@ -94,16 +92,17 @@ def main():
         logFiles.append("output_step8_MINIAODSIM.log")
         logFiles.append("output_step9_NANOAODSIM.log")
 
-    #output
-    if(options.isData):
-        output_table = "DATA"
-        tableTitle = "|Tags|L1|HLT|AOD|MINIAOD|NANOAOD|\n"
+    # Output configurables
+    if (options.isData):
+        workflow = "data"
+        tableTitle = "|Tags|L1|!HLT|!AOD|MINIAOD|NANOAOD|\n"
     else:
-        tableTitle = "|Tags|GEN|SIM|DIGI|L1|DIGI2RAW|HLT|AOD|MINIAOD|NANOAOD|\n"
+        workflow = "mc"
+        tableTitle = "|Tags|GEN|SIM|DIGI|L1|!DIGI2RAW|!HLT|!AOD|MINIAOD|NANOAOD|\n"
 
-    outputForTwiki = open(f"outputForTwiki_{output_table}.txt", 'w')
-
-    printAllRow(tagFile, logFiles, outputForTwiki, tableTitle)
+    # Print in twiki-like table which conditions are consumed for all steps
+    outputForTwiki = open(f"outputForTwiki_{workflow}{options.year}.txt", 'w')
+    printAllRow(f"allAlCaTags_{workflow}{options.year}.txt", logFiles, outputForTwiki, tableTitle)
 
 if __name__ == '__main__':
     main()
